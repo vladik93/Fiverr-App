@@ -1,4 +1,12 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white shadow">
-  <a class="navbar-brand" href="#">FIVERR SITE</a>
-  
+<div id="collapseBasic" class="navbar-collapse collapse" [collapse]="isCollapsed" [isAnimated]="true">
+  <p>Hello</p>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+  <div class="container-fluid">
+    <button type="button" class="navbar-toggle collapsed" (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Toggle collapse
+    </button>
+  </div>
 </nav>
+
