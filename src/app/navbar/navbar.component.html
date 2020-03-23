@@ -1,12 +1,50 @@
-<div id="collapseBasic" class="navbar-collapse collapse" [collapse]="isCollapsed" [isAnimated]="true">
-  <p>Hello</p>
+<div id="collapseBasic" class="navbar-collapse collapse bg-dark" [collapse]="isCollapsed" [isAnimated]="true">
+  <div class="row m-2">
+    <div class="col-md-1">
+      <div style="color: white">
+        <img src="../../assets/images/flags/spain.jpg"  style="height: 50px"/>
+        <p>Spanish</p>
+      </div>
+    </div>
+    <div class="col-md-1">
+        <div style="color: white">
+          <img src="../../assets/images/flags/spain.jpg"  style="height: 50px"/>
+          <p>Spanish</p>
+        </div>
+      </div>
+    </div>
+    <div class="row m-2">
+        <div class="col-md-1">
+          <div style="color: white">
+            <img src="../../assets/images/flags/spain.jpg"  style="height: 50px"/>
+            <p>Spanish</p>
+          </div>
+        </div>
+        <div class="col-md-1">
+            <div style="color: white">
+              <img src="../../assets/images/flags/spain.jpg"  style="height: 50px"/>
+              <p>Spanish</p>
+            </div>
+          </div>
+        </div>
 </div>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow" style="border-top: 1px dashed lightgrey">
   <div class="container-fluid">
-    <button type="button" class="navbar-toggle collapsed" (click)="isCollapsed = !isCollapsed"
-      [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Toggle collapse
+    <button type="button" id="toggler" class="navbar-toggle collapsed navbar-toggler-icon" (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
     </button>
   </div>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Register</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+      </ul>
+    </div>
 </nav>
 
