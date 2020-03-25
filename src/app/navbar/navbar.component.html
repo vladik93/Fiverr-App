@@ -1,39 +1,16 @@
 <div id="collapseBasic" class="navbar-collapse collapse bg-dark" [collapse]="isCollapsed" [isAnimated]="true">
-  <div class="row m-3">
-    <div class="col-md-1">
-      <div style="color: white">
-        <img src="../../assets/images/flags/spanish.jpg"  style="height: 45px; border: 1px solid lightgray; border-radius: 8px"/>
-        <p>Spanish</p>
-      </div>
-    </div>
-    <div class="col-md-1">
-      <div style="color: white">
-        <img src="../../assets/images/flags/dutch.jpg"  style="height: 45px; border: 1px solid lightgray; border-radius: 8px"/>
-        <p>Dutch</p>
-      </div>
-    </div>
-  </div>
-  <div class="row m-3">
-    <div class="col-md-1">
-      <div style="color: white">
-        <img src="../../assets/images/flags/german.jpg"  style="height: 45px; border: 1px solid lightgray; border-radius: 8px"/>
-        <p>German</p>
-      </div>
-    </div>
-    <div class="col-md-1">
-      <div style="color: white">
-        <img src="../../assets/images/flags/russian.jpg"  style="height: 45px; border: 1px solid lightgray; border-radius: 8px"/>
-        <p>Russian</p>
-      </div>
-    </div>
-  </div>
-  <div class="row m-3">
-      <div class="col-md-1">
-        <div style="color: white">
-          <img src="../../assets/images/flags/hebrew.jpg"  style="height: 45px; border: 1px solid lightgray; border-radius: 8px"/>
-          <p>Hebrew</p>
+  <div class="row">
+    <div class="col-md-7">
+      <div class="row">
+        <div class="col-md-4 offset-md-5 text-light mt-1">
+          <p style="text-decoration-line: underline; text-decoration-style: dotted">Main Language</p>
         </div>
       </div>
+      <app-language-menu></app-language-menu>
+    </div>
+    <div class="col-md-5" style="border-left: 1px dotted white">
+        
+    </div>
   </div>
 </div>
 

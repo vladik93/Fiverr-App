@@ -2,11 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
+
 import { NavbarComponent } from './navbar/navbar.component';
+import { AppComponent } from './app.component';
+import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
 
 
 import { LanguageService } from './services/language.service';
@@ -18,6 +19,7 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
   declarations: [
     AppComponent,
     NavbarComponent,
+    LanguageMenuComponent,
   ],
   imports: [
     BrowserModule,
