@@ -1,8 +1,11 @@
+
 <div *ngFor="let language of languages; let i = index">
-  <div *ngIf="i % 3 === 0" class="row">
-    <div *ngFor="let language of languages.slice(i, i + 3)" class="ml-5 mb-1 mt-2 text-light text-center">
+  <div *ngIf="i % 4 === 0" class="row">
+    <div *ngFor="let language of languages.slice(i, i + 4)" class="col-md-2 m-4 text-light text-center">
       <img src={{language.image}} style="height: 60px; width: 90px; border-radius: 5px; border: 1px solid white;" />
       <p>{{language.name}}</p>
     </div>
   </div>
 </div> 
+
+
