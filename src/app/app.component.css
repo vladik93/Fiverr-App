@@ -4,6 +4,33 @@
     min-height: 800px;
 }
 
+#title-parent {
+    position: relative;
+}
+
+#main-title {
+    position: relative;
+    z-index: 1000;
+}
+
+#title-span {
+    font-weight: bold;
+    color: #e9e4e2;
+    text-shadow: 0px 0px 5px black;
+}
+
+#main-logo {
+    position: absolute;
+    bottom: 14px;
+    left: 0px;
+    width: 130px;
+    /* border-bottom-left-radius: 20px; */
+    /* border-top-right-radius: 20px; */
+    /* border-top-right-radius: 20px; */
+    /* border-top-left-radius: 20px; */
+    box-shadow: 2px 0px 3px black;
+}
+
 .underlined-text {
     font-size: 30px;
     text-decoration-line: underline;
