@@ -23,4 +23,8 @@ export class LanguageMenuComponent implements OnInit {
     .subscribe(data => this.languages = data);
   }
 
+  onLanguageHover = (id) => {
+    console.log(id);
+  }
+
 }
