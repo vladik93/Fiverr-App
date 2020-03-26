@@ -14,12 +14,14 @@ import { LanguageService } from './services/language.service';
 
 
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { FeatureTranslatorComponent } from './components/feature-translator/feature-translator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LanguageMenuComponent,
+    FeatureTranslatorComponent,
   ],
   imports: [
     BrowserModule,
