@@ -24,19 +24,19 @@
 
     
 }
-
+/* 
 #feature-name {
     transform: rotate(2deg);
-}
+} */
 
-#feature-description {
+/* #feature-description {
     transform: rotate(-2deg);
-}
+} */
 
-#feature-price {
+/* #feature-price { */
     /* font-weight: bold; */
     /* background-color:#5ba36f; */
     /* padding: 5px; */
     /* box-shadow: 1px 2px 3px #376243; */
-    transform: rotate(10deg);
-}
+    /* transform: rotate(3deg); */
+/* } */
