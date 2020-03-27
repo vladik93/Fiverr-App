@@ -4,6 +4,7 @@
     transform: translateY(-50%);
 }
 
+
 .media-body {
     width: 360px;
     padding: 10px;
@@ -24,6 +25,18 @@
 
     
 }
+
+#more-link {
+    position: absolute;
+    top: 250px;
+    left: 555px;
+}
+
+#more-link a {
+    color: white;
+    font-weight: bolder;
+}
+
 /* 
 #feature-name {
     transform: rotate(2deg);
