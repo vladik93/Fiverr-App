@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Translator } from '../../models/translator';
+import { TranslatorService } from '../../services/translator.service';
 
 @Component({
   selector: 'app-feature-translator',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeatureTranslatorComponent implements OnInit {
 
-  constructor() { }
+  translator: Translator;
+
+  constructor(private tranService: TranslatorService) { }
 
   ngOnInit() {
+    this.tranService.featureTranslator$
+    .subscribe(
+      data => this.translator = data[0]
+    );
   }
-
 }

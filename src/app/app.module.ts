@@ -11,6 +11,7 @@ import { LanguageMenuComponent } from './components/language-menu/language-menu.
 
 
 import { LanguageService } from './services/language.service';
+import { TranslatorService } from './services/translator.service';
 
 
 import { CollapseModule } from 'ngx-bootstrap/collapse';
@@ -31,7 +32,10 @@ import { FeatureTranslatorComponent } from './components/feature-translator/feat
     // NGX-BOOTSTRAP COMPONENTS
     CollapseModule.forRoot()
   ],
-  providers: [LanguageService],
+  providers: [
+    LanguageService,
+    TranslatorService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

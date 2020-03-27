@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Language } from '../../models/language';
 import { LanguageService } from '../../services/language.service';
+import { TranslatorService } from '../../services/translator.service';
 
 @Component({
   selector: 'app-language-menu',
@@ -11,7 +12,10 @@ export class LanguageMenuComponent implements OnInit {
 
   languages: Language[];
 
-  constructor(private langService: LanguageService) { }
+  constructor(
+    private langService: LanguageService,
+    private tranService: TranslatorService
+  ) { }
 
   ngOnInit() {
     this.showAllLanguages();
@@ -23,8 +27,7 @@ export class LanguageMenuComponent implements OnInit {
     .subscribe(data => this.languages = data);
   }
 
-  onLanguageHover = (id) => {
-    console.log(id);
+  onLanguageMouseEnter = (id) => {
+    this.tranService.getTranslatorsByLanguage(id, 1);
   }
-
 }

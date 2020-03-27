@@ -1,8 +1,8 @@
-<div class="media">
-  <img src="../../../assets/images/translator_pic.jpg" id="translator-pic" />
+<div class="media" *ngIf="translator">
+  <img src="{{translator.image}}" id="translator-pic" />
   <div class="media-body mt-3 ml-2">
-    <h5 class="feature-text" id="feature-name">John Lennon</h5>
-    <h6 class="feature-text" id="feature-description" >Professional translator, fluent in Spanish and English and decent in Portugese</h6>
-    <h5 class="feature-text mt-4" id="feature-price">130$</h5>
+    <h5 class="feature-text" id="feature-name">{{translator.name}}</h5>
+    <h6 class="feature-text" id="feature-description" >{{translator.description}}</h6>
+    <h5 class="feature-text mt-4" id="feature-price">{{translator.price}}</h5>
   </div>
 </div>
