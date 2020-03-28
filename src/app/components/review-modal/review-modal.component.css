@@ -1,0 +1,36 @@
+
+
+carousel {
+    min-height: 500px;
+}
+
+slide {
+    /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("../../../assets/images/image-2.jpg"); */
+    /* background-size: cover; */
+    background: none;
+    /* mask-size: 30%; */
+    
+    /* box-shadow: 0 0 8px 10px #b5b2ab inset; */
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}

@@ -1,7 +1,10 @@
 .jumbotron {
-    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("../assets/images/jumbotron-photo-4.jpg");
-    background-size: cover;
-    min-height: 800px;
+    /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("../assets/images/jumbotron-photo-4.jpg"); */
+    background: none;
+    /* background-size: cover; */
+    min-height: 650px;
+    /* box-shadow: 0 0 8px 8px #b5b2ab inset; */
+    border-bottom: 5px dotted #e9e4e2;
 }
 
 #title-parent {
