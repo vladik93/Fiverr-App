@@ -20,6 +20,7 @@ import { TranslatorService } from './services/translator.service';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
     FeatureTranslatorComponent,
     ReviewModalComponent,
     HighlightLanguageComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
