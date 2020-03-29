@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AppComponent } from './app.component';
 import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
 import { FeatureTranslatorComponent } from './components/feature-translator/feature-translator.component';
+import { HighlightLanguageComponent } from './components/highlight-language/highlight-language.component';
 import { ReviewModalComponent } from './components/review-modal/review-modal.component';
 
 
@@ -18,6 +19,7 @@ import { TranslatorService } from './services/translator.service';
 
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     LanguageMenuComponent,
     FeatureTranslatorComponent,
     ReviewModalComponent,
+    HighlightLanguageComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     BrowserAnimationsModule,
     // NGX-BOOTSTRAP COMPONENTS
     CollapseModule.forRoot(),
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    TooltipModule.forRoot()
   ],
   providers: [
     LanguageService,

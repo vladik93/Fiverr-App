@@ -1,0 +1,30 @@
+#flag-section {
+    min-height: 470px;
+}
+
+.language {
+    position: relative;
+    cursor: pointer;
+}
+
+.language:hover img {
+    box-shadow: 5px 5px 10px royalblue;
+}
+
+/* .abrv {
+    position: absolute;
+    top: 120px;
+    left: 130px;
+    font-weight: bold;
+    font-size: 80px;
+    color:  #e9e4e2;
+    text-shadow: 3px 0px 3px gray;
+    
+} */
+
+img {
+    height: 300px;
+    width: 350px;
+    box-shadow: 5px 0px 10px white;
+    border-radius: 5px;
+}

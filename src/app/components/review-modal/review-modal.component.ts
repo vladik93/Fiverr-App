@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./review-modal.component.css']
 })
 export class ReviewModalComponent implements OnInit {
-  carouselInterval = 2500;
+  carouselInterval = 2000;
 
   constructor() { }
 
