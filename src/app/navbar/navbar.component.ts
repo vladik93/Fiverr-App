@@ -12,15 +12,8 @@ export class NavbarComponent implements OnInit {
   constructor(private languageService: LanguageService) { }
 
   ngOnInit() {
-    this.showAllLanguages();
   }
 
-  showAllLanguages = () => {
-    this.languageService.getAllLanguages()
-    .subscribe(
-      data => console.log(data),
-      error => console.log(error)
-    );
-  }
+
 
 }

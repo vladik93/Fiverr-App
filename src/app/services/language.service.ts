@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { Language } from '../models/language';
 
@@ -12,7 +12,9 @@ export class LanguageService {
 
   serverUrl = 'http://localhost:3000/api/languages';
 
-  getAllLanguages = () => {
-    return this.http.get<Language[]>(this.serverUrl);
+  getAllLanguages = (quant?) => {
+    const params = new HttpParams().set('limit', quant);
+
+    return this.http.get<Language[]>(this.serverUrl, {params: params} );
   }
 }

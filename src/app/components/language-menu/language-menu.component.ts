@@ -18,12 +18,12 @@ export class LanguageMenuComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.showAllLanguages();
+    this.showAllLanguages('');
   }
 
 
-  showAllLanguages = () => {
-    this.langService.getAllLanguages()
+  showAllLanguages = (limit) => {
+    this.langService.getAllLanguages(limit)
     .subscribe(data => this.languages = data);
   }
 
