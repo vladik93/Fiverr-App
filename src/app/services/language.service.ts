@@ -12,7 +12,7 @@ export class LanguageService {
 
   serverUrl = 'http://localhost:3000/api/languages';
 
-  getAllLanguages = (quant?) => {
+  getAllLanguages = (quant) => {
     const params = new HttpParams().set('limit', quant);
 
     return this.http.get<Language[]>(this.serverUrl, {params: params} );

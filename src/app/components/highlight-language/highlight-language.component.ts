@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
+import { Language } from '../../models/language';
 
 @Component({
   selector: 'app-highlight-language',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HighlightLanguageComponent implements OnInit {
 
-  constructor() { }
+  languages: Language[];
+
+  constructor(private langService: LanguageService) { }
 
   ngOnInit() {
+    this.showHighlightLanguages();
   }
+
+  showHighlightLanguages = () => {
+    this.langService.getAllLanguages(3)
+    .subscribe(data => this.languages = data);
+  }
+
+
+
 
 }
