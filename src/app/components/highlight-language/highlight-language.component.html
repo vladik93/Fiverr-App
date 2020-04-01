@@ -1,22 +1,14 @@
 <div class="row" id="flag-section">
-  <div class="col-md-3 language" *ngFor="let language of languages; let i = index; else elseOption" tooltip="{{language.name}}">
-    <div *ngIf="i === 1">
-        <img src="{{language.image}}" />
+  <div *ngFor="let language of languages; let i = index" tooltip="{{language.name}}">
+    <div *ngIf="i === 0; else elseBlock">
+      <div class="col-md-4 language">
+        <img src={{language.image}} />
+      </div>
     </div>
+    <ng-template #elseBlock>
+      <div class="col-md-4  language">
+        <img src={{language.image}} />
+      </div>
+    </ng-template>
   </div>
-  <ng-template #elseOption>
-    <div class="col-md-3 offset-md-1 language">
-      <img src="{{language.image}}" />
-    </div>
-  </ng-template>
-
-  <!-- <div class="col-md-3 language" tooltip="Spanish">
-    <img src="assets/images/flags/spanish.jpg" />
-  </div>
-  <div class="col-md-3 offset-md-1 language" tooltip="German">
-    <img src="assets/images/flags/german.jpg" />
-  </div>
-  <div class="col-md-3 offset-md-1 language" tooltip="Russian">
-    <img src="assets/images/flags/russian.jpg" />
-  </div> -->
 </div>
