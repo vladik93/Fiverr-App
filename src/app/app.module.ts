@@ -11,6 +11,9 @@ import { LanguageMenuComponent } from './components/language-menu/language-menu.
 import { FeatureTranslatorComponent } from './components/feature-translator/feature-translator.component';
 import { HighlightLanguageComponent } from './components/highlight-language/highlight-language.component';
 import { ReviewModalComponent } from './components/review-modal/review-modal.component';
+import { FooterComponent } from './footer/footer.component';
+import { TranslatorListComponent } from './components/translator-list/translator-list.component';
+
 
 
 import { LanguageService } from './services/language.service';
@@ -20,7 +23,8 @@ import { TranslatorService } from './services/translator.service';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
-import { FooterComponent } from './footer/footer.component';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,8 @@ import { FooterComponent } from './footer/footer.component';
     ReviewModalComponent,
     HighlightLanguageComponent,
     FooterComponent,
+    TranslatorListComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,8 @@ import { FooterComponent } from './footer/footer.component';
     // NGX-BOOTSTRAP COMPONENTS
     CollapseModule.forRoot(),
     CarouselModule.forRoot(),
-    TooltipModule.forRoot()
+    TooltipModule.forRoot(),
+    AccordionModule.forRoot()
   ],
   providers: [
     LanguageService,
