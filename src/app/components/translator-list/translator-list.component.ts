@@ -10,7 +10,6 @@ export class TranslatorListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('hello');
   }
 
 }

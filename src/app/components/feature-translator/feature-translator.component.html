@@ -7,5 +7,5 @@
   </div>
 </div>
 <div id="more-link" class="btn btn-outline-light" *ngIf="translator">
-  <a href="#">More</a>
+  <a [routerLink]="['translators']" [queryParams]="{lang: translator.lang_to}">More</a>
 </div>

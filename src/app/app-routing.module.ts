@@ -7,7 +7,7 @@ import { TranslatorListComponent} from './components/translator-list/translator-
 
 const routes: Routes = [
   { path: '', component: HomePageComponent, pathMatch: 'full' },
-  { path: 'translators/:lang', component: TranslatorListComponent, pathMatch: 'full' }
+  { path: 'translators', component: TranslatorListComponent, pathMatch: 'full' }
 ];
 
 @NgModule({

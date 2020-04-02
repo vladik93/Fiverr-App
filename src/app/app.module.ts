@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppComponent } from './app.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
 import { FeatureTranslatorComponent } from './components/feature-translator/feature-translator.component';
 import { HighlightLanguageComponent } from './components/highlight-language/highlight-language.component';
@@ -24,7 +25,6 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
-import { HomePageComponent } from './components/home-page/home-page.component';
 
 @NgModule({
   declarations: [
