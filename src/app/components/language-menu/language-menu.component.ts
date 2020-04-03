@@ -30,8 +30,4 @@ export class LanguageMenuComponent implements OnInit {
   onLanguageClick = (id) => {
     this.tranService.getTranslatorsByLanguage(id, 1);
   }
-
-  onLanguageMouseEnter = (e) => {
-    console.log(e);
-  }
 }
