@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../services/language.service';
+import { TranslatorService } from '../services/translator.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,12 +8,20 @@ import { LanguageService } from '../services/language.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  isCollapsed = true;
+  isCollapsed;
 
-  constructor(private languageService: LanguageService) { }
+  constructor(
+    private languageService: LanguageService,
+    private tranService: TranslatorService
+    ) { }
 
   ngOnInit() {
+    this.tranService.currentBoolean$.subscribe(bool => this.isCollapsed = bool);
   }
+
+
+
+
 
 
 

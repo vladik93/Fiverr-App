@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
+import { TranslatorService } from './services/translator.service';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +8,13 @@ import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private router: Router) {
+  constructor(private router: Router, private tranService: TranslatorService ) {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {
         console.log('Start');
       }
       if (event instanceof NavigationEnd) {
-        console.log('End');
+        this.tranService.changeCollapseBoolean(true);
       }
       if (event instanceof NavigationError) {
         console.log('Error Nav');

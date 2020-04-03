@@ -16,6 +16,11 @@ export class TranslatorService {
   private featureTranslatorSource: Subject<Translator[]> = new Subject(); // Works for interacting between two sibling/unrelated
   featureTranslator$ = this.featureTranslatorSource.asObservable();       // components
 
+  private collapseBoolSource = new BehaviorSubject(true);
+  currentBoolean$ = this.collapseBoolSource.asObservable();
+
+
+
   getTranslatorsByLanguage = (lang_id, quant) => {
     const paramData = {
       lang_to: lang_id,
@@ -26,5 +31,9 @@ export class TranslatorService {
     return this.http.get<Translator[]>(this.serverUrl, {params: body}).subscribe(data => {
       this.featureTranslatorSource.next(data);
     });
+  }
+
+  changeCollapseBoolean = (boolean: boolean) => {
+    this.collapseBoolSource.next(boolean);
   }
 }
