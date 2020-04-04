@@ -6,3 +6,21 @@ body {
     
 
 }
+
+.customClass   {
+    background: transparent;
+    border: none;
+    width: 400px;
+  }
+
+  .customClass > .card-header {
+    border: none;
+    border-bottom: 1px solid #212529 ;
+    background-color: transparent;
+  }
+
+  .customClass  .panel-body {
+      background: #343a40;
+      color: white;
+      
+  }

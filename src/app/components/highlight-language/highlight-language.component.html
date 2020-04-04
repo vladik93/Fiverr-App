@@ -1,12 +1,12 @@
 <div class="row" id="flag-section">
   <div *ngFor="let language of languages; let i = index" tooltip="{{language.name}}">
     <div *ngIf="i === 0; else elseBlock">
-      <div class="col-md-4 language">
+      <div class="language col-md-1">
         <img src={{language.image}} />
       </div>
     </div>
     <ng-template #elseBlock>
-      <div class="col-md-4  language">
+      <div class="language col-md-1">
         <img src={{language.image}} />
       </div>
     </ng-template>

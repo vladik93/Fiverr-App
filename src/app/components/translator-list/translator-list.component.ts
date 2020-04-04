@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TranslatorListComponent implements OnInit {
   oneAtATime = true;
-
+  customClass = 'customClass';
   constructor() { }
 
   ngOnInit() {
