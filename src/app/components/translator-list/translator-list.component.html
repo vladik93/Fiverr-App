@@ -6,8 +6,14 @@
                     <accordion-group [panelClass]="customClass">
                         <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
                             <img src="{{translator.image}}" style="height: 80px; width: 80px; box-shadow: 2px 2px 2px black; border-radius: 20%" class="float-left pull-left" />
+                            <h5 class="pull-left float-left mt-3 ml-2" style="color: black; border-bottom: 2px dashed white;">{{translator.name}}</h5>
+                            <img src="{{translator.lang_from}}" class="lang-from" />
+                            <span class="arrow-right"><img src="assets/images/arrow-right.png"  style="height: 15px;"/></span>
+                            <img src="{{translator.lang_to}}" class="lang-to" />
                         </button>
-                        This is just some content to illustrate fancy headings.
+                        <p>{{translator.description}}</p>
+                        <p class="price">{{translator.price}}$</p>
+                        <button class="btn btn-outline-light more-info">Info.</button>
                     </accordion-group>
                 </div>
             </div>
@@ -17,8 +23,14 @@
                     <accordion-group [panelClass]="customClass">
                         <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
                             <img src="{{translator.image}}" style="height: 80px; width: 80px; box-shadow: 2px 2px 2px black; border-radius: 20%" class="float-left pull-left" />
+                            <h5 class="pull-left float-left mt-3 ml-2" style="color: black; border-bottom: 2px dashed white;">{{translator.name}}</h5>
+                            <img src="{{translator.lang_from}}" class="lang-from" />
+                            <span class="arrow-right"><img src="assets/images/arrow-right.png"  style="height: 15px;"/></span>
+                            <img src="{{translator.lang_to}}" class="lang-to" />
                         </button>
-                        This is just some content to illustrate fancy headings.
+                        <p>{{translator.description}}</p>
+                        <p class="price">{{translator.price}}$</p>
+                        <button class="btn btn-outline-light more-info">Info.</button>
                     </accordion-group>
                 </div>
             </ng-template>

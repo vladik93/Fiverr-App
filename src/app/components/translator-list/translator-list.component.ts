@@ -10,15 +10,78 @@ export class TranslatorListComponent implements OnInit {
   customClass = 'customClass';
 
   translators = [
-    {name: 'Alejandro', image: 'assets/images/translator_pic.jpg', description: 'This is a profile description'},
-    {name: 'Maxim', image: 'assets/images/translator_pic2.jpg', description: 'This is a profile description'},
-    {name: 'Jack McBlack', image: 'assets/images/translator_pic3.jpg', description: 'This is a profile description'},
-    {name: 'Scary Woman', image: 'assets/images/translator_pic4.jpg', description: 'This is a profile description'},
-    {name: 'Alejandro', image: 'assets/images/translator_pic.jpg', description: 'This is a profile description'},
-    {name: 'Maxim', image: 'assets/images/translator_pic2.jpg', description: 'This is a profile description'},
-    {name: 'Jack McBlack', image: 'assets/images/translator_pic3.jpg', description: 'This is a profile description'},
-    {name: 'Alejandro', image: 'assets/images/translator_pic.jpg', description: 'This is a profile description'},
-    {name: 'Maxim', image: 'assets/images/translator_pic2.jpg', description: 'This is a profile description'},
+    {
+      name: 'Alejandro',
+      image: 'assets/images/translator_pic.jpg',
+      description: 'This is a profile descriptionasdjasoid asd askdjaklsdhlklsahdkjashdkjashkdjas',
+      lang_from: 'assets/images/flags/russian.jpg',
+      lang_to: 'assets/images/flags/spanish.jpg',
+      price: 200
+    },
+    {
+      name: 'Alejandro',
+      image: 'assets/images/translator_pic.jpg',
+      description: 'This is a profile description',
+      lang_from: 'assets/images/flags/not-specified2.png',
+      lang_to: 'assets/images/flags/spanish.jpg',
+      price: 300
+    },
+    {
+      name: 'Alejandro',
+      image: 'assets/images/translator_pic.jpg',
+      description: 'This is a profile description',
+      lang_from: 'assets/images/flags/russian.jpg',
+      lang_to: 'assets/images/flags/spanish.jpg',
+      price: 330
+    },
+    {
+      name: 'Alejandro',
+      image: 'assets/images/translator_pic.jpg',
+      description: 'This is a profile description',
+      lang_from: 'assets/images/flags/russian.jpg',
+      lang_to: 'assets/images/flags/spanish.jpg',
+      price: 500
+    },
+    {
+      name: 'Alejandro',
+      image: 'assets/images/translator_pic.jpg',
+      description: 'This is a profile description',
+      lang_from: 'assets/images/flags/russian.jpg',
+      lang_to: 'assets/images/flags/spanish.jpg',
+      price: 300
+    },
+    {
+      name: 'Alejandro',
+      image: 'assets/images/translator_pic.jpg',
+      description: 'This is a profile description',
+      lang_from: 'assets/images/flags/russian.jpg',
+      lang_to: 'assets/images/flags/spanish.jpg',
+      price: 120
+    },
+    {
+      name: 'Alejandro',
+      image: 'assets/images/translator_pic.jpg',
+      description: 'This is a profile description',
+      lang_from: 'assets/images/flags/russian.jpg',
+      lang_to: 'assets/images/flags/spanish.jpg',
+      price: 320
+    },
+    {
+      name: 'Alejandro',
+      image: 'assets/images/translator_pic.jpg',
+      description: 'This is a profile description',
+      lang_from: 'assets/images/flags/not-specified2.png',
+      lang_to: 'assets/images/flags/spanish.jpg',
+      price: 240
+    },
+    {
+      name: 'Alejandro Hulio',
+      image: 'assets/images/translator_pic.jpg',
+      description: 'This is a profile description',
+      lang_from: 'assets/images/flags/russian.jpg',
+      lang_to: 'assets/images/flags/spanish.jpg',
+      price: 50
+    }
   ];
 
   constructor() { }

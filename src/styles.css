@@ -15,12 +15,15 @@ body {
 
   .customClass > .card-header {
     border: none;
-    border-bottom: 1px solid #212529 ;
+    border-bottom: 1px dashed white;
     background-color: transparent;
   }
 
   .customClass  .panel-body {
       background: #343a40;
       color: white;
+      /* border-bottom: 1px dashed white; */
+      padding: 8px;
+      border-radius: 5px;
       
   }

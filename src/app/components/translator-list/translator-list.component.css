@@ -1,4 +1,37 @@
-/* accordion {
-    width: 30%;
-} */
+accordion-group {
+    position: relative;
+}
 
+.lang-from {
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    top: 65px;
+    right: 150px;
+    box-shadow: 2px 1px 2px white;
+    
+}
+
+.arrow-right {
+    position: absolute;
+    top: 63px;
+    right: 131px;
+}
+
+.lang-to {
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    top: 65px;
+    right: 100px;
+    box-shadow: 2px 1px 2px white;
+    
+}
+
+.price {
+    color: #90EE90;
+}
+
+.more-info {
+    margin-left: 227px;
+}
