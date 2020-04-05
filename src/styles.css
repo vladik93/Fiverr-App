@@ -10,7 +10,7 @@ body {
 .customClass   {
     background: transparent;
     border: none;
-    width: 400px;
+    width: 300px;
   }
 
   .customClass > .card-header {
