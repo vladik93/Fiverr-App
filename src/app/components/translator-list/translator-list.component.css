@@ -28,8 +28,13 @@ accordion-group {
     
 }
 
+.description {
+    font-weight: bold;
+}
+
 .price {
-    color: #90EE90;
+    color: #6B8E23;
+
 }
 
 .more-info {
