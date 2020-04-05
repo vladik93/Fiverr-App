@@ -1,0 +1,60 @@
+<accordion [isAnimated]="true" [closeOthers]="oneAtATime">
+    <div class="row">
+        <div class="col-md-3">
+            <accordion-group [panelClass]="customClass">
+                <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
+                    <img src="assets/images/translator_pic.jpg" style="height: 80px; width: 80px; box-shadow: 2px 2px 2px black; border-radius: 20%" class="float-left pull-left" />
+                    <h5 class="pull-left float-left mt-3 ml-2" style="color: black; text-decoration: underline;">Juan Mexicos</h5>
+                    <img src="assets/images/flags/spanish.jpg" class="shadow" style="width: 40px; height: 40px; position: absolute; top: 60px; left: 120px; border-radius: 5px" />
+                </button>
+                This is just some content to illustrate fancy headings.
+            </accordion-group>
+        </div>
+        <div class="col-md-3 offset-md-1">
+            <accordion-group [panelClass]="customClass">
+                <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
+                    <img src="assets/images/translator_pic2.jpg" style="height: 80px; width: 80px; box-shadow: 2px 2px 2px black; border-radius: 20%" class="float-left pull-left" />
+                    <h5 class="pull-left float-left mt-3 ml-2" style="color: black; text-decoration: underline">Boris Smirnoff</h5>
+                </button>
+                This is just some content to illustrate fancy headings.
+            </accordion-group>
+        </div>
+        <div class="col-md-3 offset-md-1">
+            <accordion-group [panelClass]="customClass">
+                <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
+                    <img src="assets/images/translator_pic.jpg" style="height: 80px; width: 80px; box-shadow: 2px 2px 2px black; border-radius: 20%" class="float-left pull-left" />
+                    <h5 class="pull-left float-left mt-3 ml-2" style="color: black; text-decoration: underline;">Juan Mexicos</h5>
+                    <img src="assets/images/flags/spanish.jpg" class="shadow" style="width: 40px; height: 40px; position: absolute; top: 60px; left: 120px; border-radius: 5px" />
+                </button>
+                This is just some content to illustrate fancy headings.
+            </accordion-group>
+        </div>
+        <div class="col-md-3">
+            <accordion-group [panelClass]="customClass">
+                <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
+                    <img src="assets/images/translator_pic2.jpg" style="height: 80px; width: 80px; box-shadow: 2px 2px 2px black; border-radius: 20%" class="float-left pull-left" />
+                    <h5 class="pull-left float-left mt-3 ml-2" style="color: black; text-decoration: underline">Boris Smirnoff</h5>
+                </button>
+                This is just some content to illustrate fancy headings.
+            </accordion-group>
+        </div>
+        <div class="col-md-3 offset-md-1">
+            <accordion-group [panelClass]="customClass">
+                <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
+                    <img src="assets/images/translator_pic2.jpg" style="height: 80px; width: 80px; box-shadow: 2px 2px 2px black; border-radius: 20%" class="float-left pull-left" />
+                    <h5 class="pull-left float-left mt-3 ml-2" style="color: black; text-decoration: underline">Boris Smirnoff</h5>
+                </button>
+                This is just some content to illustrate fancy headings.
+            </accordion-group>
+        </div>
+        <div class="col-md-3 offset-md-1">
+            <accordion-group [panelClass]="customClass">
+                <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
+                    <img src="assets/images/translator_pic2.jpg" style="height: 80px; width: 80px; box-shadow: 2px 2px 2px black; border-radius: 20%" class="float-left pull-left" />
+                    <h5 class="pull-left float-left mt-3 ml-2" style="color: black; text-decoration: underline">Boris Smirnoff</h5>
+                </button>
+                This is just some content to illustrate fancy headings.
+            </accordion-group>
+        </div>
+    </div>
+</accordion>
