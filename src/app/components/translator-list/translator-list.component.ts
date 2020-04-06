@@ -89,4 +89,8 @@ export class TranslatorListComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  onPageChange = (e) => {
+    console.log(e);
+  }
 }

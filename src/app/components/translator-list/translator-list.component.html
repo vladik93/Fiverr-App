@@ -1,23 +1,26 @@
-
 <div class="row">
-    <pagination [totalItems]="30" class="col-md-12 offset-md-3"></pagination>
+    <pagination class="pagination" [totalItems]="36" [itemsPerPage]="9" class="col-md-12 offset-md-4" (pageChanged)="onPageChange($event)"></pagination>
 </div>
-<accordion [isAnimated]="true" [closeOthers]="oneAtATime">
-    <div class="row">
-        <accordion-group class="col-md-4 mt-1" *ngFor="let translator of translators" [panelClass]="customClass">
-            <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
-                <img src="{{translator.image}}" style="height: 80px; width: 80px; box-shadow: 2px 2px 2px black; border-radius: 20%" class="float-left pull-left" />
-                <h5 class="mt-1 ml-1 name float-left pull-left">{{translator.name}}</h5>
-                    <img src="{{translator.lang_from}}" class="lang-from" />
-                    <span class="arrow-right"><img src="assets/images/arrow-right.png"  style="height: 15px;"/></span>
-                    <img src="{{translator.lang_to}}" class="lang-to" />
-            </button>
-            <p class="description ml-1">{{translator.description}}</p>
-            <p class="price ml-1">{{translator.price}}$</p>
-            <button class="btn btn-outline-light more-info offset-md-9">More</button>
-        </accordion-group>
+<div class="row">
+    <div class="col-md-12">
+        <accordion [isAnimated]="true" [closeOthers]="oneAtATime">
+            <div class="row mt-5">
+                <accordion-group class="col-md-4 mt-1" *ngFor="let translator of translators" [panelClass]="customClass">
+                    <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
+                        <img src="{{translator.image}}" style="height: 80px; width: 80px; box-shadow: 2px 2px 2px black; border-radius: 20%" class="float-left pull-left" />
+                        <h5 class="mt-1 ml-1 name float-left pull-left">{{translator.name}}</h5>
+                            <img src="{{translator.lang_from}}" class="lang-from" />
+                            <span class="arrow-right"><img src="assets/images/arrow-right.png"  style="height: 15px;"/></span>
+                            <img src="{{translator.lang_to}}" class="lang-to" />
+                    </button>
+                    <p class="description ml-1">{{translator.description}}</p>
+                    <p class="price ml-1">{{translator.price}}$</p>
+                    <button class="btn btn-outline-light more-info offset-md-9">More</button>
+                </accordion-group>
+            </div>
+        </accordion>
     </div>
-</accordion>
+</div>
 
 
 

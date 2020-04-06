@@ -26,6 +26,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
     CarouselModule.forRoot(),
     TooltipModule.forRoot(),
     AccordionModule.forRoot(),
-    PaginationModule.forRoot()
+    PaginationModule.forRoot(),
+    TabsModule.forRoot()
   ],
   providers: [
     LanguageService,
