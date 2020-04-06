@@ -75,7 +75,7 @@ export class TranslatorListComponent implements OnInit {
       price: 240
     },
     {
-      name: 'Alejandro Hulio',
+      name: 'Alejandro Huliosdfsdf',
       image: 'assets/images/translator_pic.jpg',
       description: 'This is a profile description',
       lang_from: 'assets/images/flags/russian.jpg',

@@ -10,7 +10,6 @@ body {
 .customClass   {
     background: transparent;
     border: none;
-    width: 300px;
   }
 
   .customClass > .card-header {
@@ -20,10 +19,9 @@ body {
   }
 
   .customClass  .panel-body {
-      background: #343a40;
-      color: white;
-      /* border: 1px dashed white; */
-      padding: 8px;
-      border-radius: 5px;
-      
+    background: #343a40;
+    color: white;
+    border-bottom: 1px dashed white;
+    padding: 3px;
+    border-radius: 5px;  
   }

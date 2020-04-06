@@ -25,6 +25,7 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     CollapseModule.forRoot(),
     CarouselModule.forRoot(),
     TooltipModule.forRoot(),
-    AccordionModule.forRoot()
+    AccordionModule.forRoot(),
+    PaginationModule.forRoot()
   ],
   providers: [
     LanguageService,

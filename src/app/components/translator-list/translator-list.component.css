@@ -1,36 +1,40 @@
+
+
 accordion-group {
     position: relative;
+}
+
+.name {
+    text-decoration: underline dashed white;
+    color: black;
 }
 
 .lang-from {
     position: absolute;
     width: 30px;
     height: 25px;
-    top: 65px;
-    right: 150px;
     box-shadow: 2px 1px 2px white;
+    top: 50px;
+    right: 200px;
     
 }
 
 .arrow-right {
     position: absolute;
-    top: 63px;
-    right: 131px;
+    top: 48px;
+    right: 180px;
+   
 }
 
 .lang-to {
     position: absolute;
     width: 30px;
     height: 25px;
-    top: 65px;
-    right: 100px;
     box-shadow: 2px 1px 2px white;
-    
+    top: 50px;
+    right: 148px;
 }
 
-.description {
-    font-weight: bold;
-}
 
 .price {
     color: #6B8E23;
@@ -38,5 +42,6 @@ accordion-group {
 }
 
 .more-info {
-    margin-left: 227px;
+   position: relative;
+   left: 20px;
 }
