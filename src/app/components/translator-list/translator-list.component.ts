@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./translator-list.component.css']
 })
 export class TranslatorListComponent implements OnInit {
+
+
   oneAtATime = true;
   customClass = 'customClass';
 
