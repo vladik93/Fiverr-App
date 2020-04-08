@@ -33,6 +33,17 @@ export class TranslatorService {
     });
   }
 
+  getTranslatorsByLanguageWithOffset = (lang_id, limit, offset) => {
+    const paramData = {
+      lang_to: lang_id,
+      limit: limit,
+      offset: offset
+    };
+    const body = new HttpParams({fromObject: paramData});
+
+    return this.http.get<Translator[]>(this.serverUrl, {params: body});
+  }
+
   changeCollapseBoolean = (boolean: boolean) => {
     this.collapseBoolSource.next(boolean);
   }
