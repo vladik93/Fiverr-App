@@ -37,11 +37,9 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
   getInitTranslatorsWithOffset = () => {
     this.subscription = this.route.queryParams.subscribe(params => {
       this.transService.getTranslatorsByLanguageWithOffset(params.lang, 9, 0)
-      .pipe(share())
       .subscribe(
         data => {
           if (data.length > 0) {
-            console.log(data);
             this.translators = data;
             this.currentPage = 0;
           }
@@ -58,7 +56,6 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
         (data) => {
           if (data.length > 0) {
             this.translators = data;
-            console.log(data);
           }
         },
         (error) => console.log(error)
