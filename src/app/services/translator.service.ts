@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject, BehaviorSubject } from 'rxjs';
+import { share } from 'rxjs/operators';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { Translator } from '../models/translator';
@@ -40,6 +41,7 @@ export class TranslatorService {
       offset: offset
     };
     const body = new HttpParams({fromObject: paramData});
+    console.log(body);
 
     return this.http.get<Translator[]>(this.serverUrl, {params: body});
   }

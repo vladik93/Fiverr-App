@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { TranslatorService } from '../../services/translator.service';
 import { Translator } from '../../models/translator';
 import { Subscription } from 'rxjs';
+import { share } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-translator-list',
@@ -17,6 +19,7 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
   langParam: String;
 
   currentPage = 0;
+  disabledPages = false;
 
   oneAtATime = true;
   customClass = 'customClass';
@@ -34,10 +37,14 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
   getInitTranslatorsWithOffset = () => {
     this.subscription = this.route.queryParams.subscribe(params => {
       this.transService.getTranslatorsByLanguageWithOffset(params.lang, 9, 0)
+      .pipe(share())
       .subscribe(
         data => {
-          this.translators = data;
-          console.log(data);
+          if (data.length > 0) {
+            console.log(data);
+            this.translators = data;
+            this.currentPage = 0;
+          }
         },
         error => console.log(error)
       );
@@ -49,7 +56,10 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
       this.transService.getTranslatorsByLanguageWithOffset(params.lang, 9, ((e.page - 1) * 9))
       .subscribe(
         (data) => {
-          this.translators = data;
+          if (data.length > 0) {
+            this.translators = data;
+            console.log(data);
+          }
         },
         (error) => console.log(error)
       );

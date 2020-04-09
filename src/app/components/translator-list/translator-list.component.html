@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-12 pagination" >
-    <pagination class="pagination-menu" [totalItems]="33" [(ngModel)]="currentPage" (pageChanged)="onPageChange($event)"></pagination>
+    <pagination class="pagination-menu" [totalItems]="33" [disabled]="disabledPages" [(ngModel)]="currentPage" (pageChanged)="onPageChange($event)"></pagination>
   </div>
 </div>
 <div class="row">
