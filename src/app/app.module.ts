@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 
 import { NavbarComponent } from './navbar/navbar.component';
+import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
@@ -33,6 +34,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
   declarations: [
     AppComponent,
     NavbarComponent,
+    SearchbarComponent,
     LanguageMenuComponent,
     FeatureTranslatorComponent,
     ReviewModalComponent,
