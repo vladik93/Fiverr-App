@@ -41,7 +41,7 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
         data => {
           if (data.length > 0) {
             this.translators = data;
-            this.currentPage = 0;
+            this.currentPage = 1;
           }
         },
         error => console.log(error)
