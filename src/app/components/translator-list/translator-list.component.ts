@@ -16,7 +16,7 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
 
   langParam: String;
 
-  currentPage = 1;
+  currentPage = 0;
 
   oneAtATime = true;
   customClass = 'customClass';
@@ -26,27 +26,31 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     // this.langParam = this.route.snapshot.queryParamMap.get('lang');
+    this.getInitTranslatorsWithOffset();
+  }
 
+
+
+  getInitTranslatorsWithOffset = () => {
     this.subscription = this.route.queryParams.subscribe(params => {
       this.transService.getTranslatorsByLanguageWithOffset(params.lang, 9, 0)
       .subscribe(
         data => {
           this.translators = data;
-          this.currentPage = 1;
+          console.log(data);
         },
         error => console.log(error)
       );
     });
   }
 
-
-
-
   onPageChange = (e) => {
     this.subscription = this.route.queryParams.subscribe(params => {
       this.transService.getTranslatorsByLanguageWithOffset(params.lang, 9, ((e.page - 1) * 9))
       .subscribe(
-        (data) => this.translators = data,
+        (data) => {
+          this.translators = data;
+        },
         (error) => console.log(error)
       );
     });
