@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslatorService } from '../../services/translator.service';
 import { Translator } from '../../models/translator';
 @Component({
@@ -10,7 +11,7 @@ export class SearchbarComponent implements OnInit {
   translators: Translator[];
   selected;
 
-  constructor(private tranService: TranslatorService) { }
+  constructor(private tranService: TranslatorService, private router: Router) { }
 
   ngOnInit() {
     this.fetchTranslatorsForTypeahead();
@@ -25,7 +26,8 @@ export class SearchbarComponent implements OnInit {
   }
 
   onSearchSelect = (e) => {
-    console.log(e);
+    this.router.navigate(['/translators', e.item.id]);
+    this.selected = null;
   }
 
 }

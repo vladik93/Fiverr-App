@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { TranslatorListComponent} from './components/translator-list/translator-list.component';
+import { TranslatorPageComponent } from './components/translator-page/translator-page.component';
 
 
 const routes: Routes = [
   { path: '', component: HomePageComponent, pathMatch: 'full' },
-  { path: 'translators', component: TranslatorListComponent, pathMatch: 'full' }
+  { path: 'translators', component: TranslatorListComponent, pathMatch: 'full' },
+  { path: 'translators/:id', component: TranslatorPageComponent, pathMatch: 'full'}
 ];
 
 @NgModule({

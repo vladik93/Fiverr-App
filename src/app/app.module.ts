@@ -16,6 +16,7 @@ import { HighlightLanguageComponent } from './components/highlight-language/high
 import { ReviewModalComponent } from './components/review-modal/review-modal.component';
 import { FooterComponent } from './footer/footer.component';
 import { TranslatorListComponent } from './components/translator-list/translator-list.component';
+import { TranslatorPageComponent } from './components/translator-page/translator-page.component';
 
 
 
@@ -43,6 +44,7 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
     FooterComponent,
     TranslatorListComponent,
     HomePageComponent,
+    TranslatorPageComponent,
   ],
   imports: [
     BrowserModule,
