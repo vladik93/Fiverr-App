@@ -29,6 +29,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     TooltipModule.forRoot(),
     AccordionModule.forRoot(),
     PaginationModule.forRoot(),
-    TabsModule.forRoot()
+    TabsModule.forRoot(),
+    TypeaheadModule.forRoot()
   ],
   providers: [
     LanguageService,

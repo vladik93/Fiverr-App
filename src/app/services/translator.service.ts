@@ -8,7 +8,6 @@ import { Translator } from '../models/translator';
   providedIn: 'root'
 })
 export class TranslatorService {
-
   constructor(private http: HttpClient) { }
 
   serverUrl = 'http://localhost:3000/api/translators';
@@ -19,7 +18,9 @@ export class TranslatorService {
   private collapseBoolSource = new BehaviorSubject(true);
   currentBoolean$ = this.collapseBoolSource.asObservable();
 
-
+  changeCollapseBoolean = (boolean: boolean) => {
+    this.collapseBoolSource.next(boolean);
+  }
 
   getTranslatorsByLanguage = (lang_id, quant) => {
     const paramData = {
@@ -44,7 +45,13 @@ export class TranslatorService {
     return this.http.get<Translator[]>(this.serverUrl, {params: body});
   }
 
-  changeCollapseBoolean = (boolean: boolean) => {
-    this.collapseBoolSource.next(boolean);
+  getTranslatorsForTypeahead = () => {
+    const paramData = {
+      typeahead: 'true'
+    };
+    const body = new HttpParams({fromObject: paramData});
+
+    return this.http.get<Translator[]>(this.serverUrl, {params: body});
   }
+
 }

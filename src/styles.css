@@ -21,7 +21,7 @@ body {
   .customClass  .panel-body {
     background: #343a40;
     color: white;
-    border-bottom: 3px solid #e6e6ff;
+    border-bottom: 2px solid #e6e6ff;
     border-left: 1px solid white;
     border-right: 2px solid #e6e6ff;
     padding: 10px;

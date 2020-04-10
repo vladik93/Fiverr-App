@@ -1,3 +1,13 @@
-<p>
-  searchbar works!
-</p>
+<form class="form-inline">
+  <input [(ngModel)]="selected" [typeahead]="translators"  [isAnimated]="true" [optionsListTemplate]="customListTemplate"
+  class="form-control mr-2" type="search" placeholder="Search" name="translator" aria-label="Search">
+
+  <ng-template #customListTemplate let-matches="matches" let-query="query" let-typeaheadTemplateMethods>
+      <ul class="custom-list-group">
+        <li  class="custom-list-group-item" *ngFor="let match of matches" (mouseenter)="typeaheadTemplateMethods.selectActive(match)">
+          {{customListTemplate}}
+        </li>
+      </ul>
+  </ng-template>
+</form>
+
