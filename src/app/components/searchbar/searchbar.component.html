@@ -2,7 +2,7 @@
   <div class="form-group">
     <input [(ngModel)]="selected" autocomplete="off" [typeahead]="translators" 
     typeaheadOptionField="value" [typeaheadScrollable]="true" [typeaheadOptionsInScrollableView]="19"  [isAnimated]="true"
-    class="form-control mr-2" type="search" placeholder="Search" name="translator" aria-label="Search" />
+    class="form-control mr-2" type="search" placeholder="Search" name="translator" aria-label="Search" (typeaheadOnSelect)="onSearchSelect($event)" />
   </div>
 </form>
 

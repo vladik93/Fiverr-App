@@ -24,4 +24,8 @@ export class SearchbarComponent implements OnInit {
     );
   }
 
+  onSearchSelect = (e) => {
+    console.log(e);
+  }
+
 }
