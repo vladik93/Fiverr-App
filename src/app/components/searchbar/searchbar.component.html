@@ -1,13 +1,17 @@
 <form class="form-inline">
-  <input [(ngModel)]="selected" [typeahead]="translators"  [isAnimated]="true" [optionsListTemplate]="customListTemplate"
-  class="form-control mr-2" type="search" placeholder="Search" name="translator" aria-label="Search">
-
-  <ng-template #customListTemplate let-matches="matches" let-query="query" let-typeaheadTemplateMethods>
-      <ul class="custom-list-group">
-        <li  class="custom-list-group-item" *ngFor="let match of matches" (mouseenter)="typeaheadTemplateMethods.selectActive(match)">
-          {{customListTemplate}}
-        </li>
-      </ul>
-  </ng-template>
+  <div class="form-group">
+    <input [(ngModel)]="selected" autocomplete="off" [typeahead]="translators" 
+    typeaheadOptionField="value" [typeaheadScrollable]="true" [typeaheadOptionsInScrollableView]="19"  [isAnimated]="true"
+    class="form-control mr-2" type="search" placeholder="Search" name="translator" aria-label="Search" />
+  </div>
 </form>
 
+
+<!-- <ng-template #customItemTemplate let-model="item" let-index="index">
+    <p>{{model.name }} ( {{model.from_code ? (model.from_code | uppercase) : '?' }} - {{model.to_code | uppercase}})</p>
+      <ul class="custom-list-group">
+        <li  class="custom-list-group-item" *ngFor="let match of matches">
+          {{customListTemplate}}
+        </li>
+      </ul> -->
+  <!-- </ng-template> -->

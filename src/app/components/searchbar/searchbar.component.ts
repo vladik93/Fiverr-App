@@ -14,7 +14,6 @@ export class SearchbarComponent implements OnInit {
 
   ngOnInit() {
     this.fetchTranslatorsForTypeahead();
-    console.log(this.translators);
   }
 
   fetchTranslatorsForTypeahead = () => {

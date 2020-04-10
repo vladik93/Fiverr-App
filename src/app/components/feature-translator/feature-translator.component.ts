@@ -16,6 +16,11 @@ export class FeatureTranslatorComponent implements OnInit, OnDestroy {
   constructor(private tranService: TranslatorService) { }
 
   ngOnInit() {
+    this.fetchFeatureTranslator();
+  }
+
+
+  fetchFeatureTranslator = () => {
     this.subscription = this.tranService.featureTranslator$
     .subscribe(
       data => this.translator = data[0]
