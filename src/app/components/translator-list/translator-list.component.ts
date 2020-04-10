@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TranslatorService } from '../../services/translator.service';
 import { Translator } from '../../models/translator';
 import { Subscription } from 'rxjs';
@@ -25,7 +25,7 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
   customClass = 'customClass';
 
 
-  constructor(private transService: TranslatorService, private route: ActivatedRoute) { }
+  constructor(private transService: TranslatorService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     // this.langParam = this.route.snapshot.queryParamMap.get('lang');
@@ -61,6 +61,10 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
         (error) => console.log(error)
       );
     });
+  }
+
+  onMoreButtonClick = (id) => {
+    this.router.navigate(['/translators', id], );
   }
 
   ngOnDestroy() {

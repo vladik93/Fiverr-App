@@ -15,9 +15,9 @@
                             <span class="arrow-right"><img src="assets/images/arrow-right.png"  style="height: 15px;"/></span>
                             <img src="{{translator.image_to}}" class="lang-to" />
                     </button>
-                    <p class="description ml-1">{{translator.description}}</p>
+                    <p class="description ml-1">{{translator.description.substring(0, 150)}}...</p>
                     <p class="price ml-1">{{translator.price}}$</p>
-                    <button class="btn btn-outline-light more-info offset-md-9">More</button>
+                    <button class="btn btn-outline-light more-info offset-md-9" (click)="onMoreButtonClick(translator.id)">More</button>
                 </accordion-group>
             </div>
         </accordion>

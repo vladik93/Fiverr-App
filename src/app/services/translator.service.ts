@@ -54,4 +54,8 @@ export class TranslatorService {
     return this.http.get<Translator[]>(this.serverUrl, {params: body});
   }
 
+  getTranslatorById = (id) => {
+    return this.http.get<Translator>(`${this.serverUrl}/${id}`);
+  }
+
 }
