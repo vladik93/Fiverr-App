@@ -11,27 +11,29 @@ import { Translator } from '../../models/translator';
 })
 export class TranslatorPageComponent implements OnInit, OnDestroy {
   translator: Translator;
-  paramId;
+  // paramId;
 
   subscription: Subscription;
 
   constructor(private tranService: TranslatorService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.subscription = this.route.params.subscribe(params => {
-      this.paramId = params.id;
-    });
+    // this.subscription = this.route.params.subscribe(params => {
+    //   this.paramId = params.id;
+    // });
     this.fetchTranslatorById();
   }
 
   fetchTranslatorById = () => {
-    this.tranService.getTranslatorById(this.paramId)
-    .subscribe(
-      data => {
-        this.translator = data[0];
-      },
-      error => console.log(error)
-    );
+    this.subscription = this.route.params.subscribe(params => {
+      this.tranService.getTranslatorById(params.id)
+      .subscribe(
+        data => {
+          this.translator = data[0];
+        },
+        error => console.log(error)
+      );
+    });
   }
 
   ngOnDestroy() {
