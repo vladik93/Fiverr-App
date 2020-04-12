@@ -36,7 +36,7 @@
       <li class="nav-item mt-2 ml-2">
         <form (ngSubmit)="onSubscriptFormSubmit(subscriptForm)" #subscriptForm="ngForm">
           <div id="alert-box" *ngIf="alert">
-            <alert type="success" [dismissible]="dismissible" id="alert" (onClosed)="onAlertClosed(alert)" class="shadow">{{alert ? alert : 'Thank you for subsckibing' }}</alert>
+            <alert type="light" [dismissible]="dismissible" [dismissOnTimeout]="2000" id="alert" (onClosed)="onAlertClosed(alert)" class="shadow">{{alert ? alert : 'Thank you for subsckibing' }}</alert>
           </div>
           <div class="form-group">
             <input type="email" class="form-control" placeholder="E-mail Here..." [(ngModel)]="subscription.email" name="email" (input)="onEmailInput()" />
