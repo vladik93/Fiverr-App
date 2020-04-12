@@ -2,3 +2,10 @@
     min-height: 250px;
     top: 180px;
 }
+
+#alert-box {
+    position: absolute;
+    right: 70px;
+    top: 30px;
+}
+

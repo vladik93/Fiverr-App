@@ -31,6 +31,7 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+import { AlertModule } from 'ngx-bootstrap/alert';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
     AccordionModule.forRoot(),
     PaginationModule.forRoot(),
     TabsModule.forRoot(),
-    TypeaheadModule.forRoot()
+    TypeaheadModule.forRoot(),
+    AlertModule.forRoot()
   ],
   providers: [
     LanguageService,

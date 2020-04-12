@@ -13,22 +13,32 @@ export class FooterComponent implements OnInit {
     email: ''
   };
 
+  alert;
+  dismissible = true;
+
   constructor(private subscrService: SubscriptionService) { }
 
   ngOnInit() {
   }
 
   onSubscriptFormSubmit = (form) => {
-    // console.log(form.value.email);
+    console.log(form.value.email);
     this.subscrService.addSubscription(form.value.email)
     .subscribe(
       data => {
-        console.log(data);
         this.subscription.email = '';
+        this.alert = 'Thank you for subscribing!';
       },
       error => console.log(error)
     );
+  }
 
+  onAlertClosed = (alert) => {
+    this.alert = null;
+  }
+
+  onEmailInput = () => {
+    this.alert = null;
   }
 
 }

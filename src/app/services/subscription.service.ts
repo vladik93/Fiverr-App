@@ -18,8 +18,8 @@ export class SubscriptionService {
 
   constructor(private http: HttpClient) { }
 
-  addSubscription = (subscription: Subscription) => {
-    return this.http.post(this.serverUrl, subscription.email, httpOptions);
+  addSubscription = (email: Subscription) => {
+    return this.http.post(this.serverUrl, {email: email});
   }
 
 
