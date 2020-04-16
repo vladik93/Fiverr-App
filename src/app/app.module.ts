@@ -17,6 +17,7 @@ import { ReviewModalComponent } from './components/review-modal/review-modal.com
 import { FooterComponent } from './footer/footer.component';
 import { TranslatorListComponent } from './components/translator-list/translator-list.component';
 import { TranslatorPageComponent } from './components/translator-page/translator-page.component';
+import { AdsModalComponent } from './components/ads-modal/ads-modal.component';
 
 
 
@@ -32,6 +33,7 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 import { AlertModule } from 'ngx-bootstrap/alert';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,7 @@ import { AlertModule } from 'ngx-bootstrap/alert';
     TranslatorListComponent,
     HomePageComponent,
     TranslatorPageComponent,
+    AdsModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,7 +64,8 @@ import { AlertModule } from 'ngx-bootstrap/alert';
     PaginationModule.forRoot(),
     TabsModule.forRoot(),
     TypeaheadModule.forRoot(),
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    ModalModule.forRoot()
   ],
   providers: [
     LanguageService,
