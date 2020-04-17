@@ -1,0 +1,28 @@
+/* .ad-image {
+    width: 100%;
+    height: 500px;
+} */
+
+.modal-body {
+    background-size: cover;
+    height: 630px;
+    /* outline: white solid 5px; */
+    
+}
+
+.close-button {
+    font-size: 50px;
+    transform: translateY(-20px);
+    opacity: 100%;
+}
+
+.ad-content {
+    font-size: 40px;
+    margin-top: 70px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 1px black;
+    padding: 40px;
+}
+
+
