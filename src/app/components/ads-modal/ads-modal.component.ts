@@ -49,9 +49,9 @@ export class AdsModalComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    // if (!sessionStorage.getItem('popup')) {
+    if (!sessionStorage.getItem('popup')) {
       this.showModal();
-    // }
+    }
   }
 
 
