@@ -23,6 +23,7 @@ import { AdsModalComponent } from './components/ads-modal/ads-modal.component';
 
 import { LanguageService } from './services/language.service';
 import { TranslatorService } from './services/translator.service';
+import { AdService } from './services/ad.service';
 
 
 import { CollapseModule } from 'ngx-bootstrap/collapse';
@@ -69,7 +70,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
   ],
   providers: [
     LanguageService,
-    TranslatorService
+    TranslatorService,
+    AdService
   ],
   bootstrap: [AppComponent]
 })

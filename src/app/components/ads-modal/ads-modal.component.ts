@@ -1,6 +1,8 @@
 import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
 import { ModalDirective } from 'ngx-bootstrap/modal';
 import { Router } from '@angular/router';
+import { AdService } from '../../services/ad.service';
+import { Ad } from 'src/app/models/ad';
 
 @Component({
   selector: 'app-ads-modal',
@@ -30,6 +32,8 @@ export class AdsModalComponent implements OnInit, AfterViewInit {
     }
   ];
 
+  ad: Ad;
+
   showModal(): void {
     this.isModalShown = true;
   }
@@ -43,15 +47,24 @@ export class AdsModalComponent implements OnInit, AfterViewInit {
     sessionStorage.setItem('popup', 'false');
   }
 
-  constructor(private router: Router) { }
+  constructor(private adService: AdService, private router: Router) { }
 
   ngOnInit() {
+    this.fetchDynamicAd();
   }
 
   ngAfterViewInit() {
-    if (!sessionStorage.getItem('popup')) {
+    // if (!sessionStorage.getItem('popup')) {
       this.showModal();
-    }
+    // }
+  }
+
+  fetchDynamicAd = () => {
+    this.adService.getAdWithCounter()
+    .subscribe(
+      data => this.ad = data[0],
+      error => console.log(error)
+    );
   }
 
 
