@@ -1,0 +1,29 @@
+input {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: none !important;
+    border-bottom: 3px solid white !important;
+
+}
+
+input:focus {
+    outline: none;
+    box-shadow: none;
+    border-bottom: 3px solid #cce6ff !important;
+}
+
+.form-row {
+    margin-top: 60px;
+}
+
+::placeholder {
+    color: white;
+}
+
+button {
+    margin-top: 40px;
+}
+
+#text-segment {
+    background-color: white;
+    
+}

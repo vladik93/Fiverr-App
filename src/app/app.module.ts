@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { TranslatorListComponent } from './components/translator-list/translator-list.component';
 import { TranslatorPageComponent } from './components/translator-page/translator-page.component';
 import { AdsModalComponent } from './components/ads-modal/ads-modal.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 
@@ -50,6 +51,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     HomePageComponent,
     TranslatorPageComponent,
     AdsModalComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
