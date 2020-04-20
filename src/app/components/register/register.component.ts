@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { passwordConfirming } from '../../custom-validators/password-confirm';
 
 @Component({
   selector: 'app-register',
@@ -20,18 +21,18 @@ export class RegisterComponent implements OnInit {
       password: new FormControl('', [ Validators.required ]),
       password_confirm: new FormControl('', [ Validators.required]),
       recieve_emails: new FormControl(false)
-    }, { validators: this.passwordConfirming});
+    }, { validators: passwordConfirming});
   }
 
   onDisclaimerCheck = (e) => {
     this.disclaimerChecked = e.currentTarget.checked;
   }
 
-  passwordConfirming = (c: AbstractControl) => {
-    if (c.get('password').value !== c.get('password_confirm').value) {
-      return {invalid: true};
-    }
-  }
+  // passwordConfirming = (c: AbstractControl) => {
+  //   if (c.get('password').value !== c.get('password_confirm').value) {
+  //     return {invalid: true};
+  //   }
+  // }
 
   onRegisterSubmit = () => {
     if (this.registerForm.valid) {
