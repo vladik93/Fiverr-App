@@ -1,18 +1,24 @@
 input {
     background-color: rgba(0, 0, 0, 0) !important;
     border: none !important;
-    border-bottom: 3px solid white !important;
+    border-bottom: 3px double white !important;
 
 }
 
 input:focus {
     outline: none;
     box-shadow: none;
-    border-bottom: 3px solid #cce6ff !important;
+    border-bottom: 3px solid white !important;
 }
 
-.form-row {
+
+.form-row, .form-check {
     margin-top: 60px;
+}
+
+.form-check-label {
+    color: white;
+    border-bottom: 3px double white;
 }
 
 ::placeholder {
@@ -20,10 +26,17 @@ input:focus {
 }
 
 button {
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 #text-segment {
     background-color: white;
     
+}
+
+#disclaimer {
+    text-shadow: 2px 1px 1px black;
+    margin-top: 40px;
+    color: white;
+    border-left: 2px solid white;
 }

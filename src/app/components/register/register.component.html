@@ -1,21 +1,45 @@
-<form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-        <input type="text" class="form-control" placeholder="Username" />
-    </div>
+<div class="row">
+  <div class="col-md-6">
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+            <input type="text" class="form-control" placeholder="Username" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+            <input type="email" class="form-control" placeholder="E-mail" /> 
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <input type="password" class="form-control" placeholder="Password" />
+        </div>
+        <div class="form-group col-md-6">
+          <input type="password" class="form-control" placeholder="Confirm Password" />
+        </div>
+      </div>
+      <div class="form-check form-check-inline mr-5">
+        <input class="form-check-input" id="disclaimer-check" type="checkbox" value="" />
+        <label class="form-check-label" for="disclaimer-check">
+            Read Disclaimer
+        </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" id="email-check" type="checkbox" value="" />
+        <label class="form-check-label" for="email-check">
+            Recieve E-mails
+        </label>
+      </div>
+      <button class="btn btn-outline-light d-block">Submit</button>
+    </form>
   </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-        <input type="email" class="form-control" placeholder="E-mail" /> 
-    </div>
+  <div class="col-md-4 offset-md-2" id="disclaimer">
+    <h1 class="title">Disclaimer</h1>
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris augue.
+       Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+       Maecenas viverra quam sodales purus egestas faucibus. Sed facilisis ipsum in maximus tincidunt. 
+       Nam vel ornare nisl. Duis ut fringilla leo, luctus vulputate arcu.
+    </p>
   </div>
-  <div class="form-row">
-    <div class="form-group col-md-3">
-      <input type="password" class="form-control" placeholder="Password" />
-    </div>
-    <div class="form-group col-md-3">
-      <input type="password" class="form-control" placeholder="Confirm Password" />
-    </div>
-  </div>
-  <button class="btn btn-outline-light">Submit</button>
-</form>
+</div>
