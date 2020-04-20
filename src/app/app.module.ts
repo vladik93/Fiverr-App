@@ -25,6 +25,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { LanguageService } from './services/language.service';
 import { TranslatorService } from './services/translator.service';
 import { AdService } from './services/ad.service';
+import { AuthService } from './services/auth.service';
 
 
 import { CollapseModule } from 'ngx-bootstrap/collapse';
@@ -74,7 +75,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
   providers: [
     LanguageService,
     TranslatorService,
-    AdService
+    AdService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

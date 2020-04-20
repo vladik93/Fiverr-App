@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { passwordConfirming } from '../../custom-validators/password-confirm';
 
@@ -12,7 +13,7 @@ export class RegisterComponent implements OnInit {
 
   disclaimerChecked = false;
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
     this.registerForm = new FormGroup({
@@ -36,7 +37,17 @@ export class RegisterComponent implements OnInit {
 
   onRegisterSubmit = () => {
     if (this.registerForm.valid) {
-      console.log(this.registerForm.value);
+      const body = {
+        username: this.registerForm.get('username').value,
+        email: this.registerForm.get('email').value,
+        password: this.registerForm.get('password').value
+      };
+      console.log(body);
+      this.authService.registerUser(body)
+      .subscribe(
+        data => console.log(data),
+        error => console.log(error)
+      );
     } else {
       console.log('Form is invalid');
     }
