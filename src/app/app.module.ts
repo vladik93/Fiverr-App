@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { NavbarComponent } from './navbar/navbar.component';
@@ -59,6 +59,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     // NGX-BOOTSTRAP COMPONENTS
     CollapseModule.forRoot(),
     CarouselModule.forRoot(),
