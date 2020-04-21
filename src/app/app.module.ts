@@ -19,6 +19,7 @@ import { TranslatorListComponent } from './components/translator-list/translator
 import { TranslatorPageComponent } from './components/translator-page/translator-page.component';
 import { AdsModalComponent } from './components/ads-modal/ads-modal.component';
 import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -53,6 +54,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     TranslatorPageComponent,
     AdsModalComponent,
     RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

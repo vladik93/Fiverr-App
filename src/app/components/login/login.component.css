@@ -1,0 +1,57 @@
+#collapseLogin {
+    position: absolute;
+    right: -16px;
+    width: 375px;
+    height: 185px;
+    top: 51px;
+    /* border-left: 1px dashed white;
+    border-bottom: 1px dashed white; */
+    /* outline: 1px dashed white; */
+    border-top: 1px dotted white;
+    border-bottom: 1px dotted white;
+    z-index: 1000;
+    border-bottom-left-radius: 5px;
+    /* border-bottom-right-radius: 5px; */
+    box-shadow: 2px 0px 1px white inset;
+    /* padding: 15px; */
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+input {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: none !important;
+    border-bottom: 3px double white !important;
+    color: white !important;
+}
+
+::placeholder {
+    color: white;
+}
+
+button {
+    position: relative;
+    left: 300px;
+    bottom: 5px;
+    box-shadow: 2px 1px 1px white;
+}
+
+.form-check {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    color: white;
+}
+
+.form-check-input {
+    position: relative;
+}
+
+
+input:focus {
+    outline: none;
+    box-shadow: none;
+    border-bottom: 3px solid white !important;
+}
