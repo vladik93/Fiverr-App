@@ -15,4 +15,12 @@ export class AuthService {
   registerUser = (body) => {
     return this.http.post<User>(`${this.serverUrl}/register`, body);
   }
+
+  loginUser = (body) => {
+    return this.http.post<any>(`${this.serverUrl}/login`, body);
+  }
+
+  loggedIn = () => {
+    return !!localStorage.getItem('token'); // !! (double negation) returns either true or false if value exists or not
+  }                                        //  instead of just returning the value (i.e. the token)
 }

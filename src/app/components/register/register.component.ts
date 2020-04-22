@@ -29,12 +29,6 @@ export class RegisterComponent implements OnInit {
     this.disclaimerChecked = e.currentTarget.checked;
   }
 
-  // passwordConfirming = (c: AbstractControl) => {
-  //   if (c.get('password').value !== c.get('password_confirm').value) {
-  //     return {invalid: true};
-  //   }
-  // }
-
   onRegisterSubmit = () => {
     if (this.registerForm.valid) {
       const body = {

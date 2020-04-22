@@ -22,6 +22,12 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 
 
+// Authenticated Components
+import { LoggedComponent } from './components/logged/logged.component';
+
+// Guards
+import { AuthGuard } from './guards/auth.guard';
+
 
 import { LanguageService } from './services/language.service';
 import { TranslatorService } from './services/translator.service';
@@ -55,6 +61,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     AdsModalComponent,
     RegisterComponent,
     LoginComponent,
+    LoggedComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,7 +85,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     LanguageService,
     TranslatorService,
     AdService,
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
