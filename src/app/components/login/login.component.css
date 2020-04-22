@@ -9,7 +9,7 @@
     /* outline: 1px dashed white; */
     border-top: 1px dotted white;
     border-bottom: 1px dotted white;
-    z-index: 1000;
+    z-index: 10000;
     border-bottom-left-radius: 5px;
     /* border-bottom-right-radius: 5px; */
     box-shadow: 2px 0px 1px white inset;
