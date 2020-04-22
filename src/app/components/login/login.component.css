@@ -7,12 +7,12 @@
     /* border-left: 1px dashed white;
     border-bottom: 1px dashed white; */
     /* outline: 1px dashed white; */
-    border-top: 1px dotted white;
-    border-bottom: 1px dotted white;
+    border-top: 1px dotted gray;
+    /* border-bottom: 1px dotted white; */
     z-index: 10000;
     border-bottom-left-radius: 5px;
     /* border-bottom-right-radius: 5px; */
-    box-shadow: 2px 0px 1px white inset;
+    box-shadow: -4px 2px 3px 0px;
     /* padding: 15px; */
 }
 
@@ -29,13 +29,14 @@ input {
 
 ::placeholder {
     color: white;
+    text-shadow: 2px 2px 1px black;
 }
 
 button {
     position: relative;
     left: 300px;
     bottom: 5px;
-    box-shadow: 2px 1px 1px white;
+    box-shadow: 0px 2px 3px white;
 }
 
 .form-check {
@@ -47,6 +48,10 @@ button {
 
 .form-check-input {
     position: relative;
+}
+
+.form-check-label {
+    text-shadow: 2px 2px 1px black;
 }
 
 
