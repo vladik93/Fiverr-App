@@ -23,4 +23,8 @@ export class AuthService {
   loggedIn = () => {
     return !!localStorage.getItem('token'); // !! (double negation) returns either true or false if value exists or not
   }                                        //  instead of just returning the value (i.e. the token)
+
+  getToken = () => {
+    return localStorage.getItem('token');
+  }
 }
