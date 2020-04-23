@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { User } from '../models/user';
 
 const headers = new HttpHeaders().set('Content-Type', 'application/json');
@@ -10,7 +11,7 @@ const headers = new HttpHeaders().set('Content-Type', 'application/json');
 export class AuthService {
   serverUrl = 'http://localhost:3000/api/auth';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   registerUser = (body) => {
     return this.http.post<User>(`${this.serverUrl}/register`, body);
@@ -26,5 +27,10 @@ export class AuthService {
 
   getToken = () => {
     return localStorage.getItem('token');
+  }
+
+  logoutUser = () => {
+    localStorage.removeItem('token');
+    this.router.navigate(['']);
   }
 }

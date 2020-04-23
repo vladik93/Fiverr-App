@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../services/language.service';
 import { TranslatorService } from '../services/translator.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +13,8 @@ export class NavbarComponent implements OnInit {
 
   constructor(
     private languageService: LanguageService,
-    private tranService: TranslatorService
+    private tranService: TranslatorService,
+    private authService: AuthService
     ) { }
 
   ngOnInit() {
