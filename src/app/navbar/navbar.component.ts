@@ -26,13 +26,11 @@ export class NavbarComponent implements OnInit {
   }
 
   fetchUserData = () => {
-    if (this.authService.loggedIn()) {
-      this.loggedService.getLoggedUserData()
-      .subscribe(
-        data => this.userData = data,
-        error => console.log(error)
-      );
-    }
+    this.loggedService.getLoggedUserData()
+    .subscribe(
+      data => this.userData = data,
+      error => console.log(error)
+    );
   }
 
 
