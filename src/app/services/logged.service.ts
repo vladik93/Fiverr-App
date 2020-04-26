@@ -9,7 +9,7 @@ export class LoggedService {
 
   constructor(private http: HttpClient) { }
 
-  getLoggedData = () => {
-    return this.http.get(this.serverUrl);
+  getLoggedUserData = () => {
+    return this.http.get<any>(`${this.serverUrl}/userInfo`);
   }
 }

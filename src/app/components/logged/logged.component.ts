@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./logged.component.css']
 })
 export class LoggedComponent implements OnInit {
-  data;
+  userData;
 
   constructor(private loggedService: LoggedService, private router: Router) { }
 
@@ -18,17 +18,16 @@ export class LoggedComponent implements OnInit {
   }
 
   fetchLoggedData = () => {
-    this.loggedService.getLoggedData()
-    .subscribe(
-      data => this.data = data,
-      error => {
-        if (error instanceof HttpErrorResponse) {
-          if (error.status === 403) {
-            this.router.navigate(['']);
-          }
-        }
-      }
-    );
-  }
-
-}
+  //   this.loggedService.getLoggedUserData()
+  //   .subscribe(
+  //     data => this.userData = data,
+  //     error => {
+  //       if (error instanceof HttpErrorResponse) {
+  //         if (error.status === 401) {
+  //           this.router.navigate(['']);
+  //         }
+  //       }
+  //     }
+  //   );
+  // }
+  }}

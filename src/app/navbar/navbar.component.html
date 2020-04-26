@@ -30,6 +30,9 @@
           <app-login></app-login>
           <!-- <a class="nav-link" href="#">Login</a> -->
         </li>
+        <li class="nav-item" *ngIf="userData">
+          <a class="nav-link" *ngIf="authService.loggedIn()" style="cursor: pointer;">{{userData.username}}</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" *ngIf="authService.loggedIn()" style="cursor: pointer" (click)="authService.logoutUser()">Logout</a> 
         </li>
