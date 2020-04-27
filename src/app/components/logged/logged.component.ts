@@ -18,16 +18,16 @@ export class LoggedComponent implements OnInit {
   }
 
   fetchLoggedData = () => {
-  //   this.loggedService.getLoggedUserData()
-  //   .subscribe(
-  //     data => this.userData = data,
-  //     error => {
-  //       if (error instanceof HttpErrorResponse) {
-  //         if (error.status === 401) {
-  //           this.router.navigate(['']);
-  //         }
-  //       }
-  //     }
-  //   );
-  // }
-  }}
+    this.loggedService.getLoggedUserData()
+    .subscribe(
+      data => this.userData = data,
+      error => {
+        if (error instanceof HttpErrorResponse) {
+          if (error.status === 401) {
+            this.router.navigate(['']);
+          }
+        }
+      }
+    );
+  }
+}

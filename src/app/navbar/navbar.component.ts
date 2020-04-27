@@ -11,7 +11,7 @@ import { LoggedService } from '../services/logged.service';
 })
 export class NavbarComponent implements OnInit {
   isCollapsed;
-  userData;
+  username = localStorage.getItem('username');
 
   constructor(
     private languageService: LanguageService,
