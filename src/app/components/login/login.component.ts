@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { LoggedService } from 'src/app/services/logged.service';
 
 @Component({
   selector: 'app-login',
@@ -11,8 +12,9 @@ import { AuthService } from '../../services/auth.service';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   isCollapsed = true;
+  user;
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private loggedService: LoggedService,  private router: Router) { }
 
   ngOnInit() {
     this.loginForm = new FormGroup({
@@ -31,7 +33,11 @@ export class LoginComponent implements OnInit {
       .subscribe(
         data => {
           localStorage.setItem('token', data.token);
-          localStorage.setItem('username', data.username);
+          // localStorage.setItem('username', data.username);
+          this.loggedService.userData$.subscribe(
+            res => console.log(res),
+            error => console.log(error)
+          );
           this.isCollapsed = true;
           this.loginForm.reset();
           this.router.navigate(['/logged']);

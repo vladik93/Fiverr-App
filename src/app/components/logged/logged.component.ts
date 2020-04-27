@@ -14,20 +14,20 @@ export class LoggedComponent implements OnInit {
   constructor(private loggedService: LoggedService, private router: Router) { }
 
   ngOnInit() {
-    this.fetchLoggedData();
+    // this.fetchLoggedData();
   }
 
-  fetchLoggedData = () => {
-    this.loggedService.getLoggedUserData()
-    .subscribe(
-      data => this.userData = data,
-      error => {
-        if (error instanceof HttpErrorResponse) {
-          if (error.status === 401) {
-            this.router.navigate(['']);
-          }
-        }
-      }
-    );
-  }
+  // fetchLoggedData = () => {
+  //   this.loggedService.getLoggedUserData()
+  //   .subscribe(
+  //     data => this.userData = data,
+  //     error => {
+  //       if (error instanceof HttpErrorResponse) {
+  //         if (error.status === 401) {
+  //           this.router.navigate(['']);
+  //         }
+  //       }
+  //     }
+  //   );
+  // }
 }
