@@ -22,21 +22,6 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.tranService.currentBoolean$.subscribe(bool => this.isCollapsed = bool);
-    this.fetchUserData();
   }
-
-  fetchUserData = () => {
-    this.loggedService.getLoggedUserData()
-    .subscribe(
-      data => this.userData = data,
-      error => console.log(error)
-    );
-  }
-
-
-
-
-
-
 
 }

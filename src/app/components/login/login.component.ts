@@ -32,10 +32,14 @@ export class LoginComponent implements OnInit {
         data => {
           localStorage.setItem('token', data.token);
           localStorage.setItem('username', data.username);
-          console.log(data);
+          this.isCollapsed = true;
+          this.loginForm.reset();
           this.router.navigate(['/logged']);
         },
-        error => console.log(error, body)
+        error => {
+          this.loginForm.reset();
+          console.log(error, body);
+        }
       );
     } else {
       console.log('Form is invalid!');

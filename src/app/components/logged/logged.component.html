@@ -1,3 +1,9 @@
-<div *ngIf="userData">
-    <h1>Hello {{userData.username}}</h1>
+<div class="jumbotron jumbotron-fluid m-0 mb-2">
+  <div class="container">
+    <div id="title-parent">
+        <h1 class="display-2" id="main-title"><span id="title-span">We</span>lcome, {{userData?.username}}!</h1>
+        <img src="../assets/images/logo.jpg" id="main-logo"/>
+    </div>
+    <p class="lead content-text display-2">Thank you for joining us! We hope you'll find our site useful. Have a great day!</p>
+  </div>
 </div>
