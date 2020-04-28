@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoggedService } from '../../services/logged.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-logged',
@@ -11,23 +12,23 @@ import { Router } from '@angular/router';
 export class LoggedComponent implements OnInit {
   userData;
 
-  constructor(private loggedService: LoggedService, private router: Router) { }
+  constructor(private loggedService: LoggedService, private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
-    // this.fetchLoggedData();
+    this.fetchLoggedData();
   }
 
-  // fetchLoggedData = () => {
-  //   this.loggedService.getLoggedUserData()
-  //   .subscribe(
-  //     data => this.userData = data,
-  //     error => {
-  //       if (error instanceof HttpErrorResponse) {
-  //         if (error.status === 401) {
-  //           this.router.navigate(['']);
-  //         }
-  //       }
-  //     }
-  //   );
-  // }
+  fetchLoggedData = () => {
+    this.loggedService.getLoggedUserData()
+    .subscribe(
+      data => this.userData = data,
+      error => {
+        if (error instanceof HttpErrorResponse) {
+          if (error.status === 401) {
+            this.router.navigate(['']);
+          }
+        }
+      }
+    );
+  }
 }

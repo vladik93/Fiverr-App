@@ -33,11 +33,8 @@ export class LoginComponent implements OnInit {
       .subscribe(
         data => {
           localStorage.setItem('token', data.token);
-          // localStorage.setItem('username', data.username);
-          this.loggedService.userData$.subscribe(
-            res => console.log(res),
-            error => console.log(error)
-          );
+          localStorage.setItem('username', data.username);
+          this.loggedService.setUsername(data.username);
           this.isCollapsed = true;
           this.loginForm.reset();
           this.router.navigate(['/logged']);

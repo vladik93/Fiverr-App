@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { User } from '../models/user';
+import { Subject } from 'rxjs';
 
 const headers = new HttpHeaders().set('Content-Type', 'application/json');
 
@@ -10,6 +11,8 @@ const headers = new HttpHeaders().set('Content-Type', 'application/json');
 })
 export class AuthService {
   serverUrl = 'http://localhost:3000/api/auth';
+  public usernameSource = new Subject<string>();
+  public username$ = this.usernameSource.asObservable();
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -34,4 +37,5 @@ export class AuthService {
     localStorage.removeItem('username');
     this.router.navigate(['']);
   }
-}
+
+ }

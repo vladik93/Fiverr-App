@@ -7,8 +7,8 @@ import { BehaviorSubject, Subject } from 'rxjs';
 })
 export class LoggedService {
   serverUrl = 'http://localhost:3000/api/logged';
-  public userDataSouce = new Subject();
-  userData$ = this.userDataSouce.asObservable();
+  public usernameSource = new Subject();
+  username$ = this.usernameSource.asObservable();
 
   constructor(private http: HttpClient) { }
 
@@ -16,12 +16,8 @@ export class LoggedService {
     return this.http.get<any>(`${this.serverUrl}/userInfo`);
   }
 
-  getUsername = () => {
-    return this.http.get<any>(`${this.serverUrl}/userInfo`)
-    .subscribe(
-      data => this.userDataSouce.next(data),
-      error => console.log(error)
-    );
+  setUsername = (username: string) => {
+   this.usernameSource.next(username);
   }
 
 

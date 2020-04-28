@@ -12,6 +12,7 @@ import { LoggedService } from '../services/logged.service';
 export class NavbarComponent implements OnInit {
   isCollapsed;
   userData;
+  username;
 
   constructor(
     private languageService: LanguageService,
@@ -23,6 +24,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.tranService.currentBoolean$.subscribe(bool => this.isCollapsed = bool);
     this.getUserData();
+    this.getUsername();
   }
 
   getUserData = () => {
@@ -31,6 +33,17 @@ export class NavbarComponent implements OnInit {
       data => this.userData = data,
       error => console.log(error)
     );
+  }
+
+  getUsername = () => {
+    this.loggedService.username$
+    .subscribe(
+      data => this.username = data
+    );
+  }
+
+  getStorageUsername = () => {
+    return localStorage.getItem('username');
   }
 
 }
