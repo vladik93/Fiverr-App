@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { passwordConfirming } from '../../custom-validators/password-confirm';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -13,12 +14,12 @@ export class RegisterComponent implements OnInit {
 
   disclaimerChecked = false;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
     this.registerForm = new FormGroup({
       username: new FormControl('', [ Validators.required ]),
-      email: new FormControl('', [ Validators.required ]),
+      email: new FormControl('', [ Validators.required, Validators.email ]),
       password: new FormControl('', [ Validators.required ]),
       password_confirm: new FormControl('', [ Validators.required]),
       recieve_emails: new FormControl(false)
@@ -39,7 +40,12 @@ export class RegisterComponent implements OnInit {
       console.log(body);
       this.authService.registerUser(body)
       .subscribe(
-        data => console.log(data),
+        data => {
+          console.log(data);
+          this.registerForm.reset();
+          this.router.navigate(['']);
+
+        },
         error => console.log(error)
       );
     } else {
