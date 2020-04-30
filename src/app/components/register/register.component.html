@@ -4,19 +4,48 @@
       <div class="form-row">
         <div class="form-group col-md-12">
             <input type="text" class="form-control" placeholder="Username" formControlName="username" />
+            <div *ngIf="username.invalid && (username.dirty || username.touched)" class="text-danger">
+              <div *ngIf="username.errors.required">
+                Userame is required.
+              </div>
+              <div *ngIf="username.errors.minlength">
+                Username must be at least 3 characters long.
+              </div>
+              <div *ngIf="username.errors.pattern">
+                Character not allowed (_,/, : ...)
+              </div>
+            </div>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-12">
-            <input type="email" class="form-control" placeholder="E-mail" formControlName="email" /> 
+            <input type="email" class="form-control" placeholder="E-mail" formControlName="email" />
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+              <div *ngIf="email.errors.required">
+                E-mail is required.
+              </div>
+              <div *ngIf="email.errors.email">
+                E-mail must be valid.
+              </div>
+            </div>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
           <input type="password" class="form-control" placeholder="Password" formControlName="password" />
+          <div *ngIf="pass.invalid && (pass.dirty || pass.touched)" class="text-danger">
+            <div *ngIf="pass.errors.required">
+              Password is required.
+            </div>
+          </div>
         </div>
         <div class="form-group col-md-6">
           <input type="password" class="form-control" placeholder="Confirm Password" formControlName="password_confirm" />
+          <div *ngIf="cpass.invalid && (cpass.dirty || cpass.touched)" class="text-danger">
+            <div *ngIf="registerForm.errors.passwordConfirming">
+              Confirm Password
+            </div>
+          </div>
         </div>
       </div>
       <div class="form-check form-check-inline mr-5">

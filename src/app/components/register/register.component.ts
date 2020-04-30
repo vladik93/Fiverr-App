@@ -12,13 +12,20 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
 
+  get username() { return this.registerForm.get('username'); }
+  get email() { return this.registerForm.get('email'); }
+  get pass() { return this.registerForm.get('password'); }
+  get cpass() { return this.registerForm.get('password_confirm'); }
+  get recieveEmails() { return this.registerForm.get('recieve_emails'); }
+
+
   disclaimerChecked = false;
 
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
     this.registerForm = new FormGroup({
-      username: new FormControl('', [ Validators.required ]),
+      username: new FormControl('', [ Validators.required, Validators.minLength(3), Validators.pattern('[^()/><\][\\\x22,;|]+') ]),
       email: new FormControl('', [ Validators.required, Validators.email ]),
       password: new FormControl('', [ Validators.required ]),
       password_confirm: new FormControl('', [ Validators.required]),
