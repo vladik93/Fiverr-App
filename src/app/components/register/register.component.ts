@@ -25,9 +25,9 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.registerForm = new FormGroup({
-      username: new FormControl('', [ Validators.required, Validators.minLength(3)]),
+      username: new FormControl('', [ Validators.required, Validators.minLength(3), Validators.pattern('[^A-Za-z0-9 _]+')]),
       email: new FormControl('', [ Validators.required, Validators.email ]),
-      password: new FormControl('', [ Validators.required ]),
+      password: new FormControl('', [ Validators.required, Validators.minLength(6)]),
       password_confirm: new FormControl('', [ Validators.required]),
       recieve_emails: new FormControl(false)
     }, { validators: passwordConfirming});
@@ -57,6 +57,7 @@ export class RegisterComponent implements OnInit {
       );
     } else {
       console.log('Form is invalid');
+      console.log(this.registerForm);
     }
   }
 

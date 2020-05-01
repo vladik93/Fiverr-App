@@ -11,6 +11,9 @@
               <div *ngIf="username.errors.minlength">
                 Username must be at least 3 characters long.
               </div>
+              <div *ngIf="!username.errors.pattern && username.length">
+                Special characters are excluded (/, +, -)
+              </div>
               <!-- <div *ngIf="username.errors.pattern">
                 Excluded characters not allowed
               </div> -->
@@ -37,12 +40,15 @@
             <div *ngIf="pass.errors.required">
               Password is required.
             </div>
+            <div *ngIf="pass.errors.minlength">
+              Password must be at least 6 chars.
+            </div>
           </div>
         </div>
         <div class="form-group col-md-6">
           <input type="password" class="form-control" placeholder="Confirm Password" formControlName="password_confirm" />
-          <div *ngIf="cpass.invalid && (cpass.dirty || cpass.touched)" class="text-danger">
-            <div *ngIf="registerForm.errors.passwordConfirming">
+          <div *ngIf="cpass.dirty || cpass.touched" class="text-danger">
+            <div *ngIf="registerForm.errors?.noMatch">
               Confirm Password
             </div>
           </div>
