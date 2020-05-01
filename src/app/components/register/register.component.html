@@ -11,9 +11,9 @@
               <div *ngIf="username.errors.minlength">
                 Username must be at least 3 characters long.
               </div>
-              <div *ngIf="username.errors.pattern">
-                Character not allowed (_,/, : ...)
-              </div>
+              <!-- <div *ngIf="username.errors.pattern">
+                Excluded characters not allowed
+              </div> -->
             </div>
         </div>
       </div>

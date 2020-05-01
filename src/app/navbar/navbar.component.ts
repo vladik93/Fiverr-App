@@ -23,23 +23,25 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.tranService.currentBoolean$.subscribe(bool => this.isCollapsed = bool);
-    this.getUserData();
+    // this.getUserData();
     this.getUsername();
   }
 
-  getUserData = () => {
-    this.loggedService.getLoggedUserData()
-    .subscribe(
-      data => this.userData = data,
-      error => console.log(error)
-    );
-  }
+  // getUserData = () => {
+  //   this.loggedService.getLoggedUserData()
+  //   .subscribe(
+  //     data => this.userData = data,
+  //     error => console.log(error)
+  //   );
+  // }
 
   getUsername = () => {
-    this.loggedService.username$
-    .subscribe(
-      data => this.username = data
-    );
+    if (this.authService.loggedIn()) {
+      this.loggedService.username$
+      .subscribe(
+        data => this.username = data
+      );
+    }
   }
 
   getStorageUsername = () => {
