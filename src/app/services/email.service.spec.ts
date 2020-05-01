@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SubscriptionService } from './subscription.service';
+import { EmailService } from './email.service';
 
-describe('SubscriptionService', () => {
+describe('EmailService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: SubscriptionService = TestBed.get(SubscriptionService);
+    const service: EmailService = TestBed.get(EmailService);
     expect(service).toBeTruthy();
   });
 });
