@@ -1,0 +1,13 @@
+div {
+    position: fixed;
+    left: 95%;
+    top: 100px;
+    background-color: #212529;
+    color: white;
+    box-shadow: 2px 2px 2px white;
+    height: 100px;
+    width: 300px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    
+}

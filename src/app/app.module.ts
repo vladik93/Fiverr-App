@@ -20,6 +20,7 @@ import { TranslatorPageComponent } from './components/translator-page/translator
 import { AdsModalComponent } from './components/ads-modal/ads-modal.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { SideWidgetComponent } from './components/side-widget/side-widget.component';
 
 
 // Authenticated Components
@@ -64,6 +65,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     RegisterComponent,
     LoginComponent,
     LoggedComponent,
+    SideWidgetComponent,
   ],
   imports: [
     BrowserModule,
