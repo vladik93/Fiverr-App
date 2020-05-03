@@ -1,4 +1,22 @@
-div {
+#widget {
+    position: fixed;
+    left: 97%;
+    top: 140px;   
+}
+
+#widget:hover {
+    cursor: pointer;
+}
+
+#widget img {
+    width: 50px;
+    background-color: #212529;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px white;
+    
+}
+
+/* div {
     position: fixed;
     left: 95%;
     top: 100px;
@@ -8,6 +26,6 @@ div {
     height: 100px;
     width: 300px;
     border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
-    
-}
+    border-bottom-left-radius: 100px; 
+} */
+
