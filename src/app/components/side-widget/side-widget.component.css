@@ -7,20 +7,26 @@
 
 #widget:hover {
     cursor: pointer;
+    
 }
 
 #widget img {
     width: 50px;
     background-color: #212529;
     border-radius: 10px;
-    box-shadow: 1px 2px 2px white;
     
+}
+
+#widget img:hover {
+    box-shadow: 1px 2px 2px white;
 }
 
 #widget-collapse {
     position: fixed;
-    top: 140px; /* 100px */
+    top: 139px; /* 100px */
     left: 77%;
+    opacity: 85%;
+    z-index: 1000;
 }
 
 #collapse-content {
@@ -28,7 +34,7 @@
     width: 350px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid white;
     
     
 }
