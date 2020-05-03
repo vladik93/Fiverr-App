@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-widget.component.css']
 })
 export class SideWidgetComponent implements OnInit {
+  isCollapsed = false;
+
 
   constructor() { }
 

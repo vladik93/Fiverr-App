@@ -1,3 +1,6 @@
-<div id="widget">
+<div id="widget" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="widget-collapse">
   <img src="assets/images/side_widget.png"/>
+</div>
+<div id="widget-collapse" [collapse]="isCollapsed" [isAnimated]="true">
+  <div class="well well-lg card card-block card-header bg-dark text-white" id="collapse-content">Some content</div>
 </div>
