@@ -1,8 +1,9 @@
 #widget {
     position: fixed;
     left: 97%;
-    top: 140px;
+    top: 220px;
     z-index: 10000;  
+    
 }
 
 #widget:hover {
@@ -23,21 +24,62 @@
 
 #widget-collapse {
     position: fixed;
-    top: 139px; /* 100px */
+    top: 140px; /* 100px */
     left: 77%;
-    opacity: 85%;
+    /* opacity: 85%; */
     z-index: 1000;
+    /* Animation */
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+    background: inherit;
+}
+
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 #collapse-content {
-    height: 130px;
+    height: 215px;
     width: 350px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    border: 1px solid white;
-    
-    
+    /* background: rgba(0,0,0,.4); */
+    z-index: 1000;
 }
+
+.glass {
+    height: 215px;
+    width: 350px;
+    top: 140px;
+    left: 77%; /* 77% */
+    background: rgba(180, 180, 180, 0.3);
+    filter: blur(2px);
+    z-index: -1;
+    position: fixed;
+  }
+
+  .title {
+    text-shadow: 1px 1px 1px black;
+    /* border-bottom: 1px solid gray; */
+    
+  }
+
+  .sub-title {
+      font-size: 16px;
+      text-shadow: 1px 1px 1px black;
+  }
+  
+
+
 
 /* div {
     position: fixed;

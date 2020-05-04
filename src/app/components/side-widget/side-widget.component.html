@@ -1,6 +1,16 @@
 <div id="widget" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="widget-collapse">
   <img src="assets/images/side_widget.png"/>
 </div>
-<div id="widget-collapse" [collapse]="isCollapsed" [isAnimated]="true">
-  <div class="well well-lg card card-block card-header bg-dark text-white" id="collapse-content">Some content</div>
+<div id="widget-collapse" [collapse]="isCollapsed">
+  
+  <div class="well well-lg card card-block card-header text-light" id="collapse-content">
+    <div class="glass"></div>
+    <div class="content">
+      <h5 class="title">Stats:</h5>
+      <p class="sub-title">Times visited: <span>29</span></p>
+      <p class="sub-title">Asked For Tutor: <span>2</span></p>
+      <p class="sub-title">Frequent Tutor: <span>Alex</span></p>
+      <h5 class="title">Pointed Gained: <span>150</span></h5>
+    </div>
+  </div>
 </div>
