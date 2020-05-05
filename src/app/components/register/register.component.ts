@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
+import { StatsService } from '../../services/stats.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { passwordConfirming } from '../../custom-validators/password-confirm';
 import { Router } from '@angular/router';
@@ -21,7 +22,7 @@ export class RegisterComponent implements OnInit {
 
   disclaimerChecked = false;
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private statsService: StatsService, private router: Router) { }
 
   ngOnInit() {
     this.registerForm = new FormGroup({
@@ -50,6 +51,7 @@ export class RegisterComponent implements OnInit {
         data => {
           console.log(data);
           this.registerForm.reset();
+          this.statsService.addUserStats();
           this.router.navigate(['']);
 
         },

@@ -35,6 +35,7 @@ import { TranslatorService } from './services/translator.service';
 import { AdService } from './services/ad.service';
 import { AuthService } from './services/auth.service';
 import { EmailService } from './services/email.service';
+import { StatsService } from './services/stats.service';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 
 
@@ -91,6 +92,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     AdService,
     AuthService,
     EmailService,
+    StatsService,
     AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,
