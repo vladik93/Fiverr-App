@@ -1,13 +1,13 @@
-<div id="widget" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="widget-collapse">
+<div id="widget" *ngIf="authService.loggedIn()" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="widget-collapse">
   <img src="assets/images/side_widget.png"/>
 </div>
-<div id="widget-collapse" [collapse]="isCollapsed">
+<div id="widget-collapse" [collapse]="isCollapsed" *ngIf="authService.loggedIn()">
   
   <div class="well well-lg card card-block card-header text-light" id="collapse-content">
     <div class="glass"></div>
     <div class="content">
       <h5 class="title">Stats:</h5>
-      <p class="sub-title">Times visited: <span>29</span></p>
+      <p class="sub-title">Times visited: <span>{{stats?.times_visited}}</span></p>
       <p class="sub-title">Asked For Tutor: <span>2</span></p>
       <p class="sub-title">Frequent Tutor: <span>Alex</span></p>
       <h5 class="title">Pointed Gained: <span>150</span></h5>

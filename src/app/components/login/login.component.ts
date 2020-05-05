@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { LoggedService } from 'src/app/services/logged.service';
+import { StatsService } from 'src/app/services/stats.service';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,11 @@ export class LoginComponent implements OnInit {
   isCollapsed = true;
   user;
 
-  constructor(private authService: AuthService, private loggedService: LoggedService,  private router: Router) { }
+  constructor(private authService: AuthService,
+    private loggedService: LoggedService,
+    private router: Router,
+    private statsService: StatsService
+  ) { }
 
   ngOnInit() {
     this.loginForm = new FormGroup({
@@ -37,6 +42,7 @@ export class LoginComponent implements OnInit {
           this.loggedService.setUsername(data.username);
           this.isCollapsed = true;
           this.loginForm.reset();
+          this.updateVisitCount();
           this.router.navigate(['/logged']);
         },
         error => {
@@ -47,5 +53,13 @@ export class LoginComponent implements OnInit {
     } else {
       console.log('Form is invalid!');
     }
+  }
+
+  updateVisitCount = () => {
+    this.statsService.updateVisitCount()
+    .subscribe(
+      data => console.log(data),
+      error => console.log(error)
+    );
   }
 }
