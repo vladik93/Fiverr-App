@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 
-<app-side-widget></app-side-widget>
+<app-side-widget *ngIf="authService.loggedIn()"></app-side-widget> <!-- Doesn't start component (onInit) until condition is fullfilled-->
 
 <div class="container">
     <app-ads-modal></app-ads-modal>

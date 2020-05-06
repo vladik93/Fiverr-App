@@ -26,6 +26,7 @@ export class StatsService implements OnInit {
     return this.http.get(this.serverUrl);
   }
 
+
   updateVisitCount = () => {
     const params = new HttpParams().set('prop', 'visited');
 
