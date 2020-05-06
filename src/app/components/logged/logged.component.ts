@@ -16,6 +16,9 @@ export class LoggedComponent implements OnInit {
 
   ngOnInit() {
     this.fetchLoggedData();
+    setTimeout(() => {
+      this.router.navigate(['']);
+    }, 2000);
   }
 
   fetchLoggedData = () => {
