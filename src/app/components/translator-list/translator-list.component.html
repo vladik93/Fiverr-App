@@ -17,7 +17,16 @@
                     </button>
                     <p class="description ml-1">{{translator.description.substring(0, 150)}}...</p>
                     <p class="price ml-1">{{translator.price}}$</p>
-                    <button class="btn btn-outline-light more-info offset-md-9" (click)="onMoreButtonClick(translator.id)">More</button>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button class="btn btn-outline-light more-info" (click)="onMoreButtonClick(translator.id)">More</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-light send-request">Send Request</button> 
+                            <!-- better create a separate component with the button and modal already there-->
+                        </div>
+                    </div>
+                    <!-- <button class="btn btn-outline-light more-info offset-md-9" (click)="onMoreButtonClick(translator.id)">More</button> -->
                 </accordion-group>
             </div>
         </accordion>
