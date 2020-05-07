@@ -22,7 +22,8 @@
                             <button class="btn btn-outline-light more-info" (click)="onMoreButtonClick(translator.id)">More</button>
                         </div>
                         <div class="col-md-3">
-                            <button class="btn btn-light send-request">Send Request</button> 
+                            <button class="btn btn-outline-light send-request" (click)="emailModal(template, translator)">Send Request</button> 
+                            <!-- <app-email-send></app-email-send> -->
                             <!-- better create a separate component with the button and modal already there-->
                         </div>
                     </div>

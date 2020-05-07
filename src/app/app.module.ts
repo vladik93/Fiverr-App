@@ -48,6 +48,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { EmailSendComponent } from './components/email-send/email-send.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     LoginComponent,
     LoggedComponent,
     SideWidgetComponent,
+    EmailSendComponent
   ],
   imports: [
     BrowserModule,
@@ -99,6 +101,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
       useClass: TokenInterceptorService,
       multi: true
     }
+  ],
+  entryComponents: [
+    EmailSendComponent,
   ],
   bootstrap: [AppComponent]
 })
