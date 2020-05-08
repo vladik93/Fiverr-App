@@ -21,4 +21,8 @@ export class EmailService {
     return this.http.post(this.serverUrl, {email: email});
   }
 
+  sendEmailRequest = (transId: Number) => {
+    return this.http.post(`${this.serverUrl}/${transId}`, null);
+  }
+
 }

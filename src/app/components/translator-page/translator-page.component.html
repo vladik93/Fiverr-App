@@ -11,7 +11,9 @@
         <img src="{{translator.image_to}}" id="image-to" />
       </div>
       <a id="profile-email" href="mailto:{{translator.email}}">{{translator.email}}</a>
-      <button class="btn btn-dark send-request mt-3" style="box-shadow: 2px 2px 2px white">Send Request</button>
     </div>
   </div>
+  <button class="btn btn-dark btn-block send-request mt-3" style="box-shadow: 2px 2px 2px white" (click)="emailModal(template, translator)">
+    Send Request
+  </button>
 </div>

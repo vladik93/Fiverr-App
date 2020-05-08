@@ -38,3 +38,7 @@
     display: block;
     font-size: 20px;
 }
+
+.send-request {
+    width: 400px;
+}
