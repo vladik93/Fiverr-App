@@ -1,13 +1,20 @@
-<div class="modal-header">
-    <h4 class="modal-title pull-left">Title</h4>
+<div class="modal-header bg-dark text-light">
+    <h4 class="modal-title pull-left">Confirm Request</h4>
     <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
-    <p>Request {{list[0].name}} to help you with your translating/tutoring needs for {{list[0].price}} NiS?</p>
+    <div class="media">
+      <img src="{{list[0].image}}" class="shadow mr-2 mb-3" />
+      <div class="media-body">
+        <h3 class="mb-1">{{list[0].name}}</h3>
+        <p class="ml-1">{{list[0].codefrom ? list[0].codefrom : 'n/a'}} - {{list[0].codeto}}</p>
+      </div>
+    </div>
+    <h4>Price: {{list[0].price}}&#8362;</h4>
     <p class="text-muted" style="font-size: 11px">Note: Request will be verified befoehand and a different price may be agreed upon. Futher information will be provided by our team. Thank you!</p>
   </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">Close</button>
+  <div class="modal-footer bg-dark text-light">
+    <button type="button" class="btn btn-outline-light" (click)="bsModalRef.hide()">Confirm</button>
   </div>

@@ -50,7 +50,9 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
           image: translator.image,
           price: translator.price,
           from: translator.image_from,
-          to: translator.image_to
+          codefrom: translator.code_from,
+          to: translator.image_to,
+          codeto: translator.code_to
         }
       ]
     };
