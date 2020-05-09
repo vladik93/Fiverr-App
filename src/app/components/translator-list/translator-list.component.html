@@ -8,25 +8,26 @@
         <accordion [isAnimated]="true" [closeOthers]="oneAtATime">
             <div class="row mt-5">
                 <accordion-group class="col-md-4 mt-1" *ngFor="let translator of translators" [panelClass]="customClass">
-                    <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
-                        <img src="{{translator.image}}" style="height: 80px; width: 80px; box-shadow: 2px 2px 2px black; border-radius: 20%" class="float-left pull-left" />
-                        <h5 class="mt-1 ml-1 name float-left pull-left">{{translator.name}}</h5>
-                            <img src="{{translator.image_from}}" class="lang-from" />
-                            <span class="arrow-right"><img src="assets/images/arrow-right.png"  style="height: 15px;"/></span>
-                            <img src="{{translator.image_to}}" class="lang-to" />
-                    </button>
-                    <p class="description ml-1">{{translator.description.substring(0, 150)}}...</p>
-                    <p class="price ml-1">{{translator.price}}$</p>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <button class="btn btn-outline-light more-info" (click)="onMoreButtonClick(translator.id)">More</button>
+                    <!-- <div class="glass"></div> -->
+                        <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
+                            <img src="{{translator.image}}" style="height: 80px; width: 80px; box-shadow: 2px 2px 2px black; border-radius: 20%" class="float-left pull-left" />
+                            <h5 class="mt-1 ml-1 name float-left pull-left">{{translator.name}}</h5>
+                                <img src="{{translator.image_from}}" class="lang-from" />
+                                <span class="arrow-right"><img src="assets/images/arrow-right.png"  style="height: 15px;"/></span>
+                                <img src="{{translator.image_to}}" class="lang-to" />
+                        </button>
+                        <p class="description ml-1">{{translator.description.substring(0, 150)}}...</p>
+                        <p class="price ml-1">{{translator.price}}$</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="btn btn-outline-dark more-info" (click)="onMoreButtonClick(translator.id)">More</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-outline-dark send-request" (click)="emailModal(template, translator)">Send Request</button> 
+                                <!-- <app-email-send></app-email-send> -->
+                                <!-- better create a separate component with the button and modal already there-->
+                            </div>
                         </div>
-                        <div class="col-md-3">
-                            <button class="btn btn-outline-light send-request" (click)="emailModal(template, translator)">Send Request</button> 
-                            <!-- <app-email-send></app-email-send> -->
-                            <!-- better create a separate component with the button and modal already there-->
-                        </div>
-                    </div>
                     <!-- <button class="btn btn-outline-light more-info offset-md-9" (click)="onMoreButtonClick(translator.id)">More</button> -->
                 </accordion-group>
             </div>

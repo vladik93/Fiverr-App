@@ -14,16 +14,26 @@ body {
 
   .customClass > .card-header {
     border: none;
-    border-bottom: 1px dashed white;
     background-color: transparent;
   }
 
   .customClass  .panel-body {
-    background: #343a40;
-    color: white;
+    /* background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 40%, rgba(178,178,178,0.5105392498796393) 78%); */
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.5721638997395833) 40%, rgba(178,178,178,0.5105392498796393) 78%);
+    /* box-shadow: 2px 2px 2px white; */
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-radius: 8px;
+
+    
+/*     
     border-bottom: 2px solid #e6e6ff;
     border-left: 1px solid white;
-    border-right: 2px solid #e6e6ff;
+    border-right: 2px solid #e6e6ff; */
     padding: 10px;
-    border-radius: 10px;  
+    /* text-shadow: 2px 2px 2px black; */
+    /* border-radius: 10px;   */
+    
   }
