@@ -54,29 +54,30 @@
     border-bottom-left-radius: 10px;
     /* background: rgba(0,0,0,.4); */
     z-index: 1000;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.5721638997395833) 40%, rgba(178,178,178,0.5105392498796393) 78%);
 }
 
-.glass {
+/* .glass {
     height: 215px;
     width: 350px;
     top: 140px;
-    left: 77%; /* 77% */
+    left: 77%; 
     background: rgba(180, 180, 180, 0.3);
     filter: blur(2px);
     z-index: -1;
     position: fixed;
-  }
+  } */
 
-  .title {
-    text-shadow: 1px 1px 1px black;
-    /* border-bottom: 1px solid gray; */
-    
-  }
 
-  .sub-title {
-      font-size: 16px;
-      text-shadow: 1px 1px 1px black;
-  }
+.title {
+    text-shadow: 1px 1px 1px white;
+}
+
+.sub-title {
+    font-size: 16px;
+    text-shadow: 1px 1px 1px white;
+}
   
 
 
