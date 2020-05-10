@@ -15,8 +15,8 @@ export class CollapseService {
 
   constructor(private http: HttpClient) {}
 
-  setCollapse = () => {
-    return this.collapsedSource.next(true);
+  setCollapse = (bool: Boolean) => {
+    return this.collapsedSource.next(bool);
   }
 
   setCollapseStatus = (bool: Boolean) => {

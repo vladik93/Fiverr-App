@@ -45,7 +45,6 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
     // this.langParam = this.route.snapshot.queryParamMap.get('lang');
     this.getInitTranslatorsWithOffset();
     this.onPanelClick();
-    console.log('OnInit: collapse: ' + this.collapseOpen );
   }
 
   emailModal(template: TemplateRef<any>, translator) {
@@ -70,20 +69,18 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
 
   onAccordionClick = (state) => {
     if (state) {
-      this.collapseService.setCollapse();
+      this.collapseService.setCollapse(true);
     }
   }
 
   onPanelClick = () => {
     this.collapseService.panelStatusObs$
     .subscribe(data => {
-      if (data === true) {
-        this.collapseOpen = false;
-        console.log('status: ' + data, 'collapse: ' + this.collapseOpen);
-      } else {
-        this.collapseOpen = null;
-        console.log('status: ' + data, 'collapse: ' + this.collapseOpen);
-      }
+     if (data === true) {
+       this.collapseOpen = false;
+     } else {
+       this.collapseOpen = null;
+     }
     });
   }
 

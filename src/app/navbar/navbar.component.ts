@@ -40,7 +40,7 @@ export class NavbarComponent implements OnInit {
   onNavbarToggle = () => {
     if (this.isCollapsed === true) {
       this.isCollapsed = false;
-      this.collapseService.setCollapse();
+      this.collapseService.setCollapse(true);
     } else {
       this.isCollapsed = true;
     }
