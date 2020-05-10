@@ -68,7 +68,7 @@ import { EmailSendComponent } from './components/email-send/email-send.component
     LoginComponent,
     LoggedComponent,
     SideWidgetComponent,
-    EmailSendComponent
+    EmailSendComponent,
   ],
   imports: [
     BrowserModule,

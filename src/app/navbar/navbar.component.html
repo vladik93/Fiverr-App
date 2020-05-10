@@ -11,9 +11,12 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow" style="border-top: 1px dashed lightgrey">
   <div class="container-fluid">
-    <button type="button" id="toggler" class="navbar-toggle collapsed navbar-toggler-icon" (click)="isCollapsed = !isCollapsed"
+    <button type="button" id="toggler" class="navbar-toggle collapsed navbar-toggler-icon"  (click)="onNavbarToggle()"
       [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
     </button>
+    <!-- <button type="button" id="toggler" class="navbar-toggle collapsed navbar-toggler-icon"  (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
+    </button> -->
   </div>
 
   <!-- To place brand next to other element, include both .navbar-header div -->

@@ -1,4 +1,5 @@
-<div id="widget" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="widget-collapse">
+<!-- <div id="widget" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="widget-collapse"></div> -->
+<div id="widget" (click)="onPanelToggle()" [attr.aria-expanded]="!isCollapsed" aria-controls="widget-collapse">
   <img src="assets/images/side_widget.png"/>
 </div>
 <div id="widget-collapse" [collapse]="isCollapsed">

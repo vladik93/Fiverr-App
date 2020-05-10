@@ -3,6 +3,7 @@ import { LanguageService } from '../services/language.service';
 import { TranslatorService } from '../services/translator.service';
 import { AuthService } from '../services/auth.service';
 import { LoggedService } from '../services/logged.service';
+import { CollapseService } from '../services/collapse.service';
 
 @Component({
   selector: 'app-navbar',
@@ -18,7 +19,8 @@ export class NavbarComponent implements OnInit {
     private languageService: LanguageService,
     private tranService: TranslatorService,
     private authService: AuthService,
-    private loggedService: LoggedService
+    private loggedService: LoggedService,
+    private collapseService: CollapseService
     ) { }
 
   ngOnInit() {
@@ -34,6 +36,15 @@ export class NavbarComponent implements OnInit {
   //     error => console.log(error)
   //   );
   // }
+
+  onNavbarToggle = () => {
+    if (this.isCollapsed === true) {
+      this.isCollapsed = false;
+      this.collapseService.setCollapse();
+    } else {
+      this.isCollapsed = true;
+    }
+  }
 
   getUsername = () => {
     if (this.authService.loggedIn()) {

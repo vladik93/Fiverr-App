@@ -1,7 +1,7 @@
 #widget {
     position: fixed;
     left: 97%;
-    top: 220px;
+    top: 370px;
     z-index: 10000;  
     
 }
@@ -24,7 +24,7 @@
 
 #widget-collapse {
     position: fixed;
-    top: 140px; /* 100px */
+    top: 285px; /* 100px */
     left: 77%;
     /* opacity: 85%; */
     z-index: 1000;

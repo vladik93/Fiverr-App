@@ -6,12 +6,15 @@ import { Translator } from '../../models/translator';
 import { Subscription } from 'rxjs';
 import { share } from 'rxjs/operators';
 import { EmailSendComponent } from '../email-send/email-send.component';
+import { CollapseService } from 'src/app/services/collapse.service';
+import { CollapseDirective } from 'ngx-bootstrap/collapse';
 
 
 @Component({
   selector: 'app-translator-list',
   templateUrl: './translator-list.component.html',
-  styleUrls: ['./translator-list.component.css']
+  styleUrls: ['./translator-list.component.css'],
+  providers: [CollapseDirective]
 })
 export class TranslatorListComponent implements OnInit, OnDestroy {
   bsModalRef: BsModalRef | null;
@@ -26,6 +29,7 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
   disabledPages = false;
 
   oneAtATime = true;
+  collapseOpen;
   customClass = 'customClass';
 
 
@@ -33,11 +37,15 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
     private transService: TranslatorService,
     private router: Router,
     private route: ActivatedRoute,
-    private modalService: BsModalService) { }
+    private modalService: BsModalService,
+    private collapseService: CollapseService,
+  ) { }
 
   ngOnInit() {
     // this.langParam = this.route.snapshot.queryParamMap.get('lang');
     this.getInitTranslatorsWithOffset();
+    this.onPanelClick();
+    console.log('OnInit: collapse: ' + this.collapseOpen );
   }
 
   emailModal(template: TemplateRef<any>, translator) {
@@ -58,6 +66,27 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
     };
     this.bsModalRef = this.modalService.show(EmailSendComponent, {initialState});
   }
+
+
+  onAccordionClick = (state) => {
+    if (state) {
+      this.collapseService.setCollapse();
+    }
+  }
+
+  onPanelClick = () => {
+    this.collapseService.panelStatusObs$
+    .subscribe(data => {
+      if (data === true) {
+        this.collapseOpen = false;
+        console.log('status: ' + data, 'collapse: ' + this.collapseOpen);
+      } else {
+        this.collapseOpen = null;
+        console.log('status: ' + data, 'collapse: ' + this.collapseOpen);
+      }
+    });
+  }
+
 
 
 

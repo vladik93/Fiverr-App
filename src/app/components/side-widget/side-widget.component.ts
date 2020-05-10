@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { StatsService } from 'src/app/services/stats.service';
+import { CollapseService } from '../../services/collapse.service';
+import { TranslatorService } from 'src/app/services/translator.service';
 
 @Component({
   selector: 'app-side-widget',
@@ -8,15 +10,34 @@ import { StatsService } from 'src/app/services/stats.service';
   styleUrls: ['./side-widget.component.css']
 })
 export class SideWidgetComponent implements OnInit {
-  isCollapsed = true;
+  isCollapsed: Boolean = true;
   stats;
 
 
-  constructor(private authService: AuthService, private statsService: StatsService) { }
+  constructor(
+    private authService: AuthService,
+    private statsService: StatsService,
+    private collapseService: CollapseService,
+    private transService: TranslatorService
+  ) { }
 
   ngOnInit() {
     this.fetchUserStats();
+    this.fetchCollapseState();
   }
+
+
+  onPanelToggle = () => {
+    if (this.isCollapsed === true) {
+      this.isCollapsed = false;
+      this.transService.changeCollapseBoolean(true);
+      this.collapseService.setCollapseStatus(true);
+    } else {
+      this.isCollapsed = true;
+      this.collapseService.setCollapseStatus(false);
+    }
+  }
+
 
   fetchUserStats = () => {
     if (this.authService.loggedIn()) {
@@ -26,6 +47,14 @@ export class SideWidgetComponent implements OnInit {
         error => console.log(error)
       );
     }
+  }
+
+  fetchCollapseState = () => {
+    this.collapseService.collapsed$
+    .subscribe(
+      data => this.isCollapsed = data,
+      error => console.log(error)
+    );
   }
 
 }
