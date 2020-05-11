@@ -13,7 +13,9 @@ export class CollapseService {
   panelStatusObs$ = this.panelStatus.asObservable();
 
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.collapsed$.subscribe(data => console.log(data));
+  }
 
   setCollapse = (bool: Boolean) => {
     return this.collapsedSource.next(bool);

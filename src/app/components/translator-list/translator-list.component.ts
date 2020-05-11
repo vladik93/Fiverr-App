@@ -44,7 +44,7 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     // this.langParam = this.route.snapshot.queryParamMap.get('lang');
     this.getInitTranslatorsWithOffset();
-    this.onPanelClick();
+    // this.onPanelClick();
   }
 
   emailModal(template: TemplateRef<any>, translator) {
@@ -73,19 +73,16 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
     }
   }
 
-  onPanelClick = () => {
-    this.collapseService.panelStatusObs$
-    .subscribe(data => {
-     if (data === true) {
-       this.collapseOpen = false;
-     } else {
-       this.collapseOpen = null;
-     }
-    });
-  }
-
-
-
+  // onPanelClick = () => {
+  //   this.collapseService.collapsed$
+  //   .subscribe(data => {
+  //     if (data === false) {
+  //       this.collapseOpen = data;
+  //     } else {
+  //       this.collapseOpen = undefined;
+  //     }
+  //   });
+  // }
 
   getInitTranslatorsWithOffset = () => {
     this.subscription = this.route.queryParams.subscribe(params => {

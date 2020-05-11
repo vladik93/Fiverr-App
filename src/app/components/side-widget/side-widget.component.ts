@@ -31,10 +31,12 @@ export class SideWidgetComponent implements OnInit {
     if (this.isCollapsed === true) {
       this.isCollapsed = false;
       this.transService.changeCollapseBoolean(true);
-      this.collapseService.setCollapseStatus(true);
+      // this.collapseService.setCollapseStatus(true);
+      this.collapseService.setCollapse(false);
     } else {
       this.isCollapsed = true;
-      this.collapseService.setCollapseStatus(false);
+      // this.collapseService.setCollapseStatus(false);
+      this.collapseService.setCollapse(true);
     }
   }
 
