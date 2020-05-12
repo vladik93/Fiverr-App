@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from '../models/subscription';
-import { EmailService } from '../services/email.service';
+import { SubscriptionService } from '../services/subscription.service';
 
 @Component({
   selector: 'app-footer',
@@ -16,14 +16,14 @@ export class FooterComponent implements OnInit {
   alert;
   dismissible = true;
 
-  constructor(private emailService: EmailService) { }
+  constructor(private subscService: SubscriptionService) { }
 
   ngOnInit() {
   }
 
   onSubscriptFormSubmit = (form) => {
     console.log(form.value.email);
-    this.emailService.addSubscription(form.value.email)
+    this.subscService.addSubscription(form.value.email)
     .subscribe(
       data => {
         this.subscription.email = '';

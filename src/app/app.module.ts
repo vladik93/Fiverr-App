@@ -35,6 +35,7 @@ import { TranslatorService } from './services/translator.service';
 import { AdService } from './services/ad.service';
 import { AuthService } from './services/auth.service';
 import { EmailService } from './services/email.service';
+import { SubscriptionService } from './services/subscription.service';
 import { StatsService } from './services/stats.service';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 
@@ -94,6 +95,7 @@ import { EmailSendComponent } from './components/email-send/email-send.component
     AdService,
     AuthService,
     EmailService,
+    SubscriptionService,
     StatsService,
     AuthGuard,
     {
