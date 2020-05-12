@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { AuthService } from '../../services/auth.service';
 import { EmailService } from '../../services/email.service';
+import { StatsService } from 'src/app/services/stats.service';
 
 
 @Component({
@@ -12,7 +13,12 @@ import { EmailService } from '../../services/email.service';
 export class EmailSendComponent implements OnInit {
   list: any[] = [];
 
-  constructor(public bsModalRef: BsModalRef, private authService: AuthService, private emailService: EmailService) { }
+  constructor(
+    public bsModalRef: BsModalRef,
+    private authService: AuthService,
+    private emailService: EmailService,
+    private statsService: StatsService
+    ) { }
 
   ngOnInit() {
   }
@@ -22,7 +28,7 @@ export class EmailSendComponent implements OnInit {
       this.emailService.sendEmailRequest(id)
       .subscribe(
         data => {
-          console.log(data);
+          this.statsService.setTotalRequestCount();
           this.bsModalRef.hide();
         },
         error => console.log(error)

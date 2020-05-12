@@ -12,6 +12,7 @@ import { TranslatorService } from 'src/app/services/translator.service';
 export class SideWidgetComponent implements OnInit {
   isCollapsed: Boolean = true;
   stats;
+  requestCount;
 
 
   constructor(
@@ -23,6 +24,7 @@ export class SideWidgetComponent implements OnInit {
 
   ngOnInit() {
     this.fetchUserStats();
+    this.fetchRequestCount();
     this.fetchCollapseState();
   }
 
@@ -45,8 +47,22 @@ export class SideWidgetComponent implements OnInit {
     if (this.authService.loggedIn()) {
       this.statsService.getUserStats()
       .subscribe(
-        data => this.stats = data[0],
+        data => {
+          this.stats = data[0];
+          console.log(data[0]);
+        },
         error => console.log(error)
+      );
+    }
+  }
+
+  fetchRequestCount = () => {
+    if (this.authService.loggedIn()) {
+      this.statsService.totalRequest$
+      .subscribe(
+        data => {
+          this.requestCount = data;
+        }
       );
     }
   }
