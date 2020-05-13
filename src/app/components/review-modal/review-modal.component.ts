@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslatorService } from '../../services/translator.service';
 
 @Component({
   selector: 'app-review-modal',
@@ -7,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReviewModalComponent implements OnInit {
   carouselInterval = 2000;
+  translators;
 
-  constructor() { }
+  constructor(private transService: TranslatorService) { }
 
   ngOnInit() {
+    this.fetchFeaturedTranslators();
+  }
+
+  fetchFeaturedTranslators = () => {
+    this.transService.getRandFeaturedTranslators(2)
+    .subscribe(
+      data => this.translators = data,
+      error => console.log(error)
+    );
   }
 
 }

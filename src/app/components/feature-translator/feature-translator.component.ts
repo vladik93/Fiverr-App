@@ -23,7 +23,10 @@ export class FeatureTranslatorComponent implements OnInit, OnDestroy {
   fetchFeatureTranslator = () => {
     this.subscription = this.tranService.featureTranslator$
     .subscribe(
-      data => this.translator = data[0]
+      data => {
+        this.translator = data[0];
+        console.log(data);
+      }
     );
   }
 

@@ -58,4 +58,10 @@ export class TranslatorService {
     return this.http.get<Translator>(`${this.serverUrl}/${id}`);
   }
 
+  getRandFeaturedTranslators = (quant) => {
+    const params = new HttpParams().set('limit', quant);
+
+    return this.http.get(this.serverUrl, {params: params});
+  }
+
 }
