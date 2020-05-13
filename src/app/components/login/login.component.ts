@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
           this.isCollapsed = true;
           this.loginForm.reset();
           this.updateVisitCount();
+          this.statsService.setInitialRequestCount();
           this.router.navigate(['/logged']);
         },
         error => {

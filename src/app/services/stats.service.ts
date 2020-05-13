@@ -1,25 +1,25 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { BehaviorSubject, Subject, ReplaySubject } from 'rxjs';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class StatsService implements OnInit {
+export class StatsService {
   serverUrl = 'http://localhost:3000/api/stats';
 
   private visitCountSource = new BehaviorSubject(null);
   visitCount$ = this.visitCountSource.asObservable();
 
-  private totalRequestSource = new ReplaySubject(1);
+  private totalRequestSource = new BehaviorSubject(null);
   totalRequest$ = this.totalRequestSource.asObservable();
+  initValue;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private authService: AuthService) {
     this.setInitialRequestCount();
   }
 
-  ngOnInit() {
-  }
 
 
   addUserStats = () => {
@@ -38,12 +38,20 @@ export class StatsService implements OnInit {
   }
 
   setInitialRequestCount = () => {
-    this.getUserStats()
-    .subscribe(
-      data => {
-        this.totalRequestSource.next(data[0].total_requests);
-      }
-    );
+    if (this.authService.loggedIn()) {
+      this.getUserStats()
+      .subscribe(
+        data => {
+          if (!!data) {
+            this.totalRequestSource.next(data[0].total_requests);
+            console.log(data);
+          }
+        },
+        error => {
+          console.log(error);
+        }
+      );
+    }
   }
 
   setTotalRequestCount = () => {
