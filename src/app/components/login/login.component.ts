@@ -28,12 +28,17 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.loginForm = new FormGroup({
       email: new FormControl('', [Validators.required]),
-      password: new FormControl('', [Validators.required])
+      password: new FormControl('', [Validators.required]),
+      remember: new FormControl(false)
+
+      // Implement a remember me option putting token in sessionStorage if the user decides not to be remembered
     });
     this.fetchLoginPanelState();
   }
 
   onLoginSubmit = () => {
+    const rememberMe = this.loginForm.get('remember').value;
+
     if (this.loginForm.valid) {
       const body = {
         email: this.loginForm.get('email').value,
