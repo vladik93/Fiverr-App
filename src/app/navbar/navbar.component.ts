@@ -57,7 +57,12 @@ export class NavbarComponent implements OnInit {
   }
 
   getStorageUsername = () => {
-    return localStorage.getItem('username');
+    if (localStorage.getItem('username')) {
+      return localStorage.getItem('username');
+    }
+    if (sessionStorage.getItem('username')) {
+      return sessionStorage.getItem('username');
+    }
   }
 
 }

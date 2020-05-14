@@ -25,17 +25,35 @@ export class AuthService {
   }
 
   loggedIn = () => {
-    return !!localStorage.getItem('token'); // !! (double negation) returns either true or false if value exists or not
+    if (localStorage.getItem('token')) {
+      return !!localStorage.getItem('token');
+    }
+    if (sessionStorage.getItem('token')) {
+      return !!sessionStorage.getItem('token');
+    }
+     // !! (double negation) returns either true or false if value exists or not
   }                                        //  instead of just returning the value (i.e. the token)
 
   getToken = () => {
-    return localStorage.getItem('token');
+    if (localStorage.getItem('token')) {
+      return localStorage.getItem('token');
+    }
+    if (sessionStorage.getItem('token')) {
+      return sessionStorage.getItem('token');
+    }
   }
 
   logoutUser = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('username');
-    this.router.navigate(['']);
+    if (localStorage.getItem('token')) {
+      localStorage.removeItem('token');
+      localStorage.removeItem('username');
+      this.router.navigate(['']);
+    }
+    if (sessionStorage.getItem('token')) {
+      sessionStorage.removeItem('token');
+      sessionStorage.removeItem('username');
+      this.router.navigate(['']);
+    }
     // location.reload();
   }
 
