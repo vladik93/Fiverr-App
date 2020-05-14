@@ -3,14 +3,14 @@
     <img src="{{translator.image}}" class="mr-4 shadow" id="profile-image" />
     <div class="media-body">
       <h1 class="mt-0" id="profile-name">{{translator.name}}</h1>
-      <span id="profile-phone">{{translator.phone}}</span>
+      <!-- <span id="profile-phone">{{translator.phone}}</span> -->
       <p>{{translator.description}}</p>
       <div id="language-section">
         <img src="{{translator.image_from}}" id="image-from" />
         <img src="assets/images/arrow-right.png" id="arrow-right" />
         <img src="{{translator.image_to}}" id="image-to" />
       </div>
-      <a id="profile-email" href="mailto:{{translator.email}}">{{translator.email}}</a>
+      <!-- <a id="profile-email" href="mailto:{{translator.email}}">{{translator.email}}</a> -->
     </div>
   </div>
   <button class="btn btn-dark btn-block send-request mt-3" style="box-shadow: 2px 2px 2px white" (click)="emailModal(template, translator)">

@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { LoggedService } from 'src/app/services/logged.service';
 import { StatsService } from 'src/app/services/stats.service';
+import { TranslatorService } from 'src/app/services/translator.service';
+import { CollapseService } from '../../services/collapse.service';
 
 @Component({
   selector: 'app-login',
@@ -12,13 +14,15 @@ import { StatsService } from 'src/app/services/stats.service';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-  isCollapsed = true;
+  isCollapsed;
   user;
 
   constructor(private authService: AuthService,
     private loggedService: LoggedService,
     private router: Router,
-    private statsService: StatsService
+    private statsService: StatsService,
+    private transService: TranslatorService,
+    private collapseService: CollapseService
   ) { }
 
   ngOnInit() {
@@ -26,6 +30,7 @@ export class LoginComponent implements OnInit {
       email: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required])
     });
+    this.fetchLoginPanelState();
   }
 
   onLoginSubmit = () => {
@@ -54,6 +59,22 @@ export class LoginComponent implements OnInit {
     } else {
       console.log('Form is invalid!');
     }
+  }
+
+  onLoginToggle = () => {
+    if (this.isCollapsed === true) {
+      this.isCollapsed = false;
+      this.transService.changeCollapseBoolean(true);
+    } else {
+      this.isCollapsed = true;
+    }
+  }
+
+  fetchLoginPanelState = () => {
+    this.collapseService.loginPanel$
+    .subscribe(
+      data => this.isCollapsed = data
+    );
   }
 
   updateVisitCount = () => {

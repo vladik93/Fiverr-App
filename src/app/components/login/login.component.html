@@ -1,4 +1,5 @@
-<a class="nav-link" *ngIf="!authService.loggedIn()" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseLogin">
+<!-- <a class="nav-link" *ngIf="!authService.loggedIn()" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseLogin"> -->
+<a class="nav-link" *ngIf="!authService.loggedIn()" (click)="onLoginToggle()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseLogin">
   Login
 </a>
 <div id="collapseLogin" class="bg-dark" [collapse]="isCollapsed" [isAnimated]="true"> 

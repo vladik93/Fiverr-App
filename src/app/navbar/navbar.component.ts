@@ -41,6 +41,7 @@ export class NavbarComponent implements OnInit {
     if (this.isCollapsed === true) {
       this.isCollapsed = false;
       this.collapseService.setCollapse(true);
+      this.collapseService.setLoginCollapse(true);
     } else {
       this.isCollapsed = true;
     }

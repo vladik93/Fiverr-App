@@ -12,6 +12,8 @@ export class CollapseService {
   private panelStatus = new Subject<Boolean>();
   panelStatusObs$ = this.panelStatus.asObservable();
 
+  private loginPanelSource = new BehaviorSubject<Boolean>(true);
+  loginPanel$ = this.loginPanelSource.asObservable();
 
   constructor(private http: HttpClient) {
     this.collapsed$.subscribe(data => console.log(data));
@@ -23,5 +25,9 @@ export class CollapseService {
 
   setCollapseStatus = (bool: Boolean) => {
     this.panelStatus.next(bool);
+  }
+
+  setLoginCollapse = (bool: boolean) => {
+    return this.loginPanelSource.next(bool);
   }
 }
