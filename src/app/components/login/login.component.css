@@ -60,3 +60,14 @@ input:focus {
     box-shadow: none;
     border-bottom: 3px solid white !important;
 }
+
+#error-alert {
+    position: absolute;
+    z-index: 1000;
+    width: 60%;
+    background: #212529;
+    color: white;
+    box-shadow: 2px 1px 1px white;
+    border: 3px double white;
+    font-weight: bold;
+}
