@@ -43,7 +43,8 @@ export class RegisterComponent implements OnInit {
       const body = {
         username: this.registerForm.get('username').value,
         email: this.registerForm.get('email').value,
-        password: this.registerForm.get('password').value
+        password: this.registerForm.get('password').value,
+        subscribed: this.registerForm.get('recieve_emails').value
       };
       console.log(body);
       this.authService.registerUser(body)
@@ -53,7 +54,6 @@ export class RegisterComponent implements OnInit {
           this.registerForm.reset();
           this.statsService.addUserStats();
           this.router.navigate(['']);
-
         },
         error => console.log(error)
       );
