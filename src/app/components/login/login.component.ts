@@ -15,6 +15,7 @@ import { CollapseService } from '../../services/collapse.service';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   isCollapsed;
+  isOpen;
   user;
   error;
 
@@ -72,6 +73,7 @@ export class LoginComponent implements OnInit {
           if (error.status === 403) {
             // console.log(error.error.forbidden);
             this.error = error.error.forbidden;
+            console.log(error);
           }
           this.loginForm.reset();
         }
@@ -103,5 +105,10 @@ export class LoginComponent implements OnInit {
       data => console.log(data),
       error => console.log(error)
     );
+  }
+
+  onAlertClosed = () => {
+    // this.isOpen = false;
+    this.error = undefined;
   }
 }

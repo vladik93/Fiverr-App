@@ -10,10 +10,14 @@
     <div class="form-group col-md-8">
       <input type="text" class="form-control" placeholder="Password" formControlName="password" />
     </div>
-    <div class="alert alert-light shadow ml-3" id="error-alert">
+    <alert type="md-local" *ngIf="error" 
+    class="alert alert-light shadow ml-3 p-0" 
+    id="error-alert" 
+    [dismissOnTimeout]="3000"
+    (onClosed)="onAlertClosed()">
       <!-- {{error}} -->
-      Current user is banned
-    </div>
+      {{error}}
+    </alert>
     <div class="form-check col-md-5">
       <input class="form-check-input" type="checkbox" id="remember-check" formControlName="remember">
       <label class="form-check-label" for="remember-check">
