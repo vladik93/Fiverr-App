@@ -37,6 +37,7 @@ import { AuthService } from './services/auth.service';
 import { EmailService } from './services/email.service';
 import { SubscriptionService } from './services/subscription.service';
 import { StatsService } from './services/stats.service';
+import { ErrorService } from './services/error.service';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 
 
@@ -97,6 +98,7 @@ import { EmailSendComponent } from './components/email-send/email-send.component
     EmailService,
     SubscriptionService,
     StatsService,
+    ErrorService,
     AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,

@@ -66,7 +66,7 @@ export class LoginComponent implements OnInit {
             this.loginForm.reset();
             this.updateVisitCount();
             this.statsService.setInitialRequestCount();
-            this.router.navigate(['/logged']);
+            // this.router.navigate(['/logged']);
           }
         },
         error => {
@@ -74,6 +74,8 @@ export class LoginComponent implements OnInit {
             // console.log(error.error.forbidden);
             this.error = error.error.forbidden;
             console.log(error);
+          } else if (error.status === 401) {
+            this.error = 'User not registered!';
           }
           this.loginForm.reset();
         }
