@@ -23,7 +23,9 @@
                                 <button class="btn btn-outline-dark more-info" (click)="onMoreButtonClick(translator.id)">More</button>
                             </div>
                             <div class="col-md-3">
-                                <button class="btn btn-outline-dark send-request" (click)="emailModal(template, translator)">Send Request</button> 
+                                <button class="btn btn-outline-dark send-request" 
+                                (click)="emailModal(template, translator)"
+                                *ngIf="authService.loggedIn()">Send Request</button> 
                                 <!-- <app-email-send></app-email-send> -->
                                 <!-- better create a separate component with the button and modal already there-->
                             </div>

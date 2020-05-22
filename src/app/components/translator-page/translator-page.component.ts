@@ -3,6 +3,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { TranslatorService } from '../../services/translator.service';
+import { AuthService } from 'src/app/services/auth.service';
 import { Translator } from '../../models/translator';
 import { EmailSendComponent } from '../email-send/email-send.component';
 
@@ -19,7 +20,11 @@ export class TranslatorPageComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
 
-  constructor(private tranService: TranslatorService, private route: ActivatedRoute, private modalService: BsModalService) { }
+  constructor(
+    private tranService: TranslatorService,
+    private route: ActivatedRoute,
+    private modalService: BsModalService,
+    private authService: AuthService) { }
 
   ngOnInit() {
     // this.subscription = this.route.params.subscribe(params => {

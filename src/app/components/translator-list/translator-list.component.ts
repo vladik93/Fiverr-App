@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy, TemplateRef } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslatorService } from '../../services/translator.service';
+import { AuthService } from 'src/app/services/auth.service';
 import { Translator } from '../../models/translator';
 import { Subscription } from 'rxjs';
 import { share } from 'rxjs/operators';
@@ -39,6 +40,7 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private modalService: BsModalService,
     private collapseService: CollapseService,
+    private authService: AuthService
   ) { }
 
   ngOnInit() {

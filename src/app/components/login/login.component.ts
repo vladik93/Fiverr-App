@@ -66,7 +66,7 @@ export class LoginComponent implements OnInit {
             this.loginForm.reset();
             this.updateVisitCount();
             this.statsService.setInitialRequestCount();
-            // this.router.navigate(['/logged']);
+            this.router.navigate(['/logged']);
           }
         },
         error => {

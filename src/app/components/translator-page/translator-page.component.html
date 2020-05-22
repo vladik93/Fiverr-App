@@ -13,7 +13,9 @@
       <!-- <a id="profile-email" href="mailto:{{translator.email}}">{{translator.email}}</a> -->
     </div>
   </div>
-  <button class="btn btn-dark btn-block send-request mt-3" style="box-shadow: 2px 2px 2px white" (click)="emailModal(template, translator)">
+  <button class="btn btn-dark btn-block send-request mt-3" style="box-shadow: 2px 2px 2px white" 
+  (click)="emailModal(template, translator)"
+  *ngIf="authService.loggedIn()">
     Send Request
   </button>
 </div>
