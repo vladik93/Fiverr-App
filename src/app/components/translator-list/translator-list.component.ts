@@ -26,6 +26,8 @@ export class TranslatorListComponent implements OnInit, OnDestroy {
 
   langParam: String;
 
+  imagePath = 'http://localhost/translation_app/translators';
+
   currentPage = 0;
   disabledPages = false;
 

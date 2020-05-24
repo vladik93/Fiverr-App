@@ -10,6 +10,8 @@ export class ReviewModalComponent implements OnInit {
   carouselInterval = 2000;
   translators;
 
+  imagePath = 'http://localhost/translation_app/translators';
+
   constructor(private transService: TranslatorService) { }
 
   ngOnInit() {

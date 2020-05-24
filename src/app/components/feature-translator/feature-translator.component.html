@@ -1,5 +1,5 @@
 <div class="media" *ngIf="translator">
-  <img src="{{translator.image}}" id="translator-pic" />
+  <img src="{{imagePath}}/{{translator.image}}" id="translator-pic" />
   <div class="media-body mt-3 ml-2">
     <h5 class="feature-text" id="feature-name">{{translator.name}}</h5>
     <h6 class="feature-text" id="feature-description" >{{translator.description.substring(0, 150)}}...</h6>
