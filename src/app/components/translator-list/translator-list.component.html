@@ -10,7 +10,7 @@
                 <accordion-group class="col-md-4 mt-1" *ngFor="let translator of translators; let i = index;" [panelClass]="customClass" [isOpen]="collapseOpen === i"  (isOpenChange)="onAccordionClick($event)">
                     <!-- <div class="glass"></div> -->
                         <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
-                            <img src="{{imagePath}}/{{translator.image}}" style="height: 80px; width: 80px; box-shadow: 2px 2px 2px black; border-radius: 20%" class="float-left pull-left" />
+                            <img src="assets/images/translators/{{translator.image}}" style="height: 80px; width: 80px; box-shadow: 2px 2px 2px black; border-radius: 20%" class="float-left pull-left" />
                             <h5 class="mt-1 ml-1 name float-left pull-left">{{translator.name}}</h5>
                                 <img src="{{translator.image_from}}" class="lang-from" />
                                 <span class="arrow-right"><img src="assets/images/arrow-right.png"  style="height: 15px;"/></span>

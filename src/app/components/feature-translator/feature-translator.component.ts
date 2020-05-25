@@ -13,7 +13,7 @@ export class FeatureTranslatorComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   translator: Translator;
 
-  imagePath = 'http://localhost/translation_app/translators';
+  // imagePath = 'http://localhost/translation_app/translators';
 
   constructor(private tranService: TranslatorService) { }
 

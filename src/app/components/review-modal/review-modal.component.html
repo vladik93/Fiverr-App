@@ -2,7 +2,7 @@
   <carousel [interval]="carouselInterval" [noPause]="true">
     <slide class="animated fadeIn" *ngFor="let translator of translators">
       <div class="media">
-          <img src="{{imagePath}}/{{translator.image}}" class="mr-3" style="height: 400px; width: 400px;">
+          <img src="assets/images/translators/{{translator.image}}" class="mr-3" style="height: 400px; width: 400px;">
           <div class="media-body">
             <h5 class="mt-0 display-2 title-text">{{translator.name}}</h5>
             <blockquote class="blockquote">
