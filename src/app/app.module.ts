@@ -21,6 +21,7 @@ import { AdsModalComponent } from './components/ads-modal/ads-modal.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { SideWidgetComponent } from './components/side-widget/side-widget.component';
+import { AccountReconfirmComponent } from './components/account-reconfirm/account-reconfirm.component';
 
 
 // Authenticated Components
@@ -71,6 +72,7 @@ import { EmailSendComponent } from './components/email-send/email-send.component
     LoggedComponent,
     SideWidgetComponent,
     EmailSendComponent,
+    AccountReconfirmComponent,
   ],
   imports: [
     BrowserModule,
