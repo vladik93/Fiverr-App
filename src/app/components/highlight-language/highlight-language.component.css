@@ -1,10 +1,13 @@
+
 #flag-section {
     min-height: 470px;
+    width: 100%;
 }
 
 .language {
     position: relative;
     cursor: pointer;
+    
 }
 
 .language:hover img {
@@ -24,7 +27,9 @@
 
 img {
     height: 280px;
-    width: 335px;
+    width: 100%;
     box-shadow: 5px 0px 10px white;
     border-radius: 5px;
 }
+
+
