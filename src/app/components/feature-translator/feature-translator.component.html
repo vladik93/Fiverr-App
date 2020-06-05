@@ -1,6 +1,6 @@
-<div class="media" *ngIf="translator">
+<!-- <div class="media" *ngIf="translator">
   <img src="assets/images/translators/{{translator.image}}" id="translator-pic" />
-  <div class="media-body mt-3 ml-2">
+  <div class="media-body">
     <h5 class="feature-text" id="feature-name">{{translator.name}}</h5>
     <h6 class="feature-text" id="feature-description" >{{translator.description.substring(0, 150)}}...</h6>
     <h5 class="feature-text mt-4" id="feature-price">{{translator.price}}$</h5>
@@ -8,4 +8,12 @@
 </div>
 <div id="more-link" class="btn btn-outline-light" *ngIf="translator">
   <a [routerLink]="['translators']" [queryParams]="{lang: translator.lang_to}">More</a>
+</div> -->
+
+<div *ngIf="translator" id="translator-section" class="d-flex justify-content-center mt-3">
+  <div class="row">
+    <div class="col-12">
+        <img src="assets/images/translators/{{translator.image}}" id="translator-pic" />
+    </div>
+  </div>
 </div>

@@ -1,4 +1,4 @@
-.media {
+/* .media {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -8,12 +8,15 @@
 .media-body {
     width: 360px;
     padding: 10px;
+} */
+
+#translator-section {
 }
 
 #translator-pic {
     border-radius: 100%;
-    width: 200px;
-    height: 200px;
+    width: 80px;
+    height: 80px;
     box-shadow: 0px 3px 5px black;
 }
 
@@ -40,7 +43,8 @@
 
 
 #feature-name {
-    width: 20%;
+    font-size: 15px;
+    text-align: center;
 }
 
 #feature-description { 
