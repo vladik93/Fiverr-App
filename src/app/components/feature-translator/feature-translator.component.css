@@ -11,12 +11,14 @@
 } */
 
 #translator-section {
+    /* margin-top: 20px; */
 }
 
 #translator-pic {
     border-radius: 100%;
     width: 80px;
     height: 80px;
+    margin: auto 0;
     box-shadow: 0px 3px 5px black;
 }
 
@@ -24,7 +26,7 @@
     background-color: #ffffe6;
     /* border: 1px dotted black; */
     /* width: 70%; */
-    display: block;
+    /* display: block; */
     box-shadow: 2px 1px 3px black;
 
     
@@ -33,7 +35,6 @@
 #more-link {
     position: absolute;
     top: 250px;
-    left: 555px;
 }
 
 #more-link a {
@@ -43,14 +44,17 @@
 
 
 #feature-name {
-    font-size: 15px;
+    font-size: 14px;
     text-align: center;
 }
 
 #feature-description { 
-    width: 80%;
+    text-align: center;
+    font-size: 12px;
 } 
 
 #feature-price {
-    width: 15%;
+    /* width: 15%; */
+    text-align: center;
+    font-size: 12px;
 }

@@ -10,10 +10,16 @@
   <a [routerLink]="['translators']" [queryParams]="{lang: translator.lang_to}">More</a>
 </div> -->
 
-<div *ngIf="translator" id="translator-section" class="d-flex justify-content-center mt-3">
+<div *ngIf="translator" id="translator-section" class="d-flex mt-3 p-2">
   <div class="row">
     <div class="col-12">
-        <img src="assets/images/translators/{{translator.image}}" id="translator-pic" />
+        <img src="assets/images/translators/{{translator.image}}" id="translator-pic" class="mb-2" />
+        <h5 class="feature-text" id="feature-name">{{translator.name}}</h5>
+        <h6 class="feature-text" id="feature-description" >{{translator.description.substring(0, 150)}}...</h6>
+        <h5 class="feature-text mt-4" id="feature-price">{{translator.price}}$</h5>
+        <div id="more-link" class="btn btn-outline-light btn-sm" *ngIf="translator">
+          <a [routerLink]="['translators']" [queryParams]="{lang: translator.lang_to}">More</a>
+        </div> 
     </div>
   </div>
 </div>
