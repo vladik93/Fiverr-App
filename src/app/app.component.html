@@ -1,4 +1,7 @@
-<app-navbar></app-navbar>
+<div class="container-fluid m-0 p-0">
+    <app-navbar></app-navbar>
+</div>
+
 
 <app-side-widget *ngIf="authService.loggedIn()"></app-side-widget> <!-- Doesn't start component (onInit) until condition is fullfilled-->
 
@@ -10,4 +13,8 @@
 <div class="container">
     <router-outlet></router-outlet>
 </div>
-<app-footer></app-footer>
+
+
+<div class="container-fluid m-0 p-0">
+    <app-footer></app-footer>
+</div>

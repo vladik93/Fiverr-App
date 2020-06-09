@@ -1,4 +1,56 @@
 .jumbotron {
+    background: none;
+}
+
+#title-parent {
+    position: relative;
+}
+
+
+#main-logo {
+    position: absolute;
+    bottom: 80.5px;
+    left: 0px;
+    width: 5.4rem;
+    /* border-bottom-left-radius: 20px; */
+    /* border-top-right-radius: 20px; */
+    /* border-top-right-radius: 20px; */
+    /* border-top-left-radius: 20px; */
+    box-shadow: 2px 0px 3px black;
+}
+
+#main-title {
+    position: relative;
+    z-index: 1000;
+    font-size: 3.7rem;
+}
+
+#title-span {
+    font-weight: bold;
+    color: #e9e4e2;
+    text-shadow: 0px 0px 5px black;
+}
+
+@media (min-width: 452px)  {
+    #main-logo {
+        position: absolute;
+        bottom: 10px;
+        left: 0px;
+        width: 5.4rem;
+        /* border-bottom-left-radius: 20px; */
+        /* border-top-right-radius: 20px; */
+        /* border-top-right-radius: 20px; */
+        /* border-top-left-radius: 20px; */
+        box-shadow: 2px 0px 3px black;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .jumbotron {
     /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("../assets/images/jumbotron-photo-4.jpg"); */
     background: none;
     /* background-size: cover; */
@@ -6,14 +58,14 @@
     /* box-shadow: 0 0 8px 8px #b5b2ab inset; */
 }
 
-#title-parent {
+/* #title-parent {
     position: relative;
-}
+} */
 
-#main-title {
+/* #main-title {
     position: relative;
     z-index: 1000;
-}
+} */
 
 #title-span {
     font-weight: bold;
@@ -44,3 +96,10 @@
     font-size: 26px;
 }
 
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }
