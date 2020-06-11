@@ -37,12 +37,17 @@ img {
 /* No media query for `xs` since this is the default in Bootstrap */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { }
+@media (min-width: 576px) { 
+   #flag-2 {
+       margin: 0 auto;
+       margin-top: 1.5rem;
+   }
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-    #flag-section {
-        /* min-height: 470px; */
+    #flag-2 {
+        margin-top: 0;
     }
     
     .language {
