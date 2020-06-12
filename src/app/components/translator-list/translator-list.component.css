@@ -1,13 +1,59 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.profile-image {
+    min-height: 100%;
+    height: 150px;
+    width: 100%; 
+    max-width: 250px;
+    box-shadow: 2px 2px 2px black; 
+    /* border-radius: 20% */
+}
+
+.lang-from {
+    /* position: absolute; */
+    width: 70px;
+    height: 45px;
+    box-shadow: 2px 1px 2px white;
+    /* top: 50px;
+    right: 200px; */
+    
+}
+
+.arrow-right {
+    /* position: absolute; */
+    top: 48px;
+    right: 180px;
+   
+}
+
+.lang-to {
+    /* position: absolute; */
+    width: 70px;
+    height: 45px;
+    box-shadow: 2px 1px 2px white;
+    /* top: 50px;
+    right: 148px; */
+}
 
 
-/* accordion-group {
-    position: relative;
-} */
 
-.name {
+
+
+
+
+
+
+
+/* .name {
     text-decoration: underline dashed white;
     color: black;
 }
+
+
 
 .lang-from {
     position: absolute;
@@ -38,21 +84,17 @@
 
 .price {
     color: #6B8E23;
-    /* text-shadow: 1px 2px 2px black; */
 
 }
 
 
 .more-info {
    position: relative;
-   /* left: 20px; */
-   /* text-shadow: 1px 2px 2px black; */
 }
 
 .send-request {
     position: relative;
     left: 20px;
-    /* text-shadow: 1px 2px 2px black; */
 }
 
 .pagination {
@@ -74,4 +116,20 @@
     color: black;
     border: 1px solid white;
     box-shadow: 1px 3px 2px black;
-}
+} */
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }
