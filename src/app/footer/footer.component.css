@@ -5,16 +5,56 @@
     top: 180px;
 }
 
+.title .display-2 {
+    font-size: 2.2rem;
+}
+
+.title .lead {
+    font-size: 1.2rem;
+}
+
+.staff .display-2 {
+    font-size: 2.2rem;
+}
+
+.staff .lead {
+    font-size: 1.2rem;
+}
+
 #alert-box {
     position: absolute;
     right: 70px;
     top: 30px;
 }
 
-.social {
-    margin: 0 auto;
+.social-media {
+    text-align: center;
+}
+
+.social-media img {
+    max-width: 100%;
+    width: 45px;
 }
 
 .email-form {
     display: none;
 }
+
+/* Extra small devices (portrait phones, less than 576px)
+ No media query since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .title .display-2 {
+        font-size: 1.9rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }

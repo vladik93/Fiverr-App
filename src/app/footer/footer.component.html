@@ -1,17 +1,35 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark text-light">
-  <div class="row">
-    <div class="col-12 col-md-6">
-      <h2>Translate World</h2>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark text-light justify-content-around">
+    <div class="col-12 col-md-4 d-flex flex-column justify-content-between text-center title">
+      <h4 class="display-2">Translate World</h4>
+      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, nostrum!</p>
+      <div class="social-media">
+        <a class="ml-1" href="#" tooltip="Facebook"><img src="assets/images/social-media/facebook.png" class="img-fluid" /></a>
+        <a class="ml-1" href="#" tooltip="Twitter"><img src="assets/images/social-media/twitter.png" class="img-fluid"  /></a>
+        <a class="ml-1" href="#" tooltip="LinkedIn"><img src="assets/images/social-media/linkedin.png" class="img-fluid" /></a>
+        <a class="ml-1" href="#" tooltip="Instagram" href="https://www.instagram.com/translateworld_original/" target="_blank"><img src="assets/images/social-media/instagram.png" class="img-fluid" /></a>
+      </div>
     </div>
-    <div class="col-12 col-md-1">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At soluta corporis laboriosam.</p>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <div class="col-md-4 d-flex flex-column  justify-content-between text-center staff">
+          <h4 class="display-2 navbar-nav">Staff</h4>
+          <p class="lead navbar-nav">Genia Zhdanov - Manager/Promoter</p>
+          <p class="lead navbar-nav">Vlad Semyonov -  Developer/Designer</p>
+        </div>
+
+        <div class="col-md-4 d-flex flex-column justify-content-between text-center staff">
+          <h4 class="display-2">Subscribe</h4>
+
+          <form (ngSubmit)="onSubscriptFormSubmit(subscriptForm)" #subscriptForm="ngForm">
+            <div id="alert-box" *ngIf="alert">
+              <alert type="light" [dismissible]="dismissible" [dismissOnTimeout]="2000" id="alert" (onClosed)="onAlertClosed(alert)" class="shadow">{{alert ? alert : 'Thank you for subsckibing' }}</alert>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="E-mail Here..." [(ngModel)]="subscription.email" name="email" (input)="onEmailInput()" />
+            </div>
+            <button class="btn btn-info btn-block" type="submit" style="box-shadow: 2px 1px 4px white;">Subscribe</button>
+          </form>
+        </div>
     </div>
-      <!-- <div class="row social d-flex justify-content-center align-items-center">
-        <a class="col-3" href="#" tooltip="Facebook"><img src="assets/images/social-media/facebook.png" class="img-fluid" /></a>
-        <a class="col-3" href="#" tooltip="Twitter"><img src="assets/images/social-media/twitter.png" class="img-fluid" /></a>
-        <a class="col-3" href="#" tooltip="LinkedIn"><img src="assets/images/social-media/linkedin.png" class="img-fluid" /></a>
-        <a class="col-3" href="#" tooltip="Instagram" href="https://www.instagram.com/translateworld_original/" target="_blank"><img src="assets/images/social-media/instagram.png"  class="img-fluid"/></a>
-      </div> -->
 </nav>
 
 
