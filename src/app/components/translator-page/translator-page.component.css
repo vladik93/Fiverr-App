@@ -106,6 +106,9 @@
         text-shadow: 1px 1px 1px gray;
     }
     
+    .media .profile-price {
+        font-size: 2rem;
+    }
     
 }
 
