@@ -37,3 +37,9 @@ body {
     /* border-radius: 10px;   */
     
   }
+  
+  .login-modal-sm {
+    margin: 0px; 
+    padding: 0px;
+    max-width: 100%;
+  }

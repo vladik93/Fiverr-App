@@ -10,9 +10,9 @@
     border-top: 1px dotted gray;
     /* border-bottom: 1px dotted white; */
     z-index: 10000;
-    border-bottom-left-radius: 5px;
+    /* border-bottom-left-radius: 5px; */
     /* border-bottom-right-radius: 5px; */
-    box-shadow: -4px 2px 3px 0px;
+    box-shadow: -2px 2px 3px 0px;
     /* padding: 15px; */
 }
 

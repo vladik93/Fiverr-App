@@ -15,25 +15,17 @@
     <button type="button" id="toggler" class="navbar-toggle collapsed navbar-toggler-icon"  (click)="onNavbarToggle()"
       [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
     </button>
+    <ul class="navbar-nav ml-auto d-md-none">
+      <li class="nav-item">
+        <app-sm-login-modal></app-sm-login-modal>
+      </li>
+    </ul>
+
+
     <!-- <button type="button" id="toggler" class="navbar-toggle collapsed navbar-toggler-icon"  (click)="isCollapsed = !isCollapsed"
       [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
     </button> -->
   <!-- </div> -->
-
-  <ul class="navbar-nav ml-auto">
-    <li class="nav-item">
-      <!-- <a class="nav-link" *ngIf="!authService.loggedIn()" [routerLink]="['register']" routerLinkActive="active">Register</a> -->
-    </li>
-    <li class="nav-item active">
-      <app-login></app-login>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" style="cursor: pointer;" *ngIf="authService.loggedIn()">{{username ? username : getStorageUsername()}}</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" *ngIf="authService.loggedIn()" style="cursor: pointer" (click)="authService.logoutUser()">Logout</a> 
-    </li>
-  </ul>
 
   <!-- To place brand next to other element, include both .navbar-header div -->
 
