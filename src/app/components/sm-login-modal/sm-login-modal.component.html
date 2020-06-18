@@ -1,4 +1,4 @@
-<a href="#" class="nav-link" (click)="loginModal.show()">LoginSM</a>
+<a href="#" class="nav-link" *ngIf="!authService.loggedIn()" (click)="loginModal.show()">Login</a>
 
 <div class="modal fade" bsModal #loginModal="bs-modal" [config]="{backdrop: false}"
      tabindex="-1" role="dialog" aria-labelledby="dialog-static-name">
