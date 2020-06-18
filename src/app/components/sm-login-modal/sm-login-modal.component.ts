@@ -1,5 +1,5 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
-import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { BsModalService, BsModalRef, ModalDirective} from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-sm-login-modal',
@@ -8,25 +8,25 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 })
 export class SmLoginModalComponent implements OnInit {
   modalRef: BsModalRef;
-  modalOpen = true;
+  @ViewChild('loginModal') loginModal: ModalDirective;
 
   constructor(private modalService: BsModalService) {
   }
 
   ngOnInit() {
-
-  }
-
-  openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(
-      template,
-      { class: 'login-modal-sm'}
-    );
-  }
-
-  onResizeScreen = () => {
     if (window.innerWidth > 767) {
-
+      this.loginModal.hide();
     }
+  }
+
+  // openModal(template: TemplateRef<any>) {
+  //   this.modalRef = this.modalService.show(
+  //     template,
+  //     { class: 'login-modal-sm'}
+  //   );
+  // }
+
+  onResizeScreen = (e) => {
+    console.log(e);
   }
 }
