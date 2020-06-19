@@ -1,11 +1,13 @@
 .navbar {
-    /* min-height: 250px; */
     padding: 2rem;
     width: 100%;
     top: 180px;
 }
 
-.title .display-2 {
+
+
+
+/* .title .display-2 {
     font-size: 2.2rem;
 }
 
@@ -38,7 +40,7 @@
 
 .email-form {
     display: none;
-}
+} */
 
 /* Extra small devices (portrait phones, less than 576px)
  No media query since this is the default in Bootstrap */
@@ -48,9 +50,9 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-    .title .display-2 {
+    /* .title .display-2 {
         font-size: 1.9rem;
-    }
+    } */
 }
 
 /* Large devices (desktops, 992px and up) */
