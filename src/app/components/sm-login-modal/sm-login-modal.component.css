@@ -5,3 +5,15 @@
     border-radius: 0;
     max-width: 100%;
 }
+
+#error-alert {
+    /* position: absolute; */
+    /* z-index: 1000; */
+    /* width: 58.3%; */
+    /* height: 30%; */
+    background: #212529;
+    color: white;
+    box-shadow: 2px 1px 1px white;
+    /* border: 3px double white; */
+    /* font-weight: bold; */
+}

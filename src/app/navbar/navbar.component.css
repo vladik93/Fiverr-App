@@ -6,3 +6,15 @@
     position: relative;
 }
 
+.navbar-nav { 
+    display: flex;
+    flex-direction: row;
+}
+
+.username {
+    margin-right: 0.5rem;
+}
+
+.register {
+    margin-right: 1.0rem;
+}

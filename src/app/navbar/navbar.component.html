@@ -10,17 +10,23 @@
 </div>
 
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow" style="border-top: 1px dashed lightgrey">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow" style="border-top: 1px dashed lightgrey;">
   <!-- <div class="container-fluid"> -->
     <button type="button" id="toggler" class="navbar-toggle collapsed navbar-toggler-icon"  (click)="onNavbarToggle()"
       [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
     </button>
     <ul class="navbar-nav ml-auto d-md-none">
-      <li class="nav-item">
+      <li class="nav-item register">
+          <a class="nav-link" *ngIf="!authService.loggedIn()" [routerLink]="['register']" routerLinkActive="active">Register</a>
+      </li>
+      <li class="nav-item login">
         <app-sm-login-modal></app-sm-login-modal>
       </li>
-      <li class="nav-item">
+      <li class="nav-item username">
           <a class="nav-link" style="cursor: pointer;" *ngIf="authService.loggedIn()">{{username ? username : getStorageUsername()}}</a>
+      </li>
+      <li class="nav-item logout">
+        <a class="nav-link" *ngIf="authService.loggedIn()" style="cursor: pointer" (click)="authService.logoutUser()">Logout</a>
       </li>
     </ul>
 
