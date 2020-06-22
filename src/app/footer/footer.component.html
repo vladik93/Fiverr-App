@@ -20,10 +20,16 @@
       <p>Developer/Designer</p>
     </div>
     <div class="col-12 col-md-4">
-      <h3>Subscribe</h3>
-      <hr class="my-4 light" />
-      <h6>Your Email?</h6>
-      <input type="email" class="form-control" />
+      <form (ngSubmit)="onSubscriptFormSubmit(subscriptForm)" #subscriptForm="ngForm">
+        <h3>Subscribe</h3>
+        <hr class="my-4 light" />
+        <h6 class="your-mail">Your Email?</h6>
+        <input type="email" class="form-control mb-3" [(ngModel)]="subscription.email" name="email" (input)="onEmailInput()"/>
+        <button class="btn btn-info btn-block" type="submit" style="box-shadow: 2px 1px 4px white;">Subscribe</button>
+        <div id="alert-box" *ngIf="alert">
+          <alert type="md-local" [dismissOnTimeout]="2000" id="alert" (onClosed)="onAlertClosed(alert)" class="shadow">{{alert ? alert : 'Thank you for subsckibing' }}</alert>
+        </div>
+      </form>
     </div>
   </div>
 </footer>

@@ -18,7 +18,7 @@
 #main-title {
     position: relative;
     z-index: 1000;
-    font-size: 4.2rem;
+    font-size: 4.5rem;
 }
 
 #title-span {
@@ -28,7 +28,7 @@
     background: url('../../../assets/images/logo.jpg') center no-repeat;
     background-size: cover;
     /* border: 1px solid gray; */
-    background-position: 0 -21.3px; 
+    background-position: 0 -26px; 
 
 }
 
