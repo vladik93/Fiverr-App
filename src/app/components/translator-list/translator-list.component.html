@@ -15,20 +15,20 @@
                                 <span class="arrow-right"><img src="assets/images/arrow-right.png"  style="height: 15px;"/></span>
                                 <img src="{{translator.image_to}}" class="lang-to" />
                         </button>
-                        <p class="description ml-1">{{translator.description.substring(0, 150)}}...</p>
-                        <p class="price ml-1">{{translator.price}}$</p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <button class="btn btn-outline-dark more-info" (click)="onMoreButtonClick(translator.id)">More</button>
-                            </div>
-                            <div class="col-md-3">
-                                <button class="btn btn-outline-dark send-request" 
+                        <p class="description ml-1 text-center">{{translator.description.substring(0, 150)}}...</p>
+                        <p class="price ml-1 text-center">{{translator.price}}$</p>
+                        <!-- <div class="row"> -->
+                            <!-- <div class="col-md-6"> -->
+                                <button class="btn btn-outline-dark btn-block more-info" (click)="onMoreButtonClick(translator.id)">More</button>
+                            <!-- </div> -->
+                            <!-- <div class="col-md-3"> -->
+                                <button class="btn btn-primary btn-block send-request" 
                                 (click)="emailModal(template, translator)"
                                 *ngIf="authService.loggedIn()">Send Request</button> 
                                 <!-- <app-email-send></app-email-send> -->
                                 <!-- better create a separate component with the button and modal already there-->
-                            </div>
-                        </div>
+                            <!-- </div> -->
+                        <!-- </div> -->
                     <!-- <button class="btn btn-outline-light more-info offset-md-9" (click)="onMoreButtonClick(translator.id)">More</button> -->
                 </accordion-group>
             </div>
