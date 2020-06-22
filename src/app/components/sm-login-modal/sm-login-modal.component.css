@@ -11,9 +11,19 @@
     /* z-index: 1000; */
     /* width: 58.3%; */
     /* height: 30%; */
-    background: #212529;
+    /* background: #212529;
     color: white;
     box-shadow: 2px 1px 1px white;
+    border: 2px solid white; */
     /* border: 3px double white; */
     /* font-weight: bold; */
+}
+
+:host >>> .alert-md-local {
+    background-color: none;
+    border: none;
+    padding: 10px 10px;
+    /* border: 1px solid white; */
+    color: #c94d2e;
+
 }

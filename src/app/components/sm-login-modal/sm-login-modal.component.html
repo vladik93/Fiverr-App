@@ -20,8 +20,7 @@
             <label for="password">Password</label>
             <input type="text" id="password" class="form-control" placeholder="Password" formControlName="password" />
           </div>
-          <alert type="md-local" *ngIf="error" 
-          class="alert alert-light shadow ml-3 p-0" 
+          <alert type="md-local" *ngIf="error"  
           id="error-alert" 
           [dismissOnTimeout]="3000"
           (onClosed)="onAlertClosed()">
