@@ -63,10 +63,16 @@ carousel img {
 .btn-small {
     width: 65%;
     margin: 0 auto;
-    background-color: purple;
-    border: none;
-    box-shadow: 1px 3px 3px white;
+    /* background-color: purple; */
+    /* border: none; */
+    border: 3px solid white;
+    color: white;
+    text-shadow: 1px 2px 1px black;
+    box-shadow: 1px 1px 1px black;
+    /* box-shadow: 1px 3px 3px white; */
 }
+
+
 
 /* .review-text {
     text-decoration-line: underline;
@@ -206,9 +212,10 @@ blockquote cite:before {
     .btn-big {
         margin-left: 2.9rem;
         /* width: 75%; */
-        background-color: purple;
-        border: none;
-        box-shadow: 1px 3px 3px white;
+        border: 3px solid white;
+        color: white;
+        text-shadow: 1px 2px 1px black;
+        box-shadow: 1px 1px 1px black;
     }
 
  }
