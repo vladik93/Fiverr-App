@@ -54,7 +54,6 @@ export class AuthService {
       sessionStorage.removeItem('username');
       this.router.navigate(['']);
     }
-    // location.reload();
   }
 
  }
