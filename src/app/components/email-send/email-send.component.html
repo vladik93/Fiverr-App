@@ -1,4 +1,5 @@
-<div class="modal-header bg-dark text-light">
+<form>
+  <div class="modal-header bg-dark text-light">
     <h4 class="modal-title pull-left">Confirm Request</h4>
     <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
       <span aria-hidden="true">&times;</span>
@@ -13,9 +14,11 @@
       </div>
     </div>
     <h4>Price: {{list[0].price}}&#8362;</h4>
+    <textarea class="form-control" rows="5" placeholder="Write a message..." name="content" [(ngModel)]="list[0].content"></textarea>
     <p class="text-muted" style="font-size: 11px">Note: Request will be verified befoehand and a different price may be agreed upon. Futher information will be provided by our team. Thank you!</p>
   </div>
   <div class="modal-footer bg-dark text-light">
-    <button type="button" class="btn btn-outline-light"  (click)="onRequestConfirm(list[0].id)">Confirm</button>
+    <button type="submit" class="btn btn-outline-light"  (click)="onRequestConfirm(list[0].id)">Confirm</button>
     <!-- <button type="button" class="btn btn-outline-light"  (click)="bsModalRef.hide()">Confirm</button> -->
   </div>
+</form>
