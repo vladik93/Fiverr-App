@@ -1,6 +1,22 @@
+.card {
+    border: none;
+}
+
 img {
-    height: 70px;
-    width: 80px;
-    /* box-shadow: 2px 2px 2px black; */
-    /* display: inline-block; */
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+}
+
+.display-2 {
+    font-size: 2.0rem;
+}
+
+hr {
+    border: none;
+}
+
+
+.close {
+    font-size: 2.5rem;
 }
