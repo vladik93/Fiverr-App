@@ -24,12 +24,13 @@
        <h3 class="display-2">CONFIRM REQUEST</h3>
       <img src="assets/images/translators/{{list[0].image}}" class="card-img-top" />
        <div class="card-body text-center">
-         <form>
+         <form (ngSubmit)="onRequestConfirm(requestForm)" #requestForm="ngForm"> 
           <h3 class="card-title display-2">{{list[0].name}}</h3>
           <p class="card-subtitle lead">{{list[0].codefrom ? list[0].codefrom : 'n/a'}} - {{list[0].codeto}}</p>
           <h5 class="card-text lead">Price: {{list[0].price}}&#8362;</h5>
+          <input type="hidden" name="id" readonly="true" [ngModel]="list[0].id" /> 
           <textarea class="form-control mb-2 w-100" rows="5" [(ngModel)]="list[0].content" name="content" placeholder="Send a message..."></textarea>
-          <button class="btn btn-outline-light btn-block" (click)="onRequestConfirm(list[0].id)">SEND</button>
+          <button class="btn btn-outline-light btn-block" type="submit">SEND</button>
         </form>
        </div>
      </div>

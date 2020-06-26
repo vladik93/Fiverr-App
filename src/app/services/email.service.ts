@@ -5,7 +5,7 @@ import { catchError } from 'rxjs/operators';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
   })
 };
 
@@ -17,7 +17,7 @@ export class EmailService {
 
   constructor(private http: HttpClient) { }
 
-  sendEmailRequest = (transId: Number, content) => {
+  sendEmailRequest = (transId: Number, content: any) => {
     return this.http.post(`${this.serverUrl}/${transId}`, content);
   }
 
