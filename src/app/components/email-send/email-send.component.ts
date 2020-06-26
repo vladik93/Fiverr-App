@@ -26,7 +26,7 @@ export class EmailSendComponent implements OnInit {
 
   onRequestConfirm = (form: NgForm) => {
     if (this.authService.loggedIn()) {
-      this.emailService.sendEmailRequest(form.value.id, form.value.content)
+      this.emailService.sendEmailRequest(form.value.id, { content: form.value.content })
       .subscribe(
         data => {
           this.statsService.setTotalRequestCount();
@@ -35,7 +35,6 @@ export class EmailSendComponent implements OnInit {
         error => console.log(error)
       );
     }
-
   }
 
 
