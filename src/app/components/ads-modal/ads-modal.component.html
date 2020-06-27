@@ -2,14 +2,11 @@
      class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-auto-name">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <!-- <div class="modal-header bg-dark text-light">
-        <h4 id="dialog-auto-name" class="modal-title pull-left">Auto shown modal</h4>
-      </div> -->
-      <div class="modal-body" [ngStyle]="{'background-image':'url(' + ad.image + ')'}">
-        <button type="button" class="close pull-right close-button" aria-label="Close" (click)="hideModal()">
-          <span aria-hidden="true">&times;</span>
+      <button type="button" class="close pull-right close-button bg-dark text-light p-2" aria-label="Close" (click)="hideModal()">
+          <span aria-hidden="true">CLOSE AD</span>
         </button>
-        <p class="ad-content">{{ad.content}}</p>
+      <div class="modal-body d-flex justify-content-center align-items-center" [ngStyle]="{'background-image':'url(' + ad.image + ')'}">
+        <p class="ad-content lead">{{ad.content}}</p>
       </div>
     </div>
   </div>
