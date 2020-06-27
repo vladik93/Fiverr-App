@@ -1,6 +1,6 @@
 #widget {
     position: fixed;
-    left: 97%;
+    right: 0;
     top: 370px;
     z-index: 10000;  
     display: none;
@@ -25,11 +25,9 @@
 
 #widget-collapse {
     position: fixed;
-    top: 285px; /* 100px */
-    left: 77%;
-    /* opacity: 85%; */
+    top: 285px;
+    right: 0;
     z-index: 1000;
-    /* Animation */
     opacity: 1;
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
@@ -53,10 +51,10 @@
     width: 350px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    /* background: rgba(0,0,0,.4); */
     z-index: 1000;
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,0.5721638997395833) 40%, rgba(178,178,178,0.5105392498796393) 78%);
+    display: none;
 }
 
 /* .glass {
@@ -103,6 +101,10 @@
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
     #widget {
+        display: block;
+    }
+
+    #collapse-content {
         display: block;
     }
 }
