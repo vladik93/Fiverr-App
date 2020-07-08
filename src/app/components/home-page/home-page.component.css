@@ -1,5 +1,6 @@
 .jumbotron {
     background: none;
+    text-align: center;
 }
 
 #title-parent {
@@ -17,7 +18,7 @@
 #main-title {
     position: relative;
     z-index: 1000;
-    font-size: 3.7rem;
+    font-size: 4.2rem;
 }
 
 #title-span {
@@ -31,6 +32,18 @@
 
 }
 
+.underlined-text {
+    font-size: 1.7rem;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    text-decoration-color: rgb(224, 224, 224);
+}
+
+
+.content-text {
+    font-size: 1.5rem;
+}
+
 
 
 /* Small devices (landscape phones, 576px and up) */
@@ -41,8 +54,9 @@
     .jumbotron {
     /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("../assets/images/jumbotron-photo-4.jpg"); */
     background: none;
+    text-align: left;
     /* background-size: cover; */
-    min-height: 570px;
+    /* min-height: 570px; */
     /* box-shadow: 0 0 8px 8px #b5b2ab inset; */
 }
 
