@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 import { Language } from '../../models/language';
 import { LanguageService } from '../../services/language.service';
 import { TranslatorService } from '../../services/translator.service';
@@ -14,7 +15,8 @@ export class LanguageMenuComponent implements OnInit {
 
   constructor(
     private langService: LanguageService,
-    private tranService: TranslatorService
+    private tranService: TranslatorService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -30,4 +32,11 @@ export class LanguageMenuComponent implements OnInit {
   onLanguageClick = (id) => {
     this.tranService.getTranslatorsByLanguage(id, 1);
   }
+
+  onSmallScrLangClick = (id) => {
+    if (window.innerWidth < 768) {
+      this.router.navigate(['translators'], {queryParams: {lang: id}});
+    }
+  }
 }
+
