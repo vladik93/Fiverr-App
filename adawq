@@ -1,0 +1,121 @@
+[33mb2c853a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/05-06-20[m[33m)[m HEAD@{0}: merge origin/05-06-20: Fast-forward
+[33m03b7f22[m[33m ([m[1;31morigin/04-06-20[m[33m, [m[1;32m04-06-20[m[33m, [m[1;32m02-06-20[m[33m)[m HEAD@{1}: merge 04-06-20: Fast-forward
+[33m7b4275b[m[33m ([m[1;31morigin/27-05-20[m[33m, [m[1;32m27-05-20[m[33m, [m[1;32m07-06-20[m[33m, [m[1;32m01-06-20[m[33m)[m HEAD@{2}: merge 27-05-20: Fast-forward
+[33m45808a2[m[33m ([m[1;31morigin/26-05-20[m[33m, [m[1;32m26-05-20[m[33m)[m HEAD@{3}: merge 26-05-20: Fast-forward
+[33m245cb6a[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/25-05-20[m[33m, [m[1;32m25-05-20[m[33m)[m HEAD@{4}: merge 25-05-20: Fast-forward
+[33m5a23ab3[m[33m ([m[1;31morigin/24-05-20[m[33m, [m[1;32m24-05-20[m[33m)[m HEAD@{5}: merge 24-05-20: Fast-forward
+[33m0429e99[m[33m ([m[1;31morigin/22-05-20[m[33m, [m[1;32m22-05-20[m[33m)[m HEAD@{6}: merge 22-05-20: Fast-forward
+[33m68eb98f[m[33m ([m[1;31morigin/21-05-20[m[33m, [m[1;32m21-05-20[m[33m)[m HEAD@{7}: merge 21-05-20: Fast-forward
+[33m77d27a0[m[33m ([m[1;31morigin/20-05-20[m[33m, [m[1;32m20-05-20[m[33m)[m HEAD@{8}: merge 20-05-20: Fast-forward
+[33me343c74[m[33m ([m[1;31morigin/15-05-20[m[33m, [m[1;32m15-05-20[m[33m)[m HEAD@{9}: merge 15-05-20: Fast-forward
+[33m833b481[m[33m ([m[1;31morigin/14-05-20[m[33m, [m[1;32m14-05-20[m[33m)[m HEAD@{10}: merge 14-05-20: Fast-forward
+[33m37cd6f2[m[33m ([m[1;31morigin/13-05-20[m[33m, [m[1;32m13-05-20[m[33m)[m HEAD@{11}: merge 13-05-20: Fast-forward
+[33mfc054f9[m[33m ([m[1;31morigin/12-05-20[m[33m, [m[1;32m12-05-20[m[33m)[m HEAD@{12}: merge 12-05-20: Fast-forward
+[33mdad4f98[m[33m ([m[1;31morigin/11-05-20[m[33m, [m[1;32m11-05-20[m[33m)[m HEAD@{13}: merge 11-05-20: Fast-forward
+[33m9b12abb[m[33m ([m[1;31morigin/10-05-20[m[33m, [m[1;32m10-05-20[m[33m)[m HEAD@{14}: merge 10-05-20: Fast-forward
+[33m2abbbdd[m[33m ([m[1;31morigin/09-05-20[m[33m, [m[1;32m09-05-20[m[33m)[m HEAD@{15}: merge 09-05-20: Fast-forward
+[33m7703ff6[m[33m ([m[1;31morigin/08-05-20[m[33m, [m[1;32m08-05-20[m[33m)[m HEAD@{16}: merge 08-05-20: Fast-forward
+[33m2c608c0[m[33m ([m[1;31morigin/07-05-20[m[33m, [m[1;32m07-05-20[m[33m)[m HEAD@{17}: merge 07-05-20: Fast-forward
+[33mf4df132[m[33m ([m[1;31morigin/06-05-20[m[33m, [m[1;32m06-05-20[m[33m)[m HEAD@{18}: merge 06-05-20: Fast-forward
+[33mfb82ec7[m[33m ([m[1;31morigin/05-05-20[m[33m, [m[1;32m05-05-20[m[33m)[m HEAD@{19}: merge 05-05-20: Fast-forward
+[33m323a7d1[m[33m ([m[1;31morigin/04-05-20[m[33m, [m[1;32m04-05-20[m[33m)[m HEAD@{20}: merge 04-05-20: Fast-forward
+[33m1e873d9[m[33m ([m[1;31morigin/03-05-20[m[33m, [m[1;32m03-05-20[m[33m)[m HEAD@{21}: merge 03-05-20: Fast-forward
+[33m3548b15[m[33m ([m[1;31morigin/01-05-20[m[33m, [m[1;32m01-05-20[m[33m)[m HEAD@{22}: merge 01-05-20: Fast-forward
+[33m3e92e97[m[33m ([m[1;31morigin/30-04-20[m[33m, [m[1;32m30-04-20[m[33m)[m HEAD@{23}: merge 30-04-20: Fast-forward
+[33m2d6f7c3[m[33m ([m[1;31morigin/28-04-20[m[33m, [m[1;32m28-04-20[m[33m)[m HEAD@{24}: merge 28-04-20: Fast-forward
+[33mabc738d[m[33m ([m[1;31morigin/27-04-20[m[33m, [m[1;32m27-04-20[m[33m)[m HEAD@{25}: merge 27-04-20: Fast-forward
+[33m4255251[m[33m ([m[1;31morigin/26-04-20[m[33m, [m[1;32m26-04-20[m[33m)[m HEAD@{26}: merge 26-04-20: Fast-forward
+[33ma180c78[m[33m ([m[1;31morigin/23-04-20[m[33m, [m[1;32m23-04-20[m[33m)[m HEAD@{27}: merge 23-04-20: Fast-forward
+[33m370e483[m[33m ([m[1;31morigin/22-04-20[m[33m, [m[1;32m22-04-20[m[33m)[m HEAD@{28}: merge 22-04-20: Fast-forward
+[33ma4d8830[m[33m ([m[1;31morigin/21-04-20[m[33m, [m[1;32m21-04-20[m[33m)[m HEAD@{29}: merge 21-04-20: Fast-forward
+[33me4582b1[m[33m ([m[1;31morigin/20-04-20[m[33m, [m[1;32m20-04-20[m[33m)[m HEAD@{30}: merge 20-04-20: Fast-forward
+[33m59263ab[m[33m ([m[1;31morigin/18-04-20[m[33m, [m[1;32m18-04-20[m[33m)[m HEAD@{31}: merge 18-04-20: Fast-forward
+[33m0864877[m[33m ([m[1;31morigin/12-04-20[m[33m, [m[1;32m12-04-20[m[33m)[m HEAD@{32}: merge 12-04-20: Fast-forward
+[33m302f098[m[33m ([m[1;31morigin/11-04-20[m[33m, [m[1;32m11-04-20[m[33m)[m HEAD@{33}: merge 11-04-20: Fast-forward
+[33m0537833[m[33m ([m[1;31morigin/10-04-20[m[33m, [m[1;32m10-04-20[m[33m)[m HEAD@{34}: merge 10-04-20: Fast-forward
+[33m4c89e43[m[33m ([m[1;31morigin/08-04-20[m[33m, [m[1;32m08-04-20[m[33m)[m HEAD@{35}: merge 08-04-20: Fast-forward
+[33mf56468a[m[33m ([m[1;31morigin/07-04-20[m[33m, [m[1;32m07-04-20[m[33m)[m HEAD@{36}: merge 07-04-20: Fast-forward
+[33mbd3a820[m[33m ([m[1;31morigin/06-04-20[m[33m, [m[1;32m06-04-20[m[33m)[m HEAD@{37}: merge 06-04-20: Fast-forward
+[33ma3f0a79[m[33m ([m[1;31morigin/05-04-20[m[33m, [m[1;32m05-04-20[m[33m)[m HEAD@{38}: merge 05-04-20: Fast-forward
+[33md4258c8[m[33m ([m[1;31morigin/04-04-20[m[33m, [m[1;32m04-04-20[m[33m)[m HEAD@{39}: merge 04-04-20: Fast-forward
+[33m8b95916[m[33m ([m[1;31morigin/01-04-20[m[33m, [m[1;32m01-04-20[m[33m)[m HEAD@{40}: merge 01-04-20: Fast-forward
+[33mc082779[m[33m ([m[1;31morigin/31-03-20[m[33m, [m[1;32m31-03-20[m[33m)[m HEAD@{41}: merge 31-03-20: Fast-forward
+[33mbac02a9[m[33m ([m[1;31morigin/30-03-20[m[33m, [m[1;32m30-03-20[m[33m)[m HEAD@{42}: merge 30-03-20: Fast-forward
+[33m9b0f7fb[m[33m ([m[1;31morigin/29-03-20[m[33m, [m[1;32m29-03-20[m[33m)[m HEAD@{43}: merge 29-03-20: Fast-forward
+[33mbaa5a50[m[33m ([m[1;31morigin/28-03-20[m[33m, [m[1;32m28-03-20[m[33m)[m HEAD@{44}: merge 28-03-20: Fast-forward
+[33mfa7dedb[m[33m ([m[1;31morigin/27-03-20[m[33m, [m[1;32m27-03-20[m[33m)[m HEAD@{45}: merge 27-03-20: Fast-forward
+[33m4511587[m[33m ([m[1;31morigin/26-03-20[m[33m, [m[1;32m26-03-20[m[33m)[m HEAD@{46}: merge 26-03-20: Fast-forward
+[33m1f2ebc0[m[33m ([m[1;31morigin/25-03-20[m[33m, [m[1;32m25-03-20[m[33m)[m HEAD@{47}: merge 25-03-20: Fast-forward
+[33m9a4e842[m[33m ([m[1;31morigin/24-03-20[m[33m, [m[1;32m24-03-20[m[33m)[m HEAD@{48}: merge 24-03-20: Fast-forward
+[33m448f210[m[33m ([m[1;31morigin/23-03-20[m[33m, [m[1;32m23-03-20[m[33m)[m HEAD@{49}: merge 23-03-20: Fast-forward
+[33m52bacbd[m[33m ([m[1;31morigin/22-03-20[m[33m, [m[1;32m22-03-20[m[33m)[m HEAD@{50}: merge 22-03-20: Fast-forward
+[33m4cbd11b[m HEAD@{51}: checkout: moving from 29-06-20 to master
+[33mb1189fd[m[33m ([m[1;31morigin/27-06-20[m[33m, [m[1;32m29-06-20[m[33m, [m[1;32m27-06-20[m[33m)[m HEAD@{52}: checkout: moving from 27-06-20 to 29-06-20
+[33mb1189fd[m[33m ([m[1;31morigin/27-06-20[m[33m, [m[1;32m29-06-20[m[33m, [m[1;32m27-06-20[m[33m)[m HEAD@{53}: commit: fixed the sm-login-panel navigating to home page upon being opened
+[33m5f4a620[m HEAD@{54}: commit: changed on route change to scroll back to top
+[33mfed73da[m HEAD@{55}: commit: added navigation links for highlight languages
+[33m99ddf61[m HEAD@{56}: commit: added redirection routes for the feature translator component buttons
+[33ma694a8a[m HEAD@{57}: commit: made the ads modal responsive
+[33m4c17da3[m HEAD@{58}: commit: fixed issue with side-widget not being responsive
+[33m17ea51b[m[33m ([m[1;31morigin/26-06-20[m[33m, [m[1;32m26-06-20[m[33m)[m HEAD@{59}: checkout: moving from 26-06-20 to 27-06-20
+[33m17ea51b[m[33m ([m[1;31morigin/26-06-20[m[33m, [m[1;32m26-06-20[m[33m)[m HEAD@{60}: commit: fixed issue with content not being sent with translator request
+[33mf83bc3c[m HEAD@{61}: commit: trying to get email request form to accept content message (weird problem where req.body is sent as a JSON key with an empty value)
+[33m410642c[m[33m ([m[1;31morigin/24-06-20[m[33m, [m[1;32m24-06-20[m[33m)[m HEAD@{62}: checkout: moving from 24-06-20 to 26-06-20
+[33m410642c[m[33m ([m[1;31morigin/24-06-20[m[33m, [m[1;32m24-06-20[m[33m)[m HEAD@{63}: commit: need to redo the code for the email requests
+[33mcf2a004[m HEAD@{64}: commit: trying to add a content text box for the email request
+[33m6d71f10[m[33m ([m[1;31morigin/23-06-20[m[33m, [m[1;32m23-06-20[m[33m)[m HEAD@{65}: checkout: moving from 23-06-20 to 24-06-20
+[33m6d71f10[m[33m ([m[1;31morigin/23-06-20[m[33m, [m[1;32m23-06-20[m[33m)[m HEAD@{66}: commit: stylized button differently
+[33mc3591b8[m HEAD@{67}: commit: added responsive check-out translator button on the carousel
+[33m546ad2a[m[33m ([m[1;31morigin/22-06-20[m[33m, [m[1;32m22-06-20[m[33m)[m HEAD@{68}: checkout: moving from 22-06-20 to 23-06-20
+[33m546ad2a[m[33m ([m[1;31morigin/22-06-20[m[33m, [m[1;32m22-06-20[m[33m)[m HEAD@{69}: commit: fixed translators-list appearance and responsiveness
+[33mea9d85d[m HEAD@{70}: commit: fixed (almost) the email subscribe functionalaity (may need to change the style of the alert and allow scrolling to the bottom)
+[33m1bee9cb[m HEAD@{71}: commit: fixed the logged page to fit smaller screens
+[33m63d9100[m HEAD@{72}: commit: fixed issue with login alert looking messed up
+[33m1a3e261[m HEAD@{73}: commit: C:/Program Files/Git/
+[33m623a960[m[33m ([m[1;31morigin/20-06-20[m[33m, [m[1;32m20-06-20[m[33m)[m HEAD@{74}: checkout: moving from 20-06-20 to 22-06-20
+[33m623a960[m[33m ([m[1;31morigin/20-06-20[m[33m, [m[1;32m20-06-20[m[33m)[m HEAD@{75}: commit: fixed mostly the footer & made some overall changes on lg-devices
+[33m62f5cc2[m[33m ([m[1;31morigin/19-06-20[m[33m, [m[1;32m19-06-20[m[33m)[m HEAD@{76}: checkout: moving from 19-06-20 to 20-06-20
+[33m62f5cc2[m[33m ([m[1;31morigin/19-06-20[m[33m, [m[1;32m19-06-20[m[33m)[m HEAD@{77}: commit: remade the footer to be more organized (need to add additional responsive fixes)
+[33md53ff1a[m[33m ([m[1;31morigin/18-06-20[m[33m, [m[1;32m18-06-20[m[33m)[m HEAD@{78}: checkout: moving from 18-06-20 to 19-06-20
+[33md53ff1a[m[33m ([m[1;31morigin/18-06-20[m[33m, [m[1;32m18-06-20[m[33m)[m HEAD@{79}: commit: added functionality to login panel on small screens
+[33m1232082[m HEAD@{80}: commit: added modal login panel for smaller screens (may need some tweaking later)
+[33m3e0d32a[m[33m ([m[1;31morigin/MYBRANCHNOTVLADIS[m[33m, [m[1;31morigin/17-06-20[m[33m, [m[1;32m17-06-20[m[33m)[m HEAD@{81}: checkout: moving from 17-06-20 to 18-06-20
+[33m3e0d32a[m[33m ([m[1;31morigin/MYBRANCHNOTVLADIS[m[33m, [m[1;31morigin/17-06-20[m[33m, [m[1;32m17-06-20[m[33m)[m HEAD@{82}: commit: added login panel for smaller screens (as a modal)
+[33m7559f7a[m HEAD@{83}: commit: fixed image aspect ratio translator page
+[33m56a2016[m[33m ([m[1;31morigin/16-06-20[m[33m, [m[1;32m16-06-20[m[33m)[m HEAD@{84}: checkout: moving from 16-06-20 to 17-06-20
+[33m56a2016[m[33m ([m[1;31morigin/16-06-20[m[33m, [m[1;32m16-06-20[m[33m)[m HEAD@{85}: commit: restyled the translator part of the navbar to be responsive and better looking
+[33m45c28c8[m HEAD@{86}: commit: changed position of navbar search/login/register
+[33m89054d4[m HEAD@{87}: commit: fixed (for the most part) the media object issue with translator page
+[33m691ccdf[m[33m ([m[1;31morigin/15-06-20[m[33m, [m[1;32m15-06-20[m[33m)[m HEAD@{88}: checkout: moving from 15-06-20 to 16-06-20
+[33m691ccdf[m[33m ([m[1;31morigin/15-06-20[m[33m, [m[1;32m15-06-20[m[33m)[m HEAD@{89}: commit: fixed some of the spacing issues with text+image in translator page
+[33m2019a00[m HEAD@{90}: commit: almost fixed issue with non-responsive translator-page (image is too wide upon resizing)
+[33m999f6e0[m HEAD@{91}: commit: fixed issue with translator list's image aspect ratio (and responsiveness)
+[33mf75a64e[m[33m ([m[1;31morigin/14-06-20[m[33m, [m[1;32m14-06-20[m[33m)[m HEAD@{92}: checkout: moving from 14-06-20 to 15-06-20
+[33mf75a64e[m[33m ([m[1;31morigin/14-06-20[m[33m, [m[1;32m14-06-20[m[33m)[m HEAD@{93}: commit: unsaved change
+[33m107dcb2[m HEAD@{94}: commit: trying to create a proper footer (problem with aligning rows/cols)
+[33mcf1d97e[m[33m ([m[1;31morigin/13-06-20[m[33m, [m[1;32m13-06-20[m[33m)[m HEAD@{95}: checkout: moving from 13-06-20 to 14-06-20
+[33mcf1d97e[m[33m ([m[1;31morigin/13-06-20[m[33m, [m[1;32m13-06-20[m[33m)[m HEAD@{96}: commit: unsaved change
+[33mea198b3[m HEAD@{97}: commit: footer content needs to be realigned
+[33m6eace1b[m[33m ([m[1;31morigin/12-06-20[m[33m, [m[1;32m12-06-20[m[33m)[m HEAD@{98}: checkout: moving from 12-06-20 to 13-06-20
+[33m6eace1b[m[33m ([m[1;31morigin/12-06-20[m[33m, [m[1;32m12-06-20[m[33m)[m HEAD@{99}: commit: made my translator list responsive (needs to be tweaked)
+[33mf1002ab[m HEAD@{100}: commit: changed carousel layout for md-screens (not lg) & added navigation event to translator list based on screen size
+[33md1f8602[m[33m ([m[1;31morigin/11-06-20[m[33m, [m[1;32m11-06-20[m[33m)[m HEAD@{101}: checkout: moving from 11-06-20 to 12-06-20
+[33md1f8602[m[33m ([m[1;31morigin/11-06-20[m[33m, [m[1;32m11-06-20[m[33m)[m HEAD@{102}: commit: reconfiguring carousel to become responsive (needs to be fixed on larger screens)
+[33mbeb928e[m[33m ([m[1;31morigin/10-06-20[m[33m, [m[1;32m10-06-20[m[33m)[m HEAD@{103}: checkout: moving from 10-06-20 to 11-06-20
+[33mbeb928e[m[33m ([m[1;31morigin/10-06-20[m[33m, [m[1;32m10-06-20[m[33m)[m HEAD@{104}: commit: fixed issue flag placement issue on md screens
+[33mef1d03c[m HEAD@{105}: commit: making the site mobile-friendly (home page looking good)
+[33mce9d52c[m[33m ([m[1;31morigin/09-06-20[m[33m, [m[1;32m09-06-20[m[33m)[m HEAD@{106}: checkout: moving from 09-06-20 to 10-06-20
+[33mce9d52c[m[33m ([m[1;31morigin/09-06-20[m[33m, [m[1;32m09-06-20[m[33m)[m HEAD@{107}: commit: fixed issue with logo on site rescaling
+[33m9ee071a[m HEAD@{108}: commit: attempting to make website responsive
+[33m7b4275b[m[33m ([m[1;31morigin/27-05-20[m[33m, [m[1;32m27-05-20[m[33m, [m[1;32m07-06-20[m[33m, [m[1;32m01-06-20[m[33m)[m HEAD@{109}: checkout: moving from 07-06-20 to 09-06-20
+[33m7b4275b[m[33m ([m[1;31morigin/27-05-20[m[33m, [m[1;32m27-05-20[m[33m, [m[1;32m07-06-20[m[33m, [m[1;32m01-06-20[m[33m)[m HEAD@{110}: checkout: moving from 01-06-20 to 07-06-20
+[33m7b4275b[m[33m ([m[1;31morigin/27-05-20[m[33m, [m[1;32m27-05-20[m[33m, [m[1;32m07-06-20[m[33m, [m[1;32m01-06-20[m[33m)[m HEAD@{111}: checkout: moving from 02-06-20 to 01-06-20
+[33m03b7f22[m[33m ([m[1;31morigin/04-06-20[m[33m, [m[1;32m04-06-20[m[33m, [m[1;32m02-06-20[m[33m)[m HEAD@{112}: checkout: moving from 04-06-20 to 02-06-20
+[33m03b7f22[m[33m ([m[1;31morigin/04-06-20[m[33m, [m[1;32m04-06-20[m[33m, [m[1;32m02-06-20[m[33m)[m HEAD@{113}: commit: tried to fix some design issues to fit with smaller devices (not working probably gonna redo the entire design)
+[33m7b4275b[m[33m ([m[1;31morigin/27-05-20[m[33m, [m[1;32m27-05-20[m[33m, [m[1;32m07-06-20[m[33m, [m[1;32m01-06-20[m[33m)[m HEAD@{114}: checkout: moving from 01-06-20 to 04-06-20
+[33m7b4275b[m[33m ([m[1;31morigin/27-05-20[m[33m, [m[1;32m27-05-20[m[33m, [m[1;32m07-06-20[m[33m, [m[1;32m01-06-20[m[33m)[m HEAD@{115}: checkout: moving from 27-05-20 to 01-06-20
+[33m7b4275b[m[33m ([m[1;31morigin/27-05-20[m[33m, [m[1;32m27-05-20[m[33m, [m[1;32m07-06-20[m[33m, [m[1;32m01-06-20[m[33m)[m HEAD@{116}: commit: another unsaved change
+[33m0c5d434[m HEAD@{117}: commit: unsaved change
+[33mdcc554e[m HEAD@{118}: commit: changed page height for account reconfirm components
+[33m45808a2[m[33m ([m[1;31morigin/26-05-20[m[33m, [m[1;32m26-05-20[m[33m)[m HEAD@{119}: checkout: moving from 26-05-20 to 27-05-20
+[33m45808a2[m[33m ([m[1;31morigin/26-05-20[m[33m, [m[1;32m26-05-20[m[33m)[m HEAD@{120}: commit: implemented account reconfirmation with appropriate emails on the frontend
