@@ -1,16 +1,9 @@
-<div id="body">
-  <carousel [interval]="carouselInterval" [noPause]="true">
-    <slide class="animated fadeIn" *ngFor="let translator of translators">
-      <div class="media">
-          <img src="assets/images/translators/{{translator.image}}" class="mr-3" style="height: 400px; width: 400px;">
-          <div class="media-body">
-            <h5 class="mt-0 display-2 title-text">{{translator.name}}</h5>
-            <blockquote class="blockquote">
-              <p class="mb-0 review-text review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-              <footer class="blockquote-footer citation-text">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-            </blockquote>
+<carousel [interval]="carouselInterval" [noPause]="true">
+  <slide class="animated fadeIn" *ngFor="let translator of translators">
+          <img src="assets/images/translators/{{translator.image}}">
+          <div class="carousel-caption d-md-none">
+            <h3>{{translator.name}}</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </div>
-        </div>
-    </slide>
-  </carousel>
-</div>
+  </slide>
+</carousel>

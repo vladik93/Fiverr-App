@@ -13,8 +13,8 @@
   <!-- </div>
 </div> -->
 
-<div class="row">
-  <div *ngFor="let language of languages; let i = index" class="col-12 col-sm-6 col-md-4 d-flex justify-content-center align-items-center" id="flag-{{i}}" tooltip="{{language.name}}">
+<div class="row mb-5">
+  <div *ngFor="let language of languages; let i = index" class="col-12 col-sm-6 col-md-4 flags" id="flag-{{i}}" tooltip="{{language.name}}">
     <img src={{language.image}} class="img-fluid" />
   </div>
 </div>
