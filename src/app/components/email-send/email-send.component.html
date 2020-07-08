@@ -1,21 +1,36 @@
-<div class="modal-header bg-dark text-light">
-    <h4 class="modal-title pull-left">Confirm Request</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <div class="media">
+  <!-- <div class="modal-header bg-dark text-light text-center">
+    
+  </div> -->
+  <div class="modal-body bg-dark text-light">
+    <!-- <div class="media">
       <img src="assets/images/translators/{{list[0].image}}" class="shadow mr-2 mb-3" />
       <div class="media-body">
+        <form>
         <h3 class="mb-1">{{list[0].name}}</h3>
         <p class="ml-1">{{list[0].codefrom ? list[0].codefrom : 'n/a'}} - {{list[0].codeto}}</p>
+        <h4>Price: {{list[0].price}}&#8362;</h4>
+    <textarea class="form-control" rows="5"></textarea>
+    <p style="font-size: 11px">Note: Request will be verified befoehand and a different price may be agreed upon. Futher information will be provided by our team. Thank you!</p>
+    <button type="button" class="btn btn-outline-light btn-block"  (click)="onRequestConfirm(list[0].id)">CONFIRM</button>
+    </form>
       </div>
     </div>
-    <h4>Price: {{list[0].price}}&#8362;</h4>
-    <p class="text-muted" style="font-size: 11px">Note: Request will be verified befoehand and a different price may be agreed upon. Futher information will be provided by our team. Thank you!</p>
-  </div>
-  <div class="modal-footer bg-dark text-light">
-    <button type="button" class="btn btn-outline-light"  (click)="onRequestConfirm(list[0].id)">Confirm</button>
-    <!-- <button type="button" class="btn btn-outline-light"  (click)="bsModalRef.hide()">Confirm</button> -->
+     -->
+     <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <hr class="my-4" />
+     <div class="card bg-dark text-light text-center">
+       <h3 class="display-2">CONFIRM REQUEST</h3>
+      <img src="assets/images/translators/{{list[0].image}}" class="card-img-top" />
+       <div class="card-body text-center">
+         <form>
+          <h3 class="card-title display-2">{{list[0].name}}</h3>
+          <p class="card-subtitle lead">{{list[0].codefrom ? list[0].codefrom : 'n/a'}} - {{list[0].codeto}}</p>
+          <h5 class="card-text lead">Price: {{list[0].price}}&#8362;</h5>
+          <textarea class="form-control mb-2 w-100" rows="5" [(ngModel)]="list[0].content" name="content" placeholder="Send a message..."></textarea>
+          <button class="btn btn-outline-light btn-block" (click)="onRequestConfirm(list[0].id)">SEND</button>
+        </form>
+       </div>
+     </div>
   </div>

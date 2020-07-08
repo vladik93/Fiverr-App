@@ -17,8 +17,8 @@ export class EmailService {
 
   constructor(private http: HttpClient) { }
 
-  sendEmailRequest = (transId: Number) => {
-    return this.http.post(`${this.serverUrl}/${transId}`, null);
+  sendEmailRequest = (transId: Number, content) => {
+    return this.http.post(`${this.serverUrl}/${transId}`, content);
   }
 
 }

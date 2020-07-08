@@ -23,17 +23,19 @@ export class EmailSendComponent implements OnInit {
   ngOnInit() {
   }
 
-  onRequestConfirm = (id) => {
-    if (this.authService.loggedIn()) {
-      this.emailService.sendEmailRequest(id)
-      .subscribe(
-        data => {
-          this.statsService.setTotalRequestCount();
-          this.bsModalRef.hide();
-        },
-        error => console.log(error)
-      );
-    }
-  }
+  // onRequestConfirm = (id) => {
+  //   if (this.authService.loggedIn()) {
+  //     this.emailService.sendEmailRequest(id, this.list[0].content)
+  //     .subscribe(
+  //       data => {
+  //         this.statsService.setTotalRequestCount();
+  //         this.bsModalRef.hide();
+  //       },
+  //       error => console.log(error)
+  //     );
+  //   }
+  // }
+
+
 
 }
