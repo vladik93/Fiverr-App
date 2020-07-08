@@ -3,6 +3,7 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 import { AuthService } from '../../services/auth.service';
 import { EmailService } from '../../services/email.service';
 import { StatsService } from 'src/app/services/stats.service';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -23,18 +24,18 @@ export class EmailSendComponent implements OnInit {
   ngOnInit() {
   }
 
-  // onRequestConfirm = (id) => {
-  //   if (this.authService.loggedIn()) {
-  //     this.emailService.sendEmailRequest(id, this.list[0].content)
-  //     .subscribe(
-  //       data => {
-  //         this.statsService.setTotalRequestCount();
-  //         this.bsModalRef.hide();
-  //       },
-  //       error => console.log(error)
-  //     );
-  //   }
-  // }
+  onRequestConfirm = (form: NgForm) => {
+    if (this.authService.loggedIn()) {
+      this.emailService.sendEmailRequest(form.value.id, { content: form.value.content })
+      .subscribe(
+        data => {
+          this.statsService.setTotalRequestCount();
+          this.bsModalRef.hide();
+        },
+        error => console.log(error)
+      );
+    }
+  }
 
 
 
