@@ -15,6 +15,13 @@
     <button type="button" id="toggler" class="navbar-toggle collapsed navbar-toggler-icon"  (click)="onNavbarToggle()"
       [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
     </button>
+    <ul class="navbar-nav ml-auto d-md-none">
+      <li class="nav-item">
+        <app-sm-login-modal></app-sm-login-modal>
+      </li>
+    </ul>
+
+
     <!-- <button type="button" id="toggler" class="navbar-toggle collapsed navbar-toggler-icon"  (click)="isCollapsed = !isCollapsed"
       [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
     </button> -->

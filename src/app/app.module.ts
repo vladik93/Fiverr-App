@@ -53,6 +53,7 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { EmailSendComponent } from './components/email-send/email-send.component';
+import { SmLoginModalComponent } from './components/sm-login-modal/sm-login-modal.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { EmailSendComponent } from './components/email-send/email-send.component
     LoggedComponent,
     SideWidgetComponent,
     EmailSendComponent,
+    SmLoginModalComponent,
     AccountReconfirmComponent,
   ],
   imports: [

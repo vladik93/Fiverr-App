@@ -1,0 +1,37 @@
+<a href="#" class="nav-link" (click)="openModal(template)">LoginSM</a>
+
+<ng-template #template>
+  <div class="modal-header bg-dark">
+    <!-- <h4 class="modal-title pull-left">Modal</h4> -->
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body bg-dark text-light">
+    <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+    <div class="form-group">
+      <label>Email</label>
+      <input type="text" class="form-control mt-2" formControlName="email"/>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="text" class="form-control" formControlName="password" />
+    </div>
+    <alert type="md-local" *ngIf="error" 
+    class="alert alert-light shadow ml-3 p-0" 
+    id="error-alert" 
+    [dismissOnTimeout]="3000"
+    (onClosed)="onAlertClosed()">
+      <!-- {{error}} -->
+      {{error}}
+    </alert>
+    <!-- <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="remember-check" formControlName="remember">
+      <label class="form-check-label" for="remember-check">
+        Remember Me
+      </label>
+    </div> -->
+    <button class="btn btn-outline-light">Login</button>
+  </form>
+  </div>
+</ng-template>

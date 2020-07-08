@@ -1,6 +1,6 @@
-#profile-image {
+/* #profile-image {
   
-}
+} */
 
 #profile-name {
    text-align: center;
@@ -98,6 +98,7 @@
         max-width: 100%;
         height: 370px;
         width: 320px;
+        object-fit: cover;
     }
 
     .media button {
