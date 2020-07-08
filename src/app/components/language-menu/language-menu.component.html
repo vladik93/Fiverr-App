@@ -1,6 +1,6 @@
 <div *ngFor="let language of languages; let i = index">
   <div *ngIf="i % 4 === 0" class="row" style="margin: 0 auto;">
-    <div *ngFor="let language of languages.slice(i, i + 4)" class="col-md-3 col-4 col-sm-4 m-4 text-light text-center" 
+    <div *ngFor="let language of languages.slice(i, i + 4)" class="col-md-3 col-4 col-sm-4 col-lg-4 m-4 text-light text-center" 
     (click)="onLanguageClick(language.id)" (click)="onSmallScrLangClick(language.id)">
     <div class="language-section"> 
       <img src={{language.image}} style="height: 60px; width: 90px; border-radius: 5px; box-shadow: 1px 1px 3px black;" />

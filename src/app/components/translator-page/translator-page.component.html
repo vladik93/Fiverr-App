@@ -28,12 +28,15 @@
   </div>
   <p class="col-12 lead" id="profile-description">{{translator.description}}</p>
   <p class="col-12 lead" id="profile-price">{{translator.price}}&#8362;</p> 
-  <button class="btn btn-outline-dark btn-block" id="request-button">Send Request</button>
+  <button class="btn btn-dark btn-block" id="request-button">SEND REQUEST</button>
 </div>
 
 <div class="row mt-3 big-profile">
   <div class="media">
-    <img src="assets/images/translators/{{translator.image}}" class="col-md-5 mr-3 profile-image mt-3" alt="...">
+    <div class="media-left">
+      <img src="assets/images/translators/{{translator.image}}" class=" profile-image mt-3" alt="...">
+      <button class="btn btn-dark btn-block">SEND REQUEST</button>
+    </div>
     <div class="media-body col-md-7">
       <h5 class="mt-0 display-2">{{translator.name}}</h5>
       <div class="language-section mb-1">
@@ -42,7 +45,7 @@
         <img src="{{translator.image_to}}" id="image-to" />
       </div>
       <p class="lead">{{translator.description}}</p>
-      <p class="display-2">{{translator.price}}&#8362;</p>
+      <p class="display-2 profile-price" style="color: darkgreen;">{{translator.price}}&#8362;</p>
     </div>
   </div>
 </div>

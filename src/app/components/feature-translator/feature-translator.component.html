@@ -1,4 +1,16 @@
-<div class="media" *ngIf="translator">
+<div *ngIf="translator" class="card text-light" style="width: 100%;">
+    <img class="card-img-top" src="assets/images/translators/{{translator.image}}">
+    <a href="#" class="btn btn-outline-light btn-block" id="translator-button">TRANSLATOR PAGE</a>
+    <div class="card-body">
+      <h5 class="card-title">{{translator.name}}</h5>
+      <p class="card-text">{{translator.description.substring(0, 150)}}...</p>
+      <a href="#" class="btn btn-primary text-right float-right m-2" id="more-button">MORE</a>
+    </div>
+  </div>
+
+
+
+<!-- <div class="media" *ngIf="translator">
   <img src="assets/images/translators/{{translator.image}}" id="translator-pic" />
   <div class="media-body mt-3 ml-2">
     <h5 class="feature-text" id="feature-name">{{translator.name}}</h5>
@@ -8,4 +20,5 @@
 </div>
 <div id="more-link" class="btn btn-outline-light" *ngIf="translator">
   <a [routerLink]="['translators']" [queryParams]="{lang: translator.lang_to}">More</a>
-</div>
+</div> -->
+
