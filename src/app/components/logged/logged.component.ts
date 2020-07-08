@@ -11,7 +11,6 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoggedComponent implements OnInit {
   userData;
-
   constructor(private loggedService: LoggedService, private authService: AuthService, private router: Router) { }
 
   ngOnInit() {

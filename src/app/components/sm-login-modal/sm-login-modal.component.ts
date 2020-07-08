@@ -63,6 +63,7 @@ export class SmLoginModalComponent implements OnInit {
             this.updateVisitCount();
             this.statsService.setInitialRequestCount();
             this.router.navigate(['/logged']);
+            this.loginModal.hide();
         },
         error => {
           if (error.status === 403) {
