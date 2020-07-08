@@ -7,10 +7,10 @@
     <div class="col-12">
         <accordion [isAnimated]="true" [closeOthers]="oneAtATime">
             <div class="row mt-5">
-                <accordion-group class="col-12 col-sm-6 col-md-4 mt-1" *ngFor="let translator of translators; let i = index;" [panelClass]="customClass" [isOpen]="collapseOpen === i"  (isOpenChange)="onAccordionClick($event)">
+                <accordion-group class="col-12 col-sm-6 col-md-4 mt-1 d-flex justify-content-center" *ngFor="let translator of translators; let i = index;" [panelClass]="customClass" [isOpen]="collapseOpen === i"  (isOpenChange)="onAccordionClick($event)">
                         <button class="btn btn-link btn-block" accordion-heading type="button">
                             <img src="assets/images/translators/{{translator.image}}" class="profile-image" />
-                            <h5 class="mt-1 ml-1 name">{{translator.name}}</h5>
+                            <h6 class="mt-1 ml-1 name">{{translator.name}}</h6>
                                 <img src="{{translator.image_from}}" class="lang-from" />
                                 <span class="arrow-right"><img src="assets/images/arrow-right.png"  style="height: 15px;"/></span>
                                 <img src="{{translator.image_to}}" class="lang-to" />

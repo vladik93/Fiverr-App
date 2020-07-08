@@ -14,7 +14,11 @@
 </div> -->
 
 <div class="row mb-5">
-  <div *ngFor="let language of languages; let i = index" class="col-12 col-sm-6 col-md-4 flags" id="flag-{{i}}" tooltip="{{language.name}}">
+  <div *ngFor="let language of languages; let i = index" 
+  class="col-12 col-sm-6 col-md-4 flags" 
+  id="flag-{{i}}" 
+  tooltip="{{language.name}}"
+  [routerLink]="['translators']" [queryParams]="{lang: language.id}">
     <img src={{language.image}} class="img-fluid" />
   </div>
 </div>
