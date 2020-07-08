@@ -9,15 +9,21 @@
   </div>
 </div>
 
+<<<<<<< HEAD
 <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow" style="border-top: 1px dashed lightgrey">
   <div class="container-fluid">
+=======
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow" style="border-top: 1px dashed lightgrey">
+  <!-- <div class="container-fluid"> -->
+>>>>>>> 09-06-20
     <button type="button" id="toggler" class="navbar-toggle collapsed navbar-toggler-icon"  (click)="onNavbarToggle()"
       [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
     </button>
     <!-- <button type="button" id="toggler" class="navbar-toggle collapsed navbar-toggler-icon"  (click)="isCollapsed = !isCollapsed"
       [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">
     </button> -->
-  </div>
+  <!-- </div> -->
 
   <!-- To place brand next to other element, include both .navbar-header div -->
 
@@ -31,7 +37,6 @@
         </li>
         <li class="nav-item active">
           <app-login></app-login>
-          <!-- <a class="nav-link" href="#">Login</a> -->
         </li>
         <li class="nav-item">
           <a class="nav-link" style="cursor: pointer;" *ngIf="authService.loggedIn()">{{username ? username : getStorageUsername()}}</a>
