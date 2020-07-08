@@ -1,5 +1,7 @@
 .navbar {
-    min-height: 250px;
+    /* min-height: 250px; */
+    padding: 2rem;
+    width: 100%;
     top: 180px;
 }
 
@@ -9,3 +11,10 @@
     top: 30px;
 }
 
+.social {
+    margin: 0 auto;
+}
+
+.email-form {
+    display: none;
+}
